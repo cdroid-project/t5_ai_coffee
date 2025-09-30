@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="#990F0F0F">
+
+    <RelativeLayout
+        android:id="@+id/pop_group"
+        android:layout_width="880dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pop_bg_r24">
+
+        <RelativeLayout
+            android:layout_width="644dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/pop_picker_title_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="时间设置"
+                android:textSize="26dp"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:splitMotionEvents="true">
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_picker_name_1"
+                    android:layout_width="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left|center_vertical"
+                    android:text="蒸汽模式"
+                    android:textSize="20dp"
+                    android:textColor="#7FFFFFFF"/>
+
+                <NumberPicker
+                    android:id="@+id/pop_select_mode_picker_1"
+                    android:fontFamily="@font/HarmonyOS_Sans_SC_Medium"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:wrapSelectorWheel="false"
+                    android:internalLayout="@layout/numpicker_ver_pop_flowrate"
+                    android:updateInputTextInFling="true"
+                    android:selectedTextSize="30dp"
+                    android:selectedTextColor="#000000"
+                    android:textSize="20dp"
+                    android:textColor="#19FFFFFF"
+                    android:min="0"
+                    android:max="19"
+                    android:wheelItemCount="3"
+                    android:background="#00FFFFFF"
+                    android:visibility="gone"/>
+
+                <NumberPicker
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_num_picker_1"
+                    android:layout_width="80dp"
+                    android:layout_height="160dp"
+                    android:layout_toRightOf="@id/pop_picker_name_1"
+                    android:wrapSelectorWheel="false"
+                    android:internalLayout="@layout/numpicker_ver_bebas_layout"
+                    android:updateInputTextInFling="true"
+                    android:min="2010"
+                    android:max="2037"
+                    android:wheelItemCount="3"
+                    android:background="#00FFFFFF"
+                    android:selectedTextSize="60dp"
+                    android:textSize="26dp"
+                    android:selectedTextColor="#000000"
+                    android:textColor="#19FFFFFF"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_units_1_tv"
+                    android:layout_width="85dp"
+                    android:layout_toRightOf="@id/pop_num_picker_1"
+                    android:layout_centerVertical="true"
+                    android:gravity="left|center_vertical"
+                    android:text="℃"
+                    android:textSize="20dp"
+                    android:textColor="#33FFFFFF"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_picker_name_2_tv"
+                    android:layout_width="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/pop_num_picker_2"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="出水量"
+                    android:textSize="20dp"
+                    android:textColor="#7FFFFFFF"/>
+
+                <NumberPicker
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_num_picker_2"
+                    android:layout_width="80dp"
+                    android:layout_height="160dp"
+                    android:layout_toLeftOf="@id/pop_units_2_tv"
+                    android:wrapSelectorWheel="false"
+                    android:internalLayout="@layout/numpicker_ver_bebas_layout"
+                    android:updateInputTextInFling="true"
+                    android:min="2010"
+                    android:max="2037"
+                    android:wheelItemCount="3"
+                    android:background="#00FFFFFF"
+                    android:selectedTextSize="60dp"
+                    android:textSize="26dp"
+                    android:selectedTextColor="#000000"
+                    android:textColor="#19FFFFFF"/>
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_units_2_tv"
+                    android:layout_width="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="80dp"
+                    android:gravity="left|center_vertical"
+                    android:text="ml"
+                    android:textSize="20dp"
+                    android:textColor="#33FFFFFF"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70dp">
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/pop_enter"
+                android:layout_width="166dp"
+                android:layout_height="60dp"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:text="确定"
+                android:background="@drawable/btn_r30_brown_gradient"/>
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/pop_cancel"
+                android:layout_width="166dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/pop_enter"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:text="取消"
+                android:background="@drawable/btn_r30_brown_gradient_alpha"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

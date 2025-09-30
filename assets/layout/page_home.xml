@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="@mipmap/bg1">
+
+    <include layout="@layout/status_bar_left" 
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="1810dp"
+        android:layout_height="350dp">
+
+        <include layout="@layout/home_layout_coffee"/>
+        <include layout="@layout/home_layout_tea_list"/>
+        <include layout="@layout/home_layout_fav_list"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1470dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_r35_tab_brown"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/tab_anim_bg"
+            android:layout_width="185dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_bg_r30_blue"/>
+
+        <LinearLayout
+            android:id="@+id/hor_scroll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/tab_customer_view"
+                android:layout_marginRight="60dp"/>
+            <TextView
+                style="@style/tab_customer_view"
+                android:layout_marginRight="60dp"/>
+            <TextView
+                style="@style/tab_customer_view"
+                android:layout_marginRight="60dp"/>
+            <TextView
+                style="@style/tab_customer_view"
+                android:layout_marginRight="60dp"/>
+            <TextView
+                style="@style/tab_customer_view"
+                android:layout_marginRight="60dp"/>
+            <TextView
+                style="@style/tab_customer_view" />
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

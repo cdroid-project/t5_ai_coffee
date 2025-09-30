@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="315dp"
+    android:layout_marginHorizontal="9dp">
+    <View
+        android:layout_width="340dp"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_r24_setting_card"/>
+
+    <ImageView
+        android:id="@+id/fav_pic_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pic_fav_americano"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/fav_edit_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_edit"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/fav_delete_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_fav_delete"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        style="@style/Harmony_Regular_Text"
+        android:id="@+id/fav_name_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/fav_info_group"
+        android:layout_marginBottom="5dp"
+        android:text="测试咖啡"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:drawableRight="@mipmap/icon_pop_edit"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+/>
+
+    <RelativeLayout
+        android:id="@+id/fav_info_group"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_above="@id/fav_make_tv"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_title_tv_1"
+            android:layout_width="80dp"
+            android:gravity="left"
+            android:layout_marginLeft="60dp"
+            android:text="粉重"
+            android:textSize="14dp"
+            android:textColor="#66FFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_tv_1"
+            android:layout_width="80dp"
+            android:gravity="left"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@id/fav_info_title_tv_1"
+            android:text="18g"
+            android:textSize="20dp"
+            android:textColor="#FFFFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_title_tv_2"
+            android:layout_toRightOf="@id/fav_info_title_tv_1"
+            android:layout_marginLeft="70dp"
+            android:text="萃取温度"
+            android:textSize="14dp"
+            android:textColor="#66FFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_tv_2"
+            android:layout_toRightOf="@id/fav_info_title_tv_1"
+            android:layout_below="@id/fav_info_title_tv_2"
+            android:layout_marginLeft="70dp"
+            android:text="96℃"
+            android:textSize="20dp"
+            android:textColor="#FFFFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_title_tv_3"
+            android:layout_width="80dp"
+            android:gravity="left"
+            android:layout_below="@id/fav_info_tv_1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:text="萃取水量"
+            android:textSize="14dp"
+            android:textColor="#66FFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_tv_3"
+            android:layout_width="80dp"
+            android:gravity="left"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@id/fav_info_title_tv_3"
+            android:text="40ml"
+            android:textSize="20dp"
+            android:textColor="#FFFFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_title_tv_4"
+            android:layout_below="@id/fav_info_tv_2"
+            android:layout_toRightOf="@id/fav_info_title_tv_3"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="8dp"
+            android:text="预浸泡时间"
+            android:textSize="14dp"
+            android:textColor="#66FFFFFF"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_info_tv_4"
+            android:layout_toRightOf="@id/fav_info_title_tv_3"
+            android:layout_below="@id/fav_info_title_tv_4"
+            android:layout_marginLeft="70dp"
+            android:text="10s"
+            android:textSize="20dp"
+            android:textColor="#FFFFFFFF"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/Harmony_Regular_Text"
+        android:id="@+id/fav_make_tv"
+        android:layout_width="166dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="制作"
+        android:textSize="26dp"
+        android:textColor="#FF000000"
+        android:background="@drawable/btn_r30_brown_gradient"/>
+</RelativeLayout>

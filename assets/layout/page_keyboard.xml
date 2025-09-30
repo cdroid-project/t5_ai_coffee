@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="#000000">
+    <!-- android:background="@mipmap/bg"> -->
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pop_page_bg"/> -->
+
+    <CdroidKeyBoard
+        android:id="@+id/cdroid_keyboard"
+        android:layout_width="1400dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="180dp">
+
+        <TextView
+            style="@style/Harmony_Medium_Text"
+            android:id="@+id/keyboard_enter"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:text="确定"
+            android:background="@drawable/btn_r30_brown_gradient"/>
+
+        <TextView
+            style="@style/Harmony_Medium_Text"
+            android:id="@+id/keyboard_cancel"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/keyboard_enter"
+            android:layout_marginTop="30dp"
+            android:textColor="000000"
+            android:textSize="26sp"
+            android:text="取消"
+            android:background="@drawable/btn_r30_brown_gradient_alpha"/>
+    </RelativeLayout>
+</RelativeLayout>
+

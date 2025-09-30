@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="@mipmap/bg">
+
+    <include layout="@layout/status_bar_left" 
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="1810dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@mipmap/icon_back"
+                android:contentDescription="返回">
+            </ImageView>
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/page_clean_back_tv"
+                android:layout_height="match_parent"
+                android:text="清洁"
+                android:textSize="32dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="60dp">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_back">
+
+            <LinearLayout
+                android:id="@+id/clean_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="530dp"
+                    android:layout_height="290dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginRight="120dp"
+                    android:background="@drawable/bg_r24_clean_card_bottom_30">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/clean_select_water_title_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="水路清洁"
+                        android:textSize="26dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/clean_select_water_time_tv"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/clean_select_water_title_tv"
+                        android:layout_marginTop="20dp"
+                        android:text="预计需要  1分钟"
+                        android:textSize="22dp"
+                        android:textColor="#B2FFFFFF"/>
+                    
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/clean_select_water_time_tv"
+                        android:text="建议萃取前后均进行一次"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF"/>
+
+                    <TextView
+                        style="@style/Harmony_Medium_Text"
+                        android:id="@+id/clean_select_water_enter_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="166dp"
+                        android:layout_height="60dp"
+                        android:textColor="#000000"
+                        android:textSize="26sp"
+                        android:text="立即清洁"
+                        android:background="@drawable/btn_r30_brown_gradient"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="530dp"
+                    android:layout_height="290dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bg_r24_clean_card_bottom_30">
+
+                    <View
+                        android:id="@+id/cal_clean_warn_img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/icon_clean_warn"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/clean_select_calcify_title_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="钙化清洁"
+                        android:textSize="26dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/clean_select_calcify_time_tv"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/clean_select_calcify_title_tv"
+                        android:layout_marginTop="20dp"
+                        android:text="萃取已超过1500次/"
+                        android:textSize="22dp"
+                        android:textColor="#B2FFFFFF"
+                        android:lineSpacingExtra="5dp"/>
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/clean_select_calcify_time_tv2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/clean_select_calcify_time_tv"
+                        android:layout_marginTop="15dp"
+                        android:text="中途需加2次水"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF"/>
+
+                    <TextView
+                        style="@style/Harmony_Medium_Text"
+                        android:id="@+id/clean_select_calcify_enter_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="166dp"
+                        android:layout_height="60dp"
+                        android:textColor="#000000"
+                        android:textSize="26sp"
+                        android:text="立即清洁"
+                        android:background="@drawable/btn_r30_brown_gradient"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/step_tips_group"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="540dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical|left"
+                    android:layout_marginLeft="485dp">
+
+                    <LinearLayout
+                        android:id="@+id/step_1_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/clean_step_1_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP1"
+                            android:textSize="29dp"
+                            android:textColor="#CCFFFFFF"
+                            android:drawableLeft="@mipmap/icon_clean_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/clean_step_1_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="确保水箱内水超过250ml"
+                            android:textSize="24dp"
+                            android:textColor="#CCFFFFFF"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/step_2_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/clean_step_2_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP2"
+                            android:textSize="29dp"
+                            android:textColor="#CCFFFFFF"
+                            android:drawableLeft="@mipmap/icon_clean_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/clean_step_2_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="确保水箱内水超过250ml"
+                            android:textSize="24dp"
+                            android:textColor="#CCFFFFFF"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="450dp">
+
+                    <TextView
+                        style="@style/Harmony_Medium_Text"
+                        android:id="@+id/clean_enter"
+                        android:layout_width="166dp"
+                        android:layout_height="60dp"
+                        android:textColor="#000000"
+                        android:textSize="26sp"
+                        android:text="确定"
+                        android:background="@drawable/btn_r30_brown_gradient"/>
+
+                    <TextView
+                        style="@style/Harmony_Medium_Text"
+                        android:id="@+id/clean_cancel"
+                        android:layout_width="166dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/clean_enter"
+                        android:layout_marginTop="30dp"
+                        android:textColor="#000000"
+                        android:textSize="26sp"
+                        android:text="取消"
+                        android:background="@drawable/btn_r30_brown_gradient_alpha"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/clean_running_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/clean_running_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="65dp"
+                    android:text="第一轮钙化清洁中"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFFFF"/>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/clean_running_info_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clean_running_title_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="第一轮钙化清洁中"
+                    android:textSize="22dp"
+                    android:textColor="#B2FFFFFF"/>
+
+                <RelativeLayout
+                    android:layout_width="450dp"
+                    android:layout_height="12dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/clean_running_info_tv"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_clean_progress">
+
+                    <View
+                        android:id="@+id/clean_running_rolling"
+                        android:layout_width="70dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/bg_clean_progress_rolling"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

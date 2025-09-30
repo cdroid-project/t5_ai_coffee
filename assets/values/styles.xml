@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Bebas_Regular_Text">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/Bebas_Regular</item>
+        <item name="android:lineSpacingExtra">-4dp</item>
+    </style>
+    <style name="Harmony_Medium_Text">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/HarmonyOS_Sans_SC_Medium</item>
+    </style>
+    <style name="Harmony_Regular_Text">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/HarmonyOS_Sans_SC_Regular</item>
+    </style>
+
+    <style name="tab_customer_view">
+        <item name="android:fontFamily">@font/HarmonyOS_Sans_SC_Regular</item>
+        <item name="android:layout_width">195dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">28dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_select_tab</item>
+        <!-- <item name="android:background">@drawable/bg_r30_tab_select</item> -->
+        <item name="android:textSize">26dp</item>
+        <item name="android:scaleX">0.9</item>
+        <item name="android:scaleY">0.9</item>
+        <item name="android:stateListAnimator">@animator/home_tab_bg_anim</item>
+        
+    </style>
+
+    <style name="numpicker">
+        <item name="android:internalLayout">@layout/numpicker_hor_layout</item>
+        <item name="android:min">0</item>
+        <item name="android:max">59</item>
+        <item name="android:wheelItemCount">3</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:selectedTextSize">38dp</item>
+        <item name="android:selectedTextColor">#FFFFFF</item>
+        <item name="android:textColor">#4DFFFFFF</item>
+    </style>
+
+    <style name="view_Configuration">
+        <item name="config_scrollbarSize">4dip</item>
+        <item name="config_isScreenRound">false</item>
+        <item name="config_ui_enableFadingMarquee">true</item>
+        <item name="config_viewConfigurationTouchSlop">20dp</item>
+        <item name="config_viewConfigurationHoverSlop">8dp</item>
+        <item name="config_minScrollbarTouchTarget">48dp</item>
+        <item name="config_viewMinFlingVelocity">50dp</item>
+        <item name="config_viewMaxFlingVelocity">8000dp</item>
+        <item name="config_horizontalScrollFactor">64dp</item>
+        <item name="config_verticalScrollFactor">64dp</item>
+        <item name="config_globalActionsKeyTimeout">500</item>
+        <item name="config_horizontalScrollFactor">64</item>
+        <item name="config_verticalScrollFactor">64</item>
+    </style>
+</resources>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="@mipmap/bg">
+
+    <include layout="@layout/status_bar_left" 
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="1810dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@mipmap/icon_back"
+                android:contentDescription="返回">
+            </ImageView>
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_height="match_parent"
+                android:text="设置"
+                android:textSize="32dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="60dp">
+            </TextView>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="434dp"
+            android:layout_height="314dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_r24_setting_card"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/time_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="时间设置"
+                        android:textSize="24dp"
+                        android:textColor="#FFFFFFFF" />
+
+                    <TextView
+                        android:id="@+id/time_tv"
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:text="2023年6月6日 17时56分"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/grind_mode_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="磨豆模式"
+                        android:textSize="24dp"
+                        android:textColor="#FFFFFFFF" />
+
+                    <TextView
+                        android:id="@+id/grind_mode_tv"
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:drawableRight="@mipmap/icon_right"
+                        android:drawablePadding="10dp"
+                        android:text="称豆模式"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/hot_water_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="热水设置"
+                        android:textSize="24dp"
+                        android:textColor="#FFFFFFFF" />
+
+                    <TextView
+                        android:id="@+id/hot_water_tv"
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:drawableRight="@mipmap/icon_right"
+                        android:drawablePadding="10dp"
+                        android:text="60℃ 150ml"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/bind_app_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="设备绑定"
+                        android:textSize="24dp"
+                        android:textColor="#FFFFFFFF" />
+
+                    <TextView
+                        android:id="@+id/bind_app_tv"
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:drawableRight="@mipmap/icon_right"
+                        android:drawablePadding="10dp"
+                        android:text="未绑定"
+                        android:textSize="20dp"
+                        android:textColor="#66FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/voice_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="按键声音"
+                        android:textSize="24dp"
+                        android:textColor="#FFFFFFFF" />
+
+                    <Switch
+                        android:id="@+id/voice_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:showText="false"
+                        android:switchMinWidth="80dp"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track"
+                        android:stateListAnimator="@animator/wifi_state_anim"
+                        android:layout_marginRight="25dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/card_4"
+            android:layout_width="353dp"
+            android:layout_height="314dp"
+            android:layout_toRightOf="@id/scrollview"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_r24_setting_card">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="本机信息"
+                android:textSize="26dp"
+                android:textColor="#FFFFFFFF"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/device_tv"
+                    android:text="型号：cdroid"
+                    android:textSize="20dp"
+                    android:textColor="#66FFFFFF"/>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/version_tv"
+                    android:layout_below="@id/device_tv"
+                    android:layout_marginTop="10dp"
+                    android:text="xx版本：1.1.1.1"
+                    android:textSize="20dp"
+                    android:textColor="#66FFFFFF"/>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/mcu_version_tv"
+                    android:layout_below="@id/version_tv"
+                    android:layout_marginTop="10dp"
+                    android:text="xxx版本：1.1.1"
+                    android:textSize="20dp"
+                    android:textColor="#66FFFFFF"/>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/cdroid_version_tv"
+                    android:layout_below="@id/mcu_version_tv"
+                    android:layout_marginTop="10dp"
+                    android:text="CDROID：1.1.1"
+                    android:textSize="20dp"
+                    android:textColor="#66FFFFFF"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/update_tv"
+                android:layout_width="137dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_r24_setting_select"
+                android:text="软件更新"
+                android:textSize="20dp"
+                android:textColor="@color/text_select_setting"/>
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/reset_tv"
+                android:layout_width="137dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_r24_setting_reset_select"
+                android:text="恢复出厂设置"
+                android:textSize="20dp"
+                android:textColor="@color/text_select_reset_setting"/>
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/card_3"
+            android:layout_width="350dp"
+            android:layout_height="314dp"
+            android:layout_toRightOf="@id/card_4"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_r24_setting_card">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="使用情况"
+                android:textSize="26dp"
+                android:textColor="#FFFFFFFF"/>
+
+            <RelativeLayout
+                android:id="@+id/card_3_froth"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="90dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_setting_frothing"/>
+                <LinearLayout
+                    android:layout_width="104dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:gravity="left|center_vertical">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:text="打奶泡"
+                        android:textSize="14dp"
+                        android:textColor="#66FFFFFF"/>
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/froth_tv"
+                        android:text="444次"
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFFFF"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_3_grind"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/card_3_froth">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_setting_grinding"/>
+                <LinearLayout
+                    android:layout_width="104dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:gravity="left|center_vertical">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:text="研磨"
+                        android:textSize="14dp"
+                        android:textColor="#66FFFFFF"/>
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/grind_tv"
+                        android:text="444次"
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFFFF"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_3_brew"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/card_3_grind">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_setting_brewing"/>
+                <LinearLayout
+                    android:layout_width="104dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:gravity="left|center_vertical">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:text="冲煮"
+                        android:textSize="14dp"
+                        android:textColor="#66FFFFFF"/>
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/brew_tv"
+                        android:text="444次"
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFFFF"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card_1"
+            android:layout_width="444dp"
+            android:layout_height="314dp"
+            android:layout_toRightOf="@id/card_3"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_r24_setting_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/wifi_title"
+                    android:layout_marginLeft="55dp"
+                    android:layout_centerVertical="true"
+                    android:text="网络设置"
+                    android:textSize="26dp"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageView
+                    android:id="@+id/wifi_shuaxin"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/wifi_title"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rotate_shuaxin_wifi"
+                    android:scaleType="centerInside"/>
+
+                <RelativeLayout
+                    android:id="@+id/wifi_sw_layout"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <Switch
+                        android:id="@+id/wifi_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:showText="false"
+                        android:switchMinWidth="80dp"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track"
+                        android:stateListAnimator="@animator/wifi_state_anim"
+                        android:layout_marginRight="25dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RecyclerView
+                android:id="@+id/wifi_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="239dp"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/disconnect_text"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_bg_r12_black"
+                android:visibility="gone"
+                android:text="断开连接"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card_light"
+            android:layout_width="50dp"
+            android:layout_height="314dp"
+            android:layout_toRightOf="@id/card_1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="30dp">
+
+            <SeekBar
+                android:id="@+id/seekbar_light"
+                android:layout_width="50dp"
+                android:layout_height="277dp"
+                android:layout_centerInParent="true"
+                android:gravity="bottom"
+                android:min="10"
+                android:max="100"
+                android:thumb="null"
+                android:progressDrawable="@drawable/setting_seekbar"/>
+
+            <ImageView
+                android:id="@+id/image_bright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rotate_light_image"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp"/>
+        </RelativeLayout>
+
+        <!-- <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="314dp"
+            android:layout_toRightOf="@id/card_light"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginBottom="30dp">
+
+            <SeekBar
+                android:id="@+id/seekbar_voice"
+                android:layout_width="50dp"
+                android:layout_height="277dp"
+                android:layout_centerInParent="true"
+                android:gravity="bottom"
+                android:min="10"
+                android:max="100"
+                android:thumb="null"
+                android:progressDrawable="@drawable/setting_seekbar"/>
+
+            <ImageView
+                android:id="@+id/image_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_voice"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="18dp"/>
+        </RelativeLayout> -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1810dp"
+    android:layout_height="350dp"
+    android:id="@+id/layout_tea_list">
+
+    <RelativeLayout
+        android:id="@+id/tea_card_group"
+        android:layout_width="392dp"
+        android:layout_height="300dp"
+        android:background="@mipmap/ext_tea_tips_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/tea_card_title_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="「 测茶 」"
+            android:textColor="@color/white"
+            android:textSize="28dp"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:layout_width="match_parent"
+            android:layout_below="@id/tea_card_title_tv"
+            android:layout_centerHorizontal="true"
+            android:gravity="left"
+            android:paddingHorizontal="33dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="17dp"
+            android:text="与传统的热泡茶相比，口味更浓郁，冲泡时间更短。在这个过程中，茶叶渗透性逐渐被激活，茶叶中的香气和味道会逐渐被释放出来，形成纯净的茶汤"
+            android:textColor="#E5FFFFFF"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+    <NestedScrollGroup
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_toRightOf="@id/tea_card_group"
+        android:layout_centerVertical="true">
+
+        <RecyclerView
+            android:id="@+id/tea_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+             />
+    </NestedScrollGroup>
+
+</RelativeLayout>

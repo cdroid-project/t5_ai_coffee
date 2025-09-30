@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="#990F0F0F">
+
+    <RelativeLayout
+        android:id="@+id/pop_group"
+        android:layout_width="880dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pop_normal_bg_r24">
+
+        <ImageView
+            android:id="@+id/warn_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_pop_tips"
+            android:layout_marginLeft="85dp"/>
+
+        <RelativeLayout
+            android:id="@+id/warn_info_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/warn_img"
+            android:layout_toLeftOf="@id/pop_enter_group"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/warn_title_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:text="水箱缺水"
+                android:textColor="#FFFFFFFF"
+                android:textSize="28dp" />
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/warn_info_tv"
+                android:layout_height="160dp"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="70dp"
+                android:gravity="left|center_vertical"
+                android:text="正在获取授权码"
+                android:textSize="24dp"
+                android:textColor="#FFFFFFFF"
+                android:lineSpacingExtra="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/warn_clean_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/warn_img"
+            android:layout_toLeftOf="@id/pop_enter_group"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/warn_clean_info_tv"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="60dp"
+                android:gravity="left|center_vertical"
+                android:text="您的咖啡机需要进行钙化情节了，是否立即清洁？"
+                android:textSize="26dp"
+                android:textColor="#FFFFFFFF"
+                android:lineSpacingExtra="10dp"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/warn_clean_switch_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/icon_checkbox_warn_clean"
+                android:drawablePadding="25dp"
+                android:text="两周内不再弹窗提醒"
+                android:textColor="#99FFFFFF"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_enter_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/pop_enter"
+                android:layout_width="166dp"
+                android:layout_height="60dp"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:text="确定"
+                android:background="@drawable/btn_r30_brown_gradient"/>
+
+            <TextView
+                style="@style/Harmony_Medium_Text"
+                android:id="@+id/pop_cancel"
+                android:layout_width="166dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/pop_enter"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:text="取消"
+                android:background="@drawable/btn_r30_brown_gradient_alpha"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

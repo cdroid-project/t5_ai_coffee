@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1810dp"
+    android:layout_height="350dp"
+    android:id="@+id/layout_coffee">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="45dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fav_back_img"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="53dp"
+            android:src="@mipmap/icon_fav_back"
+            android:scaleType="centerInside"
+            android:background="@drawable/bg_r43_brown"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_r43_brown"
+            android:layout_below="@id/fav_back_img">
+
+            <ImageView
+                android:id="@+id/icon_one_bean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_one_bean_select"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/icon_double_bean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_double_bean_select"
+                android:layout_below="@id/icon_one_bean"
+                android:layout_marginTop="53dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/powder_group"
+        android:layout_width="370dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="165dp"
+        android:visibility="invisible">
+
+        <ArcSeekBar
+            android:id="@+id/arc_powder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:clickWidth="65dp"
+            android:colorBackground="#33ACB635"
+            android:widthBackground="7dp"
+            android:colorForeground="#FF86fde8"
+            android:widthForeground="10dp"
+            android:radius="139dp"
+            android:startAngle="90"
+            android:endAngle="450"
+            android:min="0"
+            android:max="20"
+            android:showSlider="true"
+            android:slider="@mipmap/icon_huakuai" />
+            
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_centerInParent="true">
+
+            <View
+                android:id="@+id/powder_anim"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_centerInParent="true"/>
+
+            <ProgressBar
+                android:id="@+id/powder_progress_anim"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/progress_home"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/powder_title_tv"
+                android:layout_height="30dp"
+                android:layout_marginTop="91dp"
+                android:layout_centerHorizontal="true"
+                android:text="粉重"
+                android:textSize="21dp"
+                android:textColor="#FFA0A9B3"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/powder_reduce"
+                    android:layout_width="75dp"
+                    android:layout_height="90dp"
+                    android:paddingLeft="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/powder_info_tv"
+                    android:src="@drawable/btn_prev_select"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/powder_info_tv"
+                    style="@style/Bebas_Regular_Text"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="100"
+                    android:textColor="#86FDE8"
+                    android:textSize="63dp"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/powder_add"
+                    android:layout_width="75dp"
+                    android:layout_height="90dp"
+                    android:paddingLeft="-6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/powder_info_tv"
+                    android:src="@drawable/btn_add_select"
+                    android:scaleType="centerInside"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/powder_units_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="213dp"
+                android:text="g"
+                android:textSize="25dp"
+                android:textColor="#FF8C9297"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="520dp"
+        android:layout_height="350dp"
+        android:layout_toRightOf="@id/powder_group">
+
+        <include layout="@layout/home_info_layout_cup"/>
+        <include layout="@layout/home_info_layout_plot"/>
+        <include layout="@layout/home_info_layout_form"/>
+
+        <View
+            android:id="@+id/info_layout_touch_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+            
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/fav_name_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:text="测试1咖啡  我的美式"
+            android:textSize="22dp"
+            android:textColor="#FFFFFFFF"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right_group"
+        android:layout_width="370dp"
+        android:layout_height="350dp"
+        android:layout_toRightOf="@id/info_layout"
+        android:visibility="invisible">
+
+        <ArcSeekBar
+            android:id="@+id/arc_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:clickWidth="65dp"
+            android:colorBackground="#33ACB635"
+            android:widthBackground="7dp"
+            android:colorForeground="#FF86fde8"
+            android:widthForeground="10dp"
+            android:radius="139dp"
+            android:startAngle="90"
+            android:endAngle="450"
+            android:min="0"
+            android:max="100"
+            android:progress="30"
+            android:showSlider="true"
+            android:slider="@mipmap/icon_huakuai" />
+
+        <RelativeLayout
+            android:id="@+id/right_layout"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_centerInParent="true">
+
+            <View
+                android:id="@+id/right_anim"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_centerInParent="true"/>
+
+            <View
+                android:id="@+id/right_working_anim"
+                android:layout_width="327dp"
+                android:layout_height="327dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_home_puress_anim_pic"
+                android:visibility="invisible"/>
+            
+            <ProgressBar
+                android:id="@+id/right_progress_anim"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/progress_home"
+                android:visibility="invisible"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/right_info_title_tv"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="91dp"
+                android:layout_centerHorizontal="true"
+                android:text="出水量"
+                android:textSize="21dp"
+                android:textColor="#FFA0A9B3"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/right_info_reduce"
+                    android:layout_width="75dp"
+                    android:layout_height="90dp"
+                    android:paddingLeft="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_info_tv"
+                    android:src="@drawable/btn_prev_select"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/right_info_tv"
+                    style="@style/Bebas_Regular_Text"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="30"
+                    android:textColor="#86FDE8"
+                    android:textSize="70dp" />
+
+                <ImageView
+                    android:id="@+id/right_info_add"
+                    android:layout_width="75dp"
+                    android:layout_height="90dp"
+                    android:paddingLeft="-6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/right_info_tv"
+                    android:src="@drawable/btn_add_select"
+                    android:scaleType="centerInside"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/right_units_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="218dp"
+                android:text="mL"
+                android:textSize="25dp"
+                android:textColor="#FF8C9297"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/right_info_work_time_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="45dp"
+                android:drawableLeft="@mipmap/icon_ext_time"
+                android:drawablePadding="5dp"
+                android:text="0s"
+                android:textSize="25dp"
+                android:textColor="#FF5C5C5C"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="290dp"
+        android:layout_toLeftOf="@id/cup_layout"
+        android:layout_marginRight="45dp"
+        android:layout_centerVertical="true">
+
+        <RVNumberPicker
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/info_picker"
+            android:layout_width="200dp"
+            android:layout_height="290dp"
+            android:internalLayout="@layout/rvpicker_ver_select_layout"
+            android:itemBackground="@drawable/bg_r23_rvpick"
+            android:textSize="20dp"
+            android:textColor="#33FFFFFF"
+            android:min="0"
+            android:max="33"
+            android:wheelItemCount="5"
+            android:background="#00FFFFFF"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/hand_wash_fav_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/hand_wash_fav_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_favorites_select"/>
+
+            <ImageView
+                android:id="@+id/hand_wash_tips_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hand_wash_fav_img"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/icon_tips" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_tips_group"
+        android:layout_width="265dp"
+        android:layout_height="220dp"
+        android:background="#00ff00"
+        android:layout_toLeftOf="@id/cup_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="118dp"
+        android:layout_marginRight="180dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/hand_wash_tips_group"
+            android:layout_width="265dp"
+            android:layout_height="107dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="30dp"
+                android:text="累积注水量"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="22dp"
+                android:layout_marginLeft="30dp"
+                android:text="累积中断时间"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/hand_wash_tips_water_tv"
+                android:layout_width="90dp"
+                android:gravity="left|center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="5dp"
+                android:text="240ml"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/hand_wash_tips_time_tv"
+                android:layout_width="90dp"
+                android:gravity="left|center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="22dp"
+                android:layout_marginRight="5dp"
+                android:text="40s"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/home_tips_tea_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="与传统的热泡茶相比，口味更浓郁，冲泡时间更短。在这个过程中，茶叶渗透性逐渐被激活，茶叶中的香气和味道会逐渐被释放出来，形成纯净的茶汤"
+            android:lineSpacingExtra="10dp"
+            android:gravity="left"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cup_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fav_enter_img"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="53dp"
+            android:src="@mipmap/icon_fav_enter"
+            android:scaleType="centerInside"
+            android:background="@drawable/bg_r43_brown"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_r43_brown"
+            android:layout_below="@id/fav_enter_img">
+
+            <ImageView
+                android:id="@+id/icon_one_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_one_cup_select"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/icon_double_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_double_cup_select"
+                android:layout_below="@id/icon_one_cup"
+                android:layout_marginTop="53dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/icon_tea_rebrew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_tea_rebrew_select"
+                android:layout_below="@id/icon_one_cup"
+                android:layout_marginTop="53dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

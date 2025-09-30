@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="@mipmap/bg">
+
+    <include layout="@layout/status_bar_left" 
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="1810dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@mipmap/icon_back"
+                android:contentDescription="返回">
+            </ImageView>
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/page_clean_back_tv"
+                android:layout_height="match_parent"
+                android:text="电子秤校准"
+                android:textSize="32dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="60dp">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="745dp"
+                    android:layout_height="260dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingLeft="125dp"
+                    android:gravity="center|left"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_r24_scale_cal_card">
+
+                    <LinearLayout
+                        android:id="@+id/step_1_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/step_1_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP1"
+                            android:textSize="29dp"
+                            android:textColor="@color/text_select_scale_cal"
+                            android:drawableLeft="@drawable/icon_scale_cal_select_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/step_1_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="标定取零点"
+                            android:textSize="24dp"
+                            android:textColor="@color/text_select_scale_cal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/step_2_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/step_2_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP2"
+                            android:textSize="29dp"
+                            android:textColor="@color/text_select_scale_cal"
+                            android:drawableLeft="@drawable/icon_scale_cal_select_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/step_2_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="请放置500g砝码"
+                            android:textSize="24dp"
+                            android:textColor="@color/text_select_scale_cal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/step_3_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/step_3_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP3"
+                            android:textSize="29dp"
+                            android:textColor="@color/text_select_scale_cal"
+                            android:drawableLeft="@drawable/icon_scale_cal_select_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/step_3_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="请再增加放置500g砝码"
+                            android:textSize="24dp"
+                            android:textColor="@color/text_select_scale_cal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/step_4_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+
+                        <TextView
+                            style="@style/Bebas_Regular_Text"
+                            android:id="@+id/step_4_title_tv"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="STEP4"
+                            android:textSize="29dp"
+                            android:textColor="@color/text_select_scale_cal"
+                            android:drawableLeft="@drawable/icon_scale_cal_select_tips"/>
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/step_4_info_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:lineSpacingExtra="10dp"
+                            android:text="电子秤标定"
+                            android:textSize="24dp"
+                            android:textColor="@color/text_select_scale_cal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="470dp"
+                    android:layout_height="260dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bg_r24_scale_cal_card">
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:id="@+id/card2_title_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="实际重量"
+                        android:textSize="29dp"
+                        android:textColor="#CCFFFFFF"/>
+
+                    <TextView
+                        style="@style/Bebas_Regular_Text"
+                        android:id="@+id/card2_weight_tv"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/card2_title_tv"
+                        android:layout_marginTop="15dp"
+                        android:text="0"
+                        android:textSize="70dp"
+                        android:textColor="#CC000000"
+                        android:lineSpacingExtra="10dp"/>
+
+                    <TextView
+                        style="@style/Harmony_Regular_Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/card2_weight_tv"
+                        android:layout_marginTop="10dp"
+                        android:text="g"
+                        android:textSize="24dp"
+                        android:textColor="#CC000000"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

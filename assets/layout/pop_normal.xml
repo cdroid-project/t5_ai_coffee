@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="#990F0F0F">
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"/> -->
+
+    <RelativeLayout
+        android:id="@+id/pop_group"
+        android:layout_width="880dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pop_normal_bg_r24">
+
+        <RelativeLayout
+            android:id="@+id/pop_normal_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/pop_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_pop_tips"
+                android:layout_marginLeft="85dp"/>
+            <RelativeLayout
+                android:id="@+id/pop_info_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/pop_img"
+                android:layout_toLeftOf="@id/pop_enter_group"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/pop_title_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="软件更新"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="26dp" />
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/pop_info_tv"
+                    android:layout_height="160dp"
+                    android:layout_below="@id/pop_title_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="70dp"
+                    android:gravity="left|center_vertical"
+                    android:text="正在获取授权码"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:lineSpacingExtra="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pop_ota_info_scroll_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/pop_img"
+                android:layout_toLeftOf="@id/pop_enter_group">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/pop_ota_scroll_title_tv"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="软件更新"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="28dp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/pop_ota_scroll_title_tv"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="30dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:scrollbarThumbVertical="@drawable/pop_scrollbar_thum">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginHorizontal="10dp">
+
+                        <TextView
+                            style="@style/Harmony_Regular_Text"
+                            android:id="@+id/pop_ota_info_tv"
+                            android:layout_marginHorizontal="70dp"
+                            android:gravity="left"
+                            android:text="V1.1.2.2\n1、正在获取\n2、优化系统\n3、解决卡顿"
+                            android:textSize="20dp"
+                            android:textColor="#FFFFFFFF"
+                            android:lineSpacingExtra="15dp"/>
+
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/pop_enter_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_enter"
+                    android:layout_width="166dp"
+                    android:layout_height="60dp"
+                    android:textColor="#000000"
+                    android:textSize="26sp"
+                    android:text="确定"
+                    android:background="@drawable/btn_r30_brown_gradient"/>
+
+                <TextView
+                    style="@style/Harmony_Medium_Text"
+                    android:id="@+id/pop_cancel"
+                    android:layout_width="166dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/pop_enter"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000000"
+                    android:textSize="26sp"
+                    android:text="取消"
+                    android:background="@drawable/btn_r30_brown_gradient_alpha"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_ota_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/pop_ota_progress"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:progressDrawable="@drawable/progress_ota"
+                android:background="@mipmap/icon_ota"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pop_ota_progress"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/ota_info_tv"
+                    android:layout_width="290dp"
+                    android:gravity="left"
+                    android:text="软件更新中..."
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFFFF"
+                    android:lineSpacingExtra="10dp"/>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/ota_progress_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_below="@id/ota_info_tv"
+                    android:layout_marginTop="15dp"
+                    android:text="45%"
+                    android:textSize="30dp"
+                    android:textColor="#B2FFFFFF"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_bind_app_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/pop_bind_app_img_group"
+                android:layout_width="290dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/qrcode_box"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp"
+                    android:background="#ffffff">
+
+                    <QRCodeView
+                        android:id="@+id/pop_bind_app_img"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/Harmony_Regular_Text"
+                    android:id="@+id/pop_click_tips_tv"
+                    android:layout_below="@id/qrcode_box"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="(点击放大)"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:text="设备绑定"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26dp" />
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/pop_bind_app_info_tv"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="320dp"
+                android:layout_marginBottom="100dp"
+                android:gravity="left|center_vertical"
+                android:lineSpacingExtra="10dp"
+                android:text="打开APP（扫一扫）绑定设备"
+                android:textColor="#FFFFFFFF"
+                android:textSize="22dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
