@@ -1,7 +1,7 @@
 #include "pop_master_espresso.h"
 
-#include <widget/plotaxis.h>
-#include <widget/plotobject.h>
+#include <plotaxis.h>
+#include <cyplotobject.h>
 
 #include "R.h"
 #include "wind_mgr.h"
@@ -196,7 +196,7 @@ void PopMasterEspresso::initPlotViewData(){
     
 
     // 设置数据点，包括属性
-    mPlotObj = new PlotObject(Color::BLUE, PlotObject::Lines, 10, PlotObject::Pentagon);
+    mPlotObj = new CYPlotObject(Color::BLUE, CYPlotObject::Lines, 10, CYPlotObject::Pentagon);
 
     Cairo::RefPtr<Cairo::LinearGradient> patternColor = Cairo::LinearGradient::create(0,320,0,0);
     patternColor->add_color_stop_rgb(0,0.310,0.035,0.553);

@@ -2,7 +2,7 @@
 #include "conf_mgr.h"
 #include "wind_mgr.h"
 #include <plotaxis.h>
-#include <plotobject.h>
+#include <cyplotobject.h>
 #include "conn_mgr.h"
 #include "tuya_os_mgr.h"
 HomeTabModeMasEsp::HomeTabModeMasEsp(ViewGroup *wind_page_box):mWindPageBox(wind_page_box){
@@ -546,8 +546,8 @@ void HomeTabModeMasEsp::initPlotViewData(){
     
 
     // 设置数据点，包括属性
-    mPlotObj = new PlotObject(Color::BLUE, PlotObject::Lines, 10, PlotObject::Pentagon);
-    mPlotRealObj = new PlotObject(Color::BLUE, PlotObject::Lines, 10, PlotObject::Pentagon);
+    mPlotObj = new CYPlotObject(Color::BLUE, CYPlotObject::Lines, 10, CYPlotObject::Pentagon);
+    mPlotRealObj = new CYPlotObject(Color::BLUE, CYPlotObject::Lines, 10, CYPlotObject::Pentagon);
 
     Cairo::RefPtr<Cairo::LinearGradient> patternColor = Cairo::LinearGradient::create(0,320,0,0);
     patternColor->add_color_stop_rgb(0,0.310,0.035,0.553);

@@ -65,8 +65,8 @@ private:
 ////////////////// 测试浓缩特定控件 //////////////////////
     NumberPicker    *mPlotInfoModePicker;   // 测试浓缩 横向picker
     CYPlotView      *mPlotInfoPlotView;     // 测试浓缩 plot折线图
-    PlotObject      *mPlotObj;              // 测试浓缩 plot 折线图 数据
-    PlotObject      *mPlotRealObj;          // 测试浓缩 plot 折线图 实时数据
+    CYPlotObject      *mPlotObj;              // 测试浓缩 plot 折线图 数据
+    CYPlotObject      *mPlotRealObj;          // 测试浓缩 plot 折线图 实时数据
 
     ImageView       *mPlotInfoFavImg;       // 测试浓缩 收藏按钮
     ImageView       *mPlotInfoEditImg;      // 测试浓缩 的修改按钮图

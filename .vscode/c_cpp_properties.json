@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/*",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/tuya/include/**",
+                "~/Cdroid/src/**",
+                "~/Cdroid/outX64-Debug/include/**",
+                "~/Cdroid/outSIGMA-Debug/include/**",
+                "/opt/vcpkg/packages/**",
+                "~/Cdroid/src/gui/widgetEx/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc-11",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

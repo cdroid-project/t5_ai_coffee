@@ -35,7 +35,7 @@ protected:
     NumberPicker    *mPopPicker;
 
     CYPlotView        *mMasEspPopPlotView;   // 测试浓缩 plot折线图
-    PlotObject      *mPlotObj;
+    CYPlotObject      *mPlotObj;
     TextView        *mMasEspPopStep1;
     TextView        *mMasEspPopStep2;
     TextView        *mMasEspPopStep3;
