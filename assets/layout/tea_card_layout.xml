@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tea_card_Layout"
+    android:layout_width="360dp"
+    android:layout_height="360dp"
+    android:background="@mipmap/ext_tea_car">
+
+    <!-- <ImageView
+        android:id="@+id/tea_card_rebrew_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_tea_card_rebrew"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"/> -->
+
+    <TextView
+        style="@style/Harmony_Regular_Text"
+        android:id="@+id/tea_card_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:text="白茶"
+        android:textSize="28dp"
+        android:textColor="@color/white"/>
+</RelativeLayout>

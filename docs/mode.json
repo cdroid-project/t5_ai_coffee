@@ -236,7 +236,7 @@
             {
                 "sndModename":"花茶",
                 "sndModeType":1,
-                "pic":"@mipmap/pic_flower_tea",
+                "pic":"@mipmap/img_flower_tea",
                 "pressure":3,
                 "powderDef":3,
                 "washTeaNumMin":1,
@@ -255,7 +255,7 @@
             {
                 "sndModename":"绿茶",
                 "sndModeType":2,
-                "pic":"@mipmap/pic_green_tea",
+                "pic":"@mipmap/img_green_tea",
                 "pressure":3,
                 "powderDef":3,
                 "washTeaNumMin":1,
@@ -274,7 +274,7 @@
             {
                 "sndModename":"黄茶",
                 "sndModeType":3,
-                "pic":"@mipmap/pic_yellow_tea",
+                "pic":"@mipmap/img_yellow_tea",
                 "pressure":3,
                 "powderDef":4,
                 "washTeaNumMin":1,
@@ -293,7 +293,7 @@
             {
                 "sndModename":"白茶",
                 "sndModeType":4,
-                "pic":"@mipmap/pic_white_tea",
+                "pic":"@mipmap/img_white_tea",
                 "pressure":4,
                 "powderDef":4,
                 "washTeaNumMin":2,
@@ -312,7 +312,7 @@
             {
                 "sndModename":"青茶",
                 "sndModeType":5,
-                "pic":"@mipmap/pic_qing_tea",
+                "pic":"@mipmap/img_qing_tea",
                 "pressure":4,
                 "powderDef":4,
                 "washTeaNumMin":2,
@@ -331,7 +331,7 @@
             {
                 "sndModename":"红茶",
                 "sndModeType":6,
-                "pic":"@mipmap/pic_red_tea",
+                "pic":"@mipmap/img_red_tea",
                 "pressure":4,
                 "powderDef":5,
                 "washTeaNumMin":3,
@@ -350,7 +350,7 @@
             {
                 "sndModename":"黑茶",
                 "sndModeType":7,
-                "pic":"@mipmap/pic__black_tea",
+                "pic":"@mipmap/img_black_tea",
                 "pressure":4,
                 "powderDef":5,
                 "washTeaNumMin":3,

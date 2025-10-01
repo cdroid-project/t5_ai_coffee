@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="1810dp"
-        android:layout_height="350dp">
+        android:layout_height="360dp">
 
         <include layout="@layout/home_layout_coffee"/>
         <include layout="@layout/home_layout_tea_list"/>
