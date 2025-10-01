@@ -14,11 +14,11 @@
 
 
 typedef enum{
-    HOME_MT_ESPRESSO = 0,       // 测试咖啡
-    HOME_MT_AMERICANO,          // 测试1咖啡
-    HOME_MT_MASTER_ESPRESSO,    // 测试浓缩
-    HOME_MT_HAND_WASHED,        // 测试2咖啡
-    HOME_MT_EXTRACTING_TEA,     // 测茶
+    HOME_MT_ESPRESSO = 0,       // 意式咖啡
+    HOME_MT_AMERICANO,          // 美式咖啡
+    HOME_MT_MASTER_ESPRESSO,    // 大师浓缩
+    HOME_MT_HAND_WASHED,        // 手冲咖啡
+    HOME_MT_EXTRACTING_TEA,     // 萃茶
     HOME_MT_FAVORITES,          // 我的收藏
 }Home_Mode_Type;
 

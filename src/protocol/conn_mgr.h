@@ -49,11 +49,11 @@ public:
     void setDeviceSelfTest();
     // 自清洁（除垢）
     void setCleanSelf(bool flag, uint8_t type);
-    // 测试浓缩
+    // 大师浓缩
     void setMasEsp(bool flag,uint8_t extTemp,uint8_t soakTime,std::vector<MasEspStepDataStr> stepDataList);
-    // 测试2咖啡
+    // 手冲咖啡
     void setHandWash(bool flag,uint8_t extTemp,std::vector<FormStepDataStr> stepDataList);
-    // 测茶
+    // 萃茶
     void setExtTea(bool flag,uint8_t extTemp, bool isRebrew,ExtractTeaSndModeDataStr stepData);
 
     // 异常上报指令的回应帧

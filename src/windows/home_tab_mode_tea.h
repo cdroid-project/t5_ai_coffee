@@ -15,7 +15,7 @@ class HomeTabModeTea {
 class TeaSimpleCallback;
 private:  
     class TeaRecycAdapter;
-    // 测茶模式 洗茶 冲泡  泡茶（再萃）
+    // 萃茶模式 洗茶 冲泡  泡茶（再萃）
     enum{ 
         MAKE_TEA_WASH,      // 洗茶
         MAKE_TEA_EXT,       // 冲泡
@@ -40,7 +40,7 @@ public:
     Json::Value getCacheDataToJson();
 private:
     void initGroup();
-    void showHandWashPop(int selectStep);   // 显示 测试2咖啡 的修改弹窗页面
+    void showHandWashPop(int selectStep);   // 显示 手冲咖啡 的修改弹窗页面
     void setFormData();                     // 设置   表格数据
     void setStepStatus();                   // 设置 当前步骤
     void dealRightInfoAddReductClick(bool isAdd);
@@ -63,10 +63,10 @@ private:
     ImageView       *mDoubleBeanImg;    // 双豆按钮
     ImageView       *mOneCupImg;        // 单杯按钮
     ImageView       *mDoubleCupImg;     // 双杯按钮
-    ImageView       *mTeaRebrewImg;     // 测茶的再萃按钮
+    ImageView       *mTeaRebrewImg;     // 萃茶的再萃按钮
 
-    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、测茶)
-    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、测茶)
+    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、萃茶)
+    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、萃茶)
     TextView        *mHomeTipsTeaTv;
     ViewGroup       *mHomeTipsHandWashGroup;  
     
@@ -80,14 +80,14 @@ private:
     ExtractTeaSndModeDataStr mCacheData;
 ////////////////// 特定控件 //////////////////////
     ViewGroup       *mCoffeeGroup;      // 咖啡的容器
-    ViewGroup       *mTeaListGroup;     // 测茶列表的容器
+    ViewGroup       *mTeaListGroup;     // 萃茶列表的容器
     RecyclerView    *mTeaListRecycler;
     LinearLayoutManager *mLinearLyManager;
     TeaRecycAdapter *mTeaAdapter;
     TeaSimpleCallback  *mSimpleCallback;
     ItemTouchHelper    *mItemTouchHelper;
 
-    NumberPicker    *mHorModePicker;   // 测试2咖啡 横向picker
+    NumberPicker    *mHorModePicker;   // 手冲咖啡 横向picker
 
     ViewGroup       *mFormGroup;
     ViewGroup       *mFormTitleGroup;
@@ -116,7 +116,7 @@ private:
     TextView        *mFormStepTime_3;
 
     ImageView       *mFormStepAddImg;
-    ImageView       *mFavBackImg;       // 收藏功能页面的返回按钮（也适用于测茶步骤的返回）
+    ImageView       *mFavBackImg;       // 收藏功能页面的返回按钮（也适用于萃茶步骤的返回）
 private:
     int             mHorSelectPos;
     int             mBeanItemState;

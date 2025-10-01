@@ -25,7 +25,7 @@ public:
     Json::Value getCacheDataToJson();
 private:
     void initGroup();
-    void showHandWashPop(int selectStep);   // 显示 测试2咖啡 的修改弹窗页面
+    void showHandWashPop(int selectStep);   // 显示 手冲咖啡 的修改弹窗页面
     void setFormData();                     // 设置   表格数据
     void dealRightInfoAddReductClick(bool isAdd);
     void dealPowderItemClick(View &v);
@@ -48,18 +48,18 @@ private:
     ImageView       *mOneCupImg;        // 单杯按钮
     ImageView       *mDoubleCupImg;     // 双杯按钮
 
-    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、测茶)
-    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、测茶)
+    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、萃茶)
+    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、萃茶)
     ViewGroup       *mHomeTipsHandWashGroup;  
     TextView        *mHomeTipsTeaTv;
-    TextView        *mHomeTipsWater;// 主页的 group 累积注水量 (手冲模式、测茶)
-    TextView        *mHomeTipsTime; // 主页的 group 累积中断时间 (手冲模式、测茶)
+    TextView        *mHomeTipsWater;// 主页的 group 累积注水量 (手冲模式、萃茶)
+    TextView        *mHomeTipsTime; // 主页的 group 累积中断时间 (手冲模式、萃茶)
 ////////////////// 各种模式的数据 ////////////////////
     HandWashDataStr   mHandWashData;
  
     HandWashSndModeDataStr mCacheData;
-////////////////// 测试2咖啡特定控件 //////////////////////
-    NumberPicker    *mHorModePicker;   // 测试2咖啡 横向picker
+////////////////// 手冲咖啡特定控件 //////////////////////
+    NumberPicker    *mHorModePicker;   // 手冲咖啡 横向picker
 
     ViewGroup       *mFormGroup;
     ViewGroup       *mFormTitleGroup;

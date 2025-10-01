@@ -145,7 +145,7 @@ bool TuyaOsMgr::onDpCommDeal(unsigned char dpid,const void *data){
 
             memcpy(g_appData.tuyaDiyData,data,len);
             mIsRecvDiyData = true;
-            LOG(INFO) << "测茶 DIY透传型数据： hex str=" << hexstr(g_appData.tuyaDiyData, len);
+            LOG(INFO) << "萃茶 DIY透传型数据： hex str=" << hexstr(g_appData.tuyaDiyData, len);
             break;
         }case TYCMD_MODE:{
             // g_appData.tuyaExtCoffeeMode = 
@@ -309,7 +309,7 @@ void TuyaOsMgr::reportCoffeeDiyRawData(uint8_t type,     uint8_t mode,       uin
     ThreadPool::ins()->add(new ReportRawDpThread, rawDp, true);
 }
 
-// 上报测茶的DIY数据
+// 上报萃茶的DIY数据
 void TuyaOsMgr::reportTeaDiyRawData(uint8_t type, uint8_t mode, uint8_t temp, ExtractTeaSndModeDataStr teaStepData){
     uint8_t *rawData;
     int len = 0;
@@ -455,11 +455,11 @@ void TuyaOsMgr::reportAllStatus(){
     int hotwaterTotal = g_objConf->getHotWaterTotal();
     reportDpData(TYCMD_SWITCH,PROP_BOOL,&powerSwitch); // 开机
     reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); // 工作状态
-    reportDpData(TYCMD_NUM_ESPRESSO,PROP_VALUE, &extEspTotal); // 测试咖啡萃取次数
-    reportDpData(TYCMD_NUM_AMERICANO,PROP_VALUE, &extAmericanoTotal); // 测试1咖啡萃取次数
-    reportDpData(TYCMD_NUM_POUR,PROP_VALUE, &extHandWashTotal); // 测试2咖啡萃取次数
+    reportDpData(TYCMD_NUM_ESPRESSO,PROP_VALUE, &extEspTotal); // 意式咖啡萃取次数
+    reportDpData(TYCMD_NUM_AMERICANO,PROP_VALUE, &extAmericanoTotal); // 美式咖啡萃取次数
+    reportDpData(TYCMD_NUM_POUR,PROP_VALUE, &extHandWashTotal); // 手冲咖啡萃取次数
     reportDpData(TYCMD_NUM_MASTER,PROP_VALUE, &extMasEspTotal); // 大师咖啡萃取次数
-    reportDpData(TYCMD_NUM_EXTRACT_TEA,PROP_VALUE, &extTeaTotal); // 测茶萃取次数
+    reportDpData(TYCMD_NUM_EXTRACT_TEA,PROP_VALUE, &extTeaTotal); // 萃茶萃取次数
     reportDpData(TYCMD_NUM_GRIND,PROP_VALUE, &grindTotal); // 研磨次数
     reportDpData(TYCMD_NUM_MILK,PROP_VALUE, &steamTotal); // 打奶泡次数
     reportDpData(TYCMD_NUM_HOT,PROP_VALUE, &hotwaterTotal); // 出热水次数

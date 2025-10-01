@@ -440,7 +440,7 @@ void HomeTabModeEsp::dealPowderItemClick(View &v){
                 g_tuyaOsMgr->reportCoffeeDiyRawData(COFFEE_TYPE_NORMAL, CFM_ESP, mEspData.sndData.extractTempDef,
                                                     mEspData.sndData.extractWaterDef, mEspData.sndData.soakingTimeDef,0,0); // 咖啡DIY
             }else{
-                g_tuyaOsMgr->reportDpData(TYCMD_NUM_ESPRESSO,PROP_VALUE, &extEspTotal); // 测试咖啡萃取次数
+                g_tuyaOsMgr->reportDpData(TYCMD_NUM_ESPRESSO,PROP_VALUE, &extEspTotal); // 意式咖啡萃取次数
             }
                 
             g_tuyaOsMgr->reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); // 工作状态
@@ -527,7 +527,7 @@ Json::Value HomeTabModeEsp::getCacheDataToJson(){
     favSndItemData["soakingTimeDef"] = mCacheData.soakingTimeDef;
 
     favItemData["coffeeMode"] = HOME_MT_ESPRESSO;
-    favItemData["name"] = "测试咖啡";
+    favItemData["name"] = "意式咖啡";
     favItemData["beanGrindMode"] = g_objConf->getBeanGrindMode();
     favItemData["sndModeData"] = favSndItemData;
 

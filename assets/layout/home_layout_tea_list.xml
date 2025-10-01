@@ -18,7 +18,7 @@
             android:id="@+id/tea_card_title_tv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="「 测茶 」"
+            android:text="「 萃茶 」"
             android:textColor="@color/white"
             android:textSize="28dp"/>
 

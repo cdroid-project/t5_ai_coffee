@@ -61,7 +61,7 @@ private:
     HomeTabModeFav          *mFavMgr;
 
     ViewGroup       *mCoffeeGroup;      // 咖啡的容器
-    ViewGroup       *mTeaListGroup;     // 测茶列表的容器
+    ViewGroup       *mTeaListGroup;     // 萃茶列表的容器
     ViewGroup       *mFavListGroup;     // 收藏列表的容器
 
     ArcSeekBar      *mArcPowder;        // 粉重调节 的圆形进度条
@@ -84,7 +84,7 @@ private:
     ImageView       *mDoubleCupImg;     // 双杯按钮
     ImageView       *mFavBackImg;       // 收藏功能页面的返回按钮
     ImageView       *mFavEnterImg;      // 收藏功能页面的确认按钮
-    ImageView       *mTeaRebrewImg;     // 测茶的再萃按钮
+    ImageView       *mTeaRebrewImg;     // 萃茶的再萃按钮
     TextView        *mFavNameTv;        // 收藏功能页面的名字
 
     ImageView       *mPowderReduceImg;  // 粉重 减少按钮
@@ -92,10 +92,10 @@ private:
     ImageView       *mRightInfoReduceImg;  // 右边信息 减少按钮
     ImageView       *mRightInfoAddImg;     // 右边信息 增加按钮
 
-    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、测茶)
-    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、测茶)
-    ImageView       *mHomeFavImg;   // 主页的收藏 Img    (手冲模式、测茶)
-    ImageView       *mHomeTipsImg;  // 主页的Tips Img   (手冲模式、测茶)
+    ViewGroup       *mHomeFavGroup; // 主页的收藏 group (手冲模式、萃茶)
+    ViewGroup       *mHomeTipsGroup;// 主页的Tips group (手冲模式、萃茶)
+    ImageView       *mHomeFavImg;   // 主页的收藏 Img    (手冲模式、萃茶)
+    ImageView       *mHomeTipsImg;  // 主页的Tips Img   (手冲模式、萃茶)
 
     ProgressBar     *mPowderProgress;
     ProgressBar     *mRightProgress;
@@ -117,14 +117,14 @@ private:
     ValueAnimator   *mDislayHotWaterAnimator;
     ObjectAnimator   *mLastProgressAnimator;
 ////////////////// 三种模式 的group ////////////////////
-    ViewGroup       *mPicInfoGroup;   // 中间显示group：图片   (测试咖啡、测试1咖啡)
-    ViewGroup       *mPlotInfoGroup;  // 中间显示group：折线图 (测试浓缩)
-    ViewGroup       *mFormInfoGroup;  // 中间显示group：表格   (测试2咖啡)
+    ViewGroup       *mPicInfoGroup;   // 中间显示group：图片   (意式咖啡、美式咖啡)
+    ViewGroup       *mPlotInfoGroup;  // 中间显示group：折线图 (大师浓缩)
+    ViewGroup       *mFormInfoGroup;  // 中间显示group：表格   (手冲咖啡)
 
     View            *mInfoTouchView;  // 中间显示group,用于拦截touch的view 
     
 
-////////////////// 美式、测试咖啡 //////////////////////
+////////////////// 美式、意式咖啡 //////////////////////
     ImageView       *mCupInfoFavImg;       // 美式、意式 收藏按钮
 
     ViewGroup       *mCupResetGroup;
@@ -134,10 +134,10 @@ private:
     TextView        *mHotWaterTv;
     TextView        *mSteamTv;
 
-////////////////// 测试浓缩 ///////////////////////////
-    ImageView       *mPlotInfoFavImg;       // 测试浓缩 收藏按钮
+////////////////// 大师浓缩 ///////////////////////////
+    ImageView       *mPlotInfoFavImg;       // 大师浓缩 收藏按钮
     
-////////////////// 测试2咖啡、测茶 ///////////////////////////
+////////////////// 手冲咖啡、萃茶 ///////////////////////////
     ViewGroup       *mFormGroup;
     ViewGroup       *mFormStepGroup_0;
     ViewGroup       *mFormStepGroup_1;
@@ -146,7 +146,7 @@ private:
     ImageView       *mFormStepAddImg;
 
     NumberPicker    *mFormInfoHorPicker;
-////////////////// 测茶 ///////////////////////////
+////////////////// 萃茶 ///////////////////////////
 private:
     LinearLayout    *mHorScrollLayout;
     View            *mHomeTabAnimBg;

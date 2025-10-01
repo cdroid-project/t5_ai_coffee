@@ -71,7 +71,7 @@ int CConfMgr::init()
 
     // 加载 收藏 模式数据
     loadFavJsonData();
-    // 加载模式 步骤数据（测试浓缩、收藏咖啡）
+    // 加载模式 步骤数据（大师浓缩、收藏咖啡）
     loadModeJsonData();
     
     // 判断是否需要初始化
@@ -129,11 +129,11 @@ void CConfMgr::createConfig(){
         "    <item name=\"frothTotal\" desc=\"打奶泡总次数\">0</item>\n" 
         "    <item name=\"hotWaterTotal\" desc=\"出热水总次数\">0</item>\n"
         "    <item name=\"grindTotal\" desc=\"研磨总次数\">0</item>\n"
-        "    <item name=\"espressoTotal\" desc=\"测试咖啡总杯数\">0</item>\n"
-        "    <item name=\"americanoTotal\" desc=\"测试1咖啡总杯数\">0</item>\n"
-        "    <item name=\"masEspTotal\" desc=\"测试浓缩咖啡总杯数\">0</item>\n"
-        "    <item name=\"handWashTotal\" desc=\"测试2咖啡总杯数\">0</item>\n"
-        "    <item name=\"teaTotal\" desc=\"测茶总杯数\">0</item>\n"
+        "    <item name=\"espressoTotal\" desc=\"意式咖啡总杯数\">0</item>\n"
+        "    <item name=\"americanoTotal\" desc=\"美式咖啡总杯数\">0</item>\n"
+        "    <item name=\"masEspTotal\" desc=\"大师浓缩咖啡总杯数\">0</item>\n"
+        "    <item name=\"handWashTotal\" desc=\"手冲咖啡总杯数\">0</item>\n"
+        "    <item name=\"teaTotal\" desc=\"萃茶总杯数\">0</item>\n"
         "    <item name=\"hotWaterTemp\" desc=\"热水温度\">60</item>\n"
         "    <item name=\"hotWater\" desc=\"热水出水量\">150</item>\n"
         "    <item name=\"steamMode\" desc=\"蒸汽模式\">0</item>\n"
@@ -155,20 +155,20 @@ void CConfMgr::createConfig(){
 void CConfMgr::getHomeTabList(std::vector<HomePageTabDataStr> &tabList){
     tabList.clear();
     HomePageTabDataStr tabData;
-    tabData.modeType = HOME_MT_ESPRESSO;
-    tabData.modeName = mEspData.name;
-    tabList.push_back(tabData);
-
     tabData.modeType = HOME_MT_AMERICANO;
     tabData.modeName = mAmericanData.name;
     tabList.push_back(tabData);
 
-    tabData.modeType = HOME_MT_MASTER_ESPRESSO;
-    tabData.modeName = mMasEspData.name;
+    tabData.modeType = HOME_MT_ESPRESSO;
+    tabData.modeName = mEspData.name;
     tabList.push_back(tabData);
 
     tabData.modeType = HOME_MT_HAND_WASHED;
     tabData.modeName = mHandWashData.name;
+    tabList.push_back(tabData);
+
+    tabData.modeType = HOME_MT_MASTER_ESPRESSO;
+    tabData.modeName = mMasEspData.name;
     tabList.push_back(tabData);
 
     tabData.modeType = HOME_MT_EXTRACTING_TEA;
@@ -297,7 +297,7 @@ void CConfMgr::loadFavJsonData(){
 void CConfMgr::saveModeJsonData(bool isBak){
     Json::Value ModeJsonValue(Json::objectValue);
 
-    // 测试咖啡
+    // 意式咖啡
     Json::Value espData(Json::objectValue);
     espData["pic"] = mEspData.pic;
     espData["name"] = mEspData.name;
@@ -320,7 +320,7 @@ void CConfMgr::saveModeJsonData(bool isBak){
     espSndData["soakingTimeDef"] = mEspData.sndData.soakingTimeDef;
     espData["sndModeData"] = espSndData;
 
-    // 测试1咖啡
+    // 美式咖啡
     Json::Value americanData(Json::objectValue);
     americanData["pic"] = mAmericanData.pic;
     americanData["name"] = mAmericanData.name;
@@ -352,7 +352,7 @@ void CConfMgr::saveModeJsonData(bool isBak){
     americanSndData["hotWaterTempDef"] = mAmericanData.sndData.hotWaterTempDef;
     americanData["sndModeData"] = americanSndData;
 
-    // 测试浓缩
+    // 大师浓缩
     Json::Value masEspData(Json::objectValue);
     masEspData["name"] = mMasEspData.name;
     masEspData["powderMin"] = mMasEspData.powderMin;
@@ -389,7 +389,7 @@ void CConfMgr::saveModeJsonData(bool isBak){
     }
     masEspData["sndModeList"] = masEspSndList;
 
-    //测试2咖啡
+    //手冲咖啡
     Json::Value handWashData(Json::objectValue);
     handWashData["name"] = mHandWashData.name;
     handWashData["powderMin"] = mHandWashData.powderMin;
@@ -426,7 +426,7 @@ void CConfMgr::saveModeJsonData(bool isBak){
     }
     handWashData["sndModeList"] = handWashSndList;
 
-    // 测茶
+    // 萃茶
     Json::Value extTeaData(Json::objectValue);
     extTeaData["name"] = mExtTeaData.name;
     extTeaData["extractTempMin"] = mExtTeaData.extractTempMin;
@@ -611,7 +611,7 @@ void CConfMgr::setGrindTotal(int value){
     mPrefer.setValue(SECTION_INIT, "grindTotal", value);
 }
 
-// 测试咖啡 总次数
+// 意式咖啡 总次数
 int  CConfMgr::getEspTotal(){
     return mPrefer.getInt(SECTION_INIT, "espressoTotal", 0);
 }
@@ -619,7 +619,7 @@ void CConfMgr::setEspTotal(int value){
     mPrefer.setValue(SECTION_INIT, "espressoTotal", value);
 }
 
-// 测试1咖啡 总杯数
+// 美式咖啡 总杯数
 int  CConfMgr::getAmericanoTotal(){
     return mPrefer.getInt(SECTION_INIT, "americanoTotal", 0);
 }
@@ -627,7 +627,7 @@ void CConfMgr::setAmericanoTotal(int value){
     mPrefer.setValue(SECTION_INIT, "americanoTotal", value);
 }
 
-// 测试浓缩咖啡 总杯数
+// 大师浓缩咖啡 总杯数
 int  CConfMgr::getMasEspTotal(){
     return mPrefer.getInt(SECTION_INIT, "masEspTotal", 0);
 }
@@ -635,7 +635,7 @@ void CConfMgr::setMasEspTotal(int value){
     mPrefer.setValue(SECTION_INIT, "masEspTotal", value);
 }
 
-// 测试2咖啡 总杯数
+// 手冲咖啡 总杯数
 int  CConfMgr::getHandWashTotal(){
     return mPrefer.getInt(SECTION_INIT, "handWashTotal", 0);
 }
@@ -643,7 +643,7 @@ void CConfMgr::setHandWashTotal(int value){
     mPrefer.setValue(SECTION_INIT, "handWashTotal", value);
 }
 
-// 测茶 总次数
+// 萃茶 总次数
 int  CConfMgr::getTeaTotal(){
     return mPrefer.getInt(SECTION_INIT, "teaTotal", 0);
 }

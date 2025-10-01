@@ -37,7 +37,7 @@ std::vector<cityData> cityProvinceList = {
 // 读取模式数据
 void loadModeDataFromJson(Json::Value fromJsonData,EspDataStr &espStrData,AmericanDataStr &americanStrData,
                             MasEspDataStr &masEspStrData,HandWashDataStr &handWashStrData,ExtractTeaDataStr &extTeaStrData){
-    // 测试咖啡 数据
+    // 意式咖啡 数据
     Json::Value espData = fromJsonData["espresso"];
     espStrData.name = getJsonString(espData,"name");
     espStrData.pic = getJsonString(espData,"pic");
@@ -61,7 +61,7 @@ void loadModeDataFromJson(Json::Value fromJsonData,EspDataStr &espStrData,Americ
     espStrData.sndData.extractWaterDef = getJsonInt(espSndData,"extractWaterDef");
     espStrData.sndData.soakingTimeDef = getJsonInt(espSndData,"soakingTimeDef");
 
-    // 测试1咖啡 数据
+    // 美式咖啡 数据
     Json::Value americanData = fromJsonData["americano"];
     americanStrData.name = getJsonString(americanData,"name");
     americanStrData.pic = getJsonString(americanData,"pic");
@@ -94,7 +94,7 @@ void loadModeDataFromJson(Json::Value fromJsonData,EspDataStr &espStrData,Americ
     americanStrData.sndData.hotWaterTempDef = getJsonInt(americanSndData,"hotWaterTempDef");
     
 
-    // 测试浓缩
+    // 大师浓缩
     Json::Value masEspData = fromJsonData["master_espresso"];
     masEspStrData.name = getJsonString(masEspData,"name");
     masEspStrData.powderMin = getJsonInt(masEspData,"powderMin");
@@ -131,7 +131,7 @@ void loadModeDataFromJson(Json::Value fromJsonData,EspDataStr &espStrData,Americ
         }
     }
 
-    // 测试2咖啡
+    // 手冲咖啡
     Json::Value handWashData = fromJsonData["hand_wash"];
 
     handWashStrData.name = getJsonString(handWashData,"name");
@@ -171,7 +171,7 @@ void loadModeDataFromJson(Json::Value fromJsonData,EspDataStr &espStrData,Americ
         }
     }
     
-    // 测茶
+    // 萃茶
     Json::Value extractingTeaData = fromJsonData["extracting_tea"];
     extTeaStrData.name = getJsonString(extractingTeaData,"name");
 

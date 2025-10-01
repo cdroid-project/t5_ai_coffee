@@ -1,1 +1,1 @@
-/home/cikn/Cdroid/apps/T5-AI-COFFEE/conf/defualt_config.h
+/home/cikn/Cdroid/apps/t5_ai_coffee/conf/defualt_config.h

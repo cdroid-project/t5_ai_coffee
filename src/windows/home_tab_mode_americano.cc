@@ -489,7 +489,7 @@ void HomeTabModeAmericano::dealPowderItemClick(View &v){
                                                     mAmericanData.sndData.extractWaterDef, mAmericanData.sndData.soakingTimeDef,
                                                     mAmericanData.sndData.hotWaterDef, mAmericanData.sndData.hotWaterTempDef); // 咖啡DIY
             }else{
-                g_tuyaOsMgr->reportDpData(TYCMD_NUM_AMERICANO,PROP_VALUE, &extAmericanoTotal); // 测试1咖啡萃取次数
+                g_tuyaOsMgr->reportDpData(TYCMD_NUM_AMERICANO,PROP_VALUE, &extAmericanoTotal); // 美式咖啡萃取次数
             }
                 
             g_tuyaOsMgr->reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); // 工作状态
@@ -584,7 +584,7 @@ Json::Value HomeTabModeAmericano::getCacheDataToJson(){
     favSndItemData["soakingTimeDef"] = mCacheData.soakingTimeDef;
 
     favItemData["coffeeMode"] = HOME_MT_AMERICANO;
-    favItemData["name"] = "测试1咖啡";
+    favItemData["name"] = "美式咖啡";
     favItemData["beanGrindMode"] = g_objConf->getBeanGrindMode();
     favItemData["sndModeData"] = favSndItemData;
 

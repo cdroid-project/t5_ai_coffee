@@ -1,6 +1,6 @@
 {
     "espresso":{
-        "name":"测试咖啡",
+        "name":"意式咖啡",
         "pic":"@mipmap/pic_esp",
         "powderMin":1,
         "powderMax":22,
@@ -22,7 +22,7 @@
         }
     },
     "americano":{
-        "name":"测试1咖啡",
+        "name":"美式咖啡",
         "pic":"@mipmap/pic_americano",
         "powderMin":1,
         "powderMax":22,
@@ -52,7 +52,7 @@
         }
     },
     "master_espresso":{
-        "name":"测试浓缩",
+        "name":"大师浓缩",
         "pic":"",
         "powderMin":1,
         "powderMax":22,
@@ -144,7 +144,7 @@
         ]
     },
     "hand_wash":{
-        "name":"测试2咖啡",
+        "name":"手冲咖啡",
         "pic":"",
         "powderMin":1,
         "powderMax":22,
@@ -222,7 +222,7 @@
         ]
     },
     "extracting_tea":{
-        "name":"测茶",
+        "name":"萃茶",
         "extractTempMin":80,
         "extractTempMax":98,
         "extractTempGear":1,

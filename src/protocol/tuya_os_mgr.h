@@ -87,7 +87,7 @@ public:
                                 uint8_t soakTime, uint8_t hotWater,   uint8_t hotWaterTemp,
                                 std::vector<MasEspStepDataStr> MasEspStepDataList = {},
                                 std::vector<FormStepDataStr>   HandWashStepDataList = {});
-    // 上报测茶的DIY数据
+    // 上报萃茶的DIY数据
     void reportTeaDiyRawData(uint8_t type, uint8_t mode, uint8_t temp, ExtractTeaSndModeDataStr teaStepData);
 protected:
     virtual int checkEvents();

@@ -176,7 +176,7 @@ void HomeTabModeHandWash::onFavModeEditListener(int Position, bool isEdit){
     LOGE("mCacheData.stepDataList size = %d mCacheData.powderDef = %d",mCacheData.stepDataList.size(),mCacheData.powderDef);
 }
 
-// 显示 测试2咖啡 的修改弹窗页面
+// 显示 手冲咖啡 的修改弹窗页面
 void HomeTabModeHandWash::showHandWashPop(int selectStep){
     if((mPageEditType == HOME_PAGE_NORMAL) && (g_appData.machineState == MC_STATE_NONE)){
         g_windMgr->showSndStepPopPage(POP_TYPE_HAND_WASH,mWindPageBox,mHorModePicker->getValue(),selectStep,
@@ -357,7 +357,7 @@ void HomeTabModeHandWash::dealPowderItemClick(View &v){
                                                     mHandWashData.sndModeList.at(mHorModePicker->getValue()).stepDataList); 
                 LOGE("sndModeType = %d",mHandWashData.sndModeList.at(mHorModePicker->getValue()).sndModeType);
             }else{
-                g_tuyaOsMgr->reportDpData(TYCMD_NUM_POUR,PROP_VALUE, &extHandWashTotal); // 测试2咖啡萃取次数
+                g_tuyaOsMgr->reportDpData(TYCMD_NUM_POUR,PROP_VALUE, &extHandWashTotal); // 手冲咖啡萃取次数
             }
             // 工作状态 ------------
             g_tuyaOsMgr->reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); 
@@ -523,7 +523,7 @@ Json::Value HomeTabModeHandWash::getCacheDataToJson(){
     }
 
     favItemData["coffeeMode"] = HOME_MT_HAND_WASHED;
-    favItemData["name"] = "测试2咖啡";
+    favItemData["name"] = "手冲咖啡";
     favItemData["beanGrindMode"] = g_objConf->getBeanGrindMode();
     favItemData["sndModeData"] = favSndItemData;
 

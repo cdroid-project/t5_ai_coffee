@@ -40,6 +40,7 @@ typedef enum {
     CS_TUYA_START_CLEAN         = 0x00800000,     // 涂鸦的清洁指令下发
 
     CS_AI_DATA_CHANGE           = 0x01000000,     // AI数据更新
+    CS_AI_EXT                   = 0x02000000,     // AI发送萃取模式数据
 }callbackStatus;
 
 

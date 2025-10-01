@@ -54,23 +54,23 @@ public:
     int  getGrindTotal();
     void setGrindTotal(int value);
 
-    // 测试咖啡 总次数
+    // 意式咖啡 总次数
     int  getEspTotal();
     void setEspTotal(int value);
     
-    // 测试1咖啡 总杯数
+    // 美式咖啡 总杯数
     int  getAmericanoTotal();
     void setAmericanoTotal(int value);
 
-    // 测试浓缩咖啡 总杯数
+    // 大师浓缩咖啡 总杯数
     int  getMasEspTotal();
     void setMasEspTotal(int value);
 
-    // 测试2咖啡 总杯数
+    // 手冲咖啡 总杯数
     int  getHandWashTotal();
     void setHandWashTotal(int value);
 
-    // 测茶 总次数
+    // 萃茶 总次数
     int  getTeaTotal();
     void setTeaTotal(int value);
 

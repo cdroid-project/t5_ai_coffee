@@ -213,7 +213,7 @@ void CConnMgr::setCleanSelf(bool flag, uint8_t type){
     send2MCU();
 }
 
-// 测试浓缩
+// 大师浓缩
 void CConnMgr::setMasEsp(bool flag, uint8_t extTemp, uint8_t soakTime,std::vector<MasEspStepDataStr> stepDataList){
     mSetData = 0;
     mSndData[mSetData++] = 0x0E;
@@ -233,7 +233,7 @@ void CConnMgr::setMasEsp(bool flag, uint8_t extTemp, uint8_t soakTime,std::vecto
     send2MCU();
 }
 
-// 测试2咖啡
+// 手冲咖啡
 void CConnMgr::setHandWash(bool flag, uint8_t extTemp,std::vector<FormStepDataStr> stepDataList){
     mSetData = 0;
     mSndData[mSetData++] = 0x0F;
@@ -254,7 +254,7 @@ void CConnMgr::setHandWash(bool flag, uint8_t extTemp,std::vector<FormStepDataSt
     send2MCU();
 }
 
-// 测茶
+// 萃茶
 void CConnMgr::setExtTea(bool flag, uint8_t extTemp, bool isRebrew,ExtractTeaSndModeDataStr stepData){
     mSetData = 0;
     mSndData[mSetData++] = 0x0D;

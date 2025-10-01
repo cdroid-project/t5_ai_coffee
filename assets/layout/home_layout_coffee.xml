@@ -174,7 +174,7 @@
             android:id="@+id/fav_name_tv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="49dp"
-            android:text="测试1咖啡  我的美式"
+            android:text="美式咖啡  我的美式"
             android:textSize="22dp"
             android:textColor="#FFFFFFFF"/>
     </RelativeLayout>

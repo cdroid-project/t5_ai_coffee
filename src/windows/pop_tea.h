@@ -19,7 +19,7 @@ private:
     void initPopView()override;
     void initPopData()override;
 
-    void setStepData();// 初始化 测试2咖啡 步骤数据
+    void setStepData();// 初始化 手冲咖啡 步骤数据
     void saveStepData();
     void setTipsData();
 

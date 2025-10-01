@@ -50,7 +50,7 @@ private:
     EspDataStr       mEspData;
 
     EspSndDataStr   mCacheData;  // 缓存数据
-////////////////// 美式、测试咖啡 //////////////////////
+////////////////// 美式、意式咖啡 //////////////////////
     ImageView       *mCupInfoFavImg;       // 收藏按钮
     ImageView       *mInfoImg;          // 模式的咖啡图
 

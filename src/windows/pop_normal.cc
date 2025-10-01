@@ -233,7 +233,7 @@ void PopNormal::initPopData(){
         mNormalGroup->setVisibility(View::VISIBLE);
         mPopImg->setVisibility(View::VISIBLE);
         mPopTitleTv->setVisibility(View::GONE);
-        mPopInfoTv->setText("测茶工作中，是否取消？");
+        mPopInfoTv->setText("萃茶工作中，是否取消？");
         mPopInfoTv->setTextSize(26);
         mPopBtnConfirm->setText("取消");
         mPopBtnCancel->setText("继续");

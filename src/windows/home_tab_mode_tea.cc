@@ -436,7 +436,7 @@ void HomeTabModeTea::stopWork(){
 #ifndef TUYA_OS_DISABLE
     // 工作状态 ------------
     g_tuyaOsMgr->reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); 
-    // 测茶萃取次数
+    // 萃茶萃取次数
     if((mExtractStep != MAKE_TEA_WASH) && !(g_appData.machineState & MC_STATE_EXT)) 
         g_tuyaOsMgr->reportDpData(TYCMD_NUM_EXTRACT_TEA,PROP_VALUE, &extTeaTotal); 
 #endif
@@ -474,7 +474,7 @@ void HomeTabModeTea::stopWork(){
                 });
         }
     }else{
-        // 中断测茶
+        // 中断萃茶
         g_appData.machineState &= ~MC_STATE_EXT;
         g_objConnMgr->setExtTea(false,0,false,{}); 
 #ifndef TUYA_OS_DISABLE
@@ -516,7 +516,7 @@ void HomeTabModeTea::startWork(){
     }
     
     if(mExtractStep == MAKE_TEA_WASH)       mRightInfoTitleTv->setText("洗茶中");
-    else                                    mRightInfoTitleTv->setText("测茶中");
+    else                                    mRightInfoTitleTv->setText("萃茶中");
     mFavBackImg->setVisibility(View::GONE);
     mRightInfoUnitsTv->setText("ml");
     mFormStepAddImg->setVisibility(View::GONE);
@@ -725,7 +725,7 @@ Json::Value HomeTabModeTea::getCacheDataToJson(){
     favSndItemData["makeTeaInterTime"] = mCacheData.makeTeaInterTime;
 
     favItemData["coffeeMode"] = HOME_MT_EXTRACTING_TEA;
-    favItemData["name"] = "测茶";
+    favItemData["name"] = "萃茶";
     favItemData["beanGrindMode"] = g_objConf->getBeanGrindMode();
     favItemData["sndModeData"] = favSndItemData;
 

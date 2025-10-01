@@ -43,7 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/fav_info_group"
         android:layout_marginBottom="5dp"
-        android:text="测试咖啡"
+        android:text="意式咖啡"
         android:textSize="24dp"
         android:textColor="@color/white"
         android:drawableRight="@mipmap/icon_pop_edit"

@@ -32,8 +32,8 @@ typedef enum{
     HW_FLOW_RATE_TYPE_FAST,     // 快
 }FlowRateTypeEm;
 
-///////////////////////////////////////////// 测试咖啡 ////////////////////////////////////////////////
-// 测试咖啡 二级 数据结构体
+///////////////////////////////////////////// 意式咖啡 ////////////////////////////////////////////////
+// 意式咖啡 二级 数据结构体
 typedef struct tagEspData{
     int powderDef;      // 粉重 默认值
     int extractTempDef; // 萃取温度 默认值
@@ -46,7 +46,7 @@ typedef struct tagEspData{
     }
 }EspSndDataStr;
 
-// 测试咖啡 萃取模式 数据结构体
+// 意式咖啡 萃取模式 数据结构体
 typedef struct{
     std::string name;   // 萃取模式名称
     std::string pic;    // 图片
@@ -69,8 +69,8 @@ typedef struct{
     EspSndDataStr  sndData;
 }EspDataStr;
 
-///////////////////////////////////////////// 测试1咖啡 ////////////////////////////////////////////////
-// 测试1咖啡 二级 数据结构体
+///////////////////////////////////////////// 美式咖啡 ////////////////////////////////////////////////
+// 美式咖啡 二级 数据结构体
 typedef struct tagAmericanData{
     int powderDef;      // 粉重 默认值
     int extractTempDef; // 萃取温度 默认值
@@ -85,7 +85,7 @@ typedef struct tagAmericanData{
     }
 }AmericanSndDataStr;
 
-// 测试1咖啡 数据结构体
+// 美式咖啡 数据结构体
 typedef struct{
     std::string name;   // 萃取模式名称
     std::string pic;    // 图片
@@ -117,14 +117,14 @@ typedef struct{
     AmericanSndDataStr sndData;
 }AmericanDataStr;
 
-///////////////////////////////////////////// 测试浓缩 ////////////////////////////////////////////////
-// 测试浓缩模式 萃取模式 步骤 数据结构体
+///////////////////////////////////////////// 大师浓缩 ////////////////////////////////////////////////
+// 大师浓缩模式 萃取模式 步骤 数据结构体
 typedef struct{
     int pressure;   // 压力
     int water;      // 出水量
 }MasEspStepDataStr;
 
-// 测试浓缩模式 二级模式 数据结构体
+// 大师浓缩模式 二级模式 数据结构体
 typedef struct tagMasEspData{
     std::string sndModename;// 萃取模式名称
     int sndModeType;        // 萃取模式Type(目前仅用作上报APP)
@@ -148,7 +148,7 @@ typedef struct tagMasEspData{
     }
 }MasEspSndModeDataStr;
 
-// 测试浓缩模式 萃取模式 数据结构体
+// 大师浓缩模式 萃取模式 数据结构体
 typedef struct{
     std::string name;   // 萃取模式名称
 
@@ -171,7 +171,7 @@ typedef struct{
     std::vector<MasEspSndModeDataStr> sndModeList;  // 该模式的 步骤数据数据
 }MasEspDataStr;
 
-///////////////////////////////////////////// 测试2咖啡 ////////////////////////////////////////////////
+///////////////////////////////////////////// 手冲咖啡 ////////////////////////////////////////////////
 
 // 表格步骤 数据结构体
 typedef struct{
@@ -180,7 +180,7 @@ typedef struct{
     int interTime;  // 中断时间
 }FormStepDataStr;
 
-// 测试2咖啡 二级模式 数据结构体
+// 手冲咖啡 二级模式 数据结构体
 typedef struct tagHandWashData{
     std::string sndModename;// 萃取模式名称
     int sndModeType;        // 萃取模式Type(目前仅用作上报APP)
@@ -203,7 +203,7 @@ typedef struct tagHandWashData{
     }
 }HandWashSndModeDataStr;
 
-// 测试2咖啡模式 萃取模式 数据结构体
+// 手冲咖啡模式 萃取模式 数据结构体
 typedef struct{
     std::string name;   // 萃取模式名称
 
@@ -226,8 +226,8 @@ typedef struct{
     std::vector<HandWashSndModeDataStr> sndModeList;  // 该模式的数据
 }HandWashDataStr;
 
-///////////////////////////////////////////// 测茶 ////////////////////////////////////////////////
-// 测茶 二级菜单 数据结构体
+///////////////////////////////////////////// 萃茶 ////////////////////////////////////////////////
+// 萃茶 二级菜单 数据结构体
 typedef struct tagTeaData{
     std::string sndModename;   // 萃取模式名称
     int sndModeType;           // 萃取模式Type(目前仅用作上报APP)
@@ -261,7 +261,7 @@ typedef struct tagTeaData{
     }
 }ExtractTeaSndModeDataStr;
 
-// 测茶 数据结构体
+// 萃茶 数据结构体
 typedef struct{
     std::string name; // 萃取模式名称
 

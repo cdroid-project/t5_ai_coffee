@@ -1375,13 +1375,13 @@ void PageHome::dealTuyaExt(){
                 case COFFEE_TYPE_NORMAL:{
                     // 常规萃取
                     if(Mode == CFM_ESP){
-                        // 测试咖啡
-                        g_appData.homeTabSelectMode = 0;
+                        // 意式咖啡
+                        g_appData.homeTabSelectMode = 1;
                         mEspMgr->dealTuyaStartWork();
                         setGroupType(HOME_MT_ESPRESSO);
                     }else if(Mode == CFM_AMERICANO){
-                        // 测试1咖啡
-                        g_appData.homeTabSelectMode = 1;
+                        // 美式咖啡
+                        g_appData.homeTabSelectMode = 0;
                         mAmericanoMgr->dealTuyaStartWork();
                         setGroupType(HOME_MT_AMERICANO);
                     }else if(Mode == CFM_HOT){
@@ -1403,14 +1403,14 @@ void PageHome::dealTuyaExt(){
                     }
                     break;
                 }case COFFEE_TYPE_MAS:{
-                    // 测试浓缩
-                    g_appData.homeTabSelectMode = 2;
+                    // 大师浓缩
+                    g_appData.homeTabSelectMode = 3;
                     mMasEspMgr->dealTuyaStartWork();
                     setGroupType(HOME_MT_MASTER_ESPRESSO);
                     break;
                 }case COFFEE_TYPE_HANDWASH:{
-                    // 测试2咖啡
-                    g_appData.homeTabSelectMode = 3;
+                    // 手冲咖啡
+                    g_appData.homeTabSelectMode = 2;
                     mHandWashMgr->dealTuyaStartWork();
                     setGroupType(HOME_MT_HAND_WASHED);
                     break;

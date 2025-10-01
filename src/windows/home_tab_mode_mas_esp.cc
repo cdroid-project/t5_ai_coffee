@@ -410,7 +410,7 @@ void HomeTabModeMasEsp::dealPowderItemClick(View &v){
                                                     mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).stepDataList); 
                 LOGE("sndModeType = %d",mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).sndModeType);
             }else{
-                g_tuyaOsMgr->reportDpData(TYCMD_NUM_MASTER,PROP_VALUE, &extMasEspTotal); // 测试浓缩咖啡萃取次数
+                g_tuyaOsMgr->reportDpData(TYCMD_NUM_MASTER,PROP_VALUE, &extMasEspTotal); // 大师浓缩咖啡萃取次数
             }
             // 工作状态 ------------
             g_tuyaOsMgr->reportDpData(TYCMD_WORK_STATE,PROP_ENUM, &g_appData.eqStatus); 
@@ -629,7 +629,7 @@ Json::Value HomeTabModeMasEsp::getCacheDataToJson(){
         favSndItemData["stepDataList"].append(favSndStepItemData);
     }
     favItemData["coffeeMode"] = HOME_MT_MASTER_ESPRESSO;
-    favItemData["name"] = "测试浓缩";
+    favItemData["name"] = "大师浓缩";
     favItemData["beanGrindMode"] = g_objConf->getBeanGrindMode();
     favItemData["sndModeData"] = favSndItemData;
 

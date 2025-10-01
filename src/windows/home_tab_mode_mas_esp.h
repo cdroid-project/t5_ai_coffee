@@ -35,8 +35,8 @@ public:
 private:
     void initGroup();
 
-    void setPlotViewData();     // 设置   测试浓缩 折线图 数据
-    void initPlotViewData();    // 初始化 测试浓缩 折线图
+    void setPlotViewData();     // 设置   大师浓缩 折线图 数据
+    void initPlotViewData();    // 初始化 大师浓缩 折线图
     void dealRightInfoAddReductClick(bool isAdd);
     void dealPowderItemClick(View &v);
 private:
@@ -62,14 +62,14 @@ private:
     MasEspDataStr   mMasEspData;
 
     MasEspSndModeDataStr mCacheData;
-////////////////// 测试浓缩特定控件 //////////////////////
-    NumberPicker    *mPlotInfoModePicker;   // 测试浓缩 横向picker
-    CYPlotView      *mPlotInfoPlotView;     // 测试浓缩 plot折线图
-    CYPlotObject      *mPlotObj;              // 测试浓缩 plot 折线图 数据
-    CYPlotObject      *mPlotRealObj;          // 测试浓缩 plot 折线图 实时数据
+////////////////// 大师浓缩特定控件 //////////////////////
+    NumberPicker    *mPlotInfoModePicker;   // 大师浓缩 横向picker
+    CYPlotView      *mPlotInfoPlotView;     // 大师浓缩 plot折线图
+    CYPlotObject      *mPlotObj;              // 大师浓缩 plot 折线图 数据
+    CYPlotObject      *mPlotRealObj;          // 大师浓缩 plot 折线图 实时数据
 
-    ImageView       *mPlotInfoFavImg;       // 测试浓缩 收藏按钮
-    ImageView       *mPlotInfoEditImg;      // 测试浓缩 的修改按钮图
+    ImageView       *mPlotInfoFavImg;       // 大师浓缩 收藏按钮
+    ImageView       *mPlotInfoEditImg;      // 大师浓缩 的修改按钮图
 
 #if 0
     Runnable        mHorPickerUpdateRun;

@@ -41,18 +41,18 @@ enum{
     CMD_DEVICE_SELF_TEST            = 0x0D,     // 设备自检
     CMD_CLEAN_SELF                  = 0x0E,     // 自清洁（除垢）
 
-    CMD_MAS_ESP                     = 0x0F,     // 测试浓缩
-    CMD_HAND_WASH                   = 0x10,     // 测试2咖啡
-    CMD_EXTRACTION_TEA              = 0x11,     // 测茶
+    CMD_MAS_ESP                     = 0x0F,     // 大师浓缩
+    CMD_HAND_WASH                   = 0x10,     // 手冲咖啡
+    CMD_EXTRACTION_TEA              = 0x11,     // 萃茶
     CMD_WORK_DATA                   = 0x12,     // 工作数据
     CMD_DEVICE_SET                  = 0x13,     // 机器设置指令
 } ;
 
 // 萃取模式
 enum{
-    EXT_MODE_ESP            = 0x01,     // 测试咖啡
-    EXT_MODE_ESP_DOUBLE     = 0x02,     // 测试咖啡 (双杯)
-    EXT_MODE_AMERICANO      = 0x03,     // 测试1咖啡
+    EXT_MODE_ESP            = 0x01,     // 意式咖啡
+    EXT_MODE_ESP_DOUBLE     = 0x02,     // 意式咖啡 (双杯)
+    EXT_MODE_AMERICANO      = 0x03,     // 美式咖啡
     EXT_MODE_HOT_WATER      = 0x04,     // 热水
     EXT_MODE_STEAM          = 0x05,     // 蒸汽
 };
@@ -82,9 +82,9 @@ typedef enum{
     TYCMD_CLEAN_CAL                 = 102,// 钙化清洁                      布尔型
     TYCMD_MAKE_TYPE                 = 103,// 制作大类型                    枚举型      
     TYCMD_COFFEE_DIY                = 104,// 咖啡DIY                       透传型
-    TYCMD_TEA_DIY                   = 105,// 测茶IDY                       透传型
+    TYCMD_TEA_DIY                   = 105,// 萃茶IDY                       透传型
     TYCMD_BREW_AGAIN                = 106,// 再次冲泡                      数值型
-    TYCMD_NUM_EXTRACT_TEA           = 107,// 测茶次数             只上报    数值型
+    TYCMD_NUM_EXTRACT_TEA           = 107,// 萃茶次数             只上报    数值型
     TYCMD_NUM_GRIND                 = 108,// 研磨次数             只上报    数值型
     TYCMD_CLEAN_CAL_SECOND          = 109,// 钙化二次清洁                   布尔型
     TYCMD_CLEANING_START            = 110,// 清洁启动/暂停
@@ -92,13 +92,13 @@ typedef enum{
     TYCMD_GRAIN_UNIT_MODE           = 112,// 磨豆模式                      枚举型
 
     TYCMD_WORK_ALARM                = 114,// 异常提醒             只上报   故障型  
-    TYCMD_NUM_ESPRESSO              = 118,// 测试咖啡杯数         只上报   数值型
-    TYCMD_NUM_AMERICANO             = 119,// 测试1咖啡杯数         只上报   数值型
+    TYCMD_NUM_ESPRESSO              = 118,// 意式咖啡杯数         只上报   数值型
+    TYCMD_NUM_AMERICANO             = 119,// 美式咖啡杯数         只上报   数值型
     TYCMD_NUM_MASTER                = 120,// 大师咖啡杯数         只上报   数值型
-    TYCMD_NUM_POUR                  = 121,// 测试2咖啡杯数         只上报   数值型
+    TYCMD_NUM_POUR                  = 121,// 手冲咖啡杯数         只上报   数值型
     TYCMD_NUM_HOT                   = 123,// 出热水次数           只上报   数值型
     TYCMD_NUM_MILK                  = 124,// 打奶泡次数           只上报   数值型
-    TYCMD_TEA_MODE                  = 125,// 测茶模式                     枚举型
+    TYCMD_TEA_MODE                  = 125,// 萃茶模式                     枚举型
     TYCMD_MAKEING_START             = 126,// 制作停止/启动                 布尔型
 
     
@@ -126,24 +126,24 @@ typedef enum{
 // 制作大类型
 enum{
     MAKE_TYPE_COFFEE = 0,   // 咖啡
-    MAKE_TYPE_TEA           // 测茶
+    MAKE_TYPE_TEA           // 萃茶
 };
 
 // 咖啡模式
 enum{
-    CFM_ESP = 1,                // 测试咖啡
-    CFM_AMERICANO,              // 测试1咖啡
+    CFM_ESP = 1,                // 意式咖啡
+    CFM_AMERICANO,              // 美式咖啡
     CFM_HOT,                    // 热水
-    CFM_MAS_CLASSIC_9_BAR,      // 测试浓缩 经典-9bar
-    CFM_MAS_GENTLE_AND_SWEET,   // 测试浓缩 温和香甜
-    CFM_MAS_RICH_AND_SWEET,     // 测试浓缩 浓郁回甘 
-    CFM_MAS_CLASSIC_ITALIAN,    // 测试浓缩 经典意式浓缩
-    CFM_MAS_TURBO_SHOT,         // 测试浓缩 Turbo Shot
-    CFM_MAS_LUNGO,              // 测试浓缩 Lungo
-    CFM_MAS_CUSTOMER,           // 测试浓缩 自定义
+    CFM_MAS_CLASSIC_9_BAR,      // 大师浓缩 经典-9bar
+    CFM_MAS_GENTLE_AND_SWEET,   // 大师浓缩 温和香甜
+    CFM_MAS_RICH_AND_SWEET,     // 大师浓缩 浓郁回甘 
+    CFM_MAS_CLASSIC_ITALIAN,    // 大师浓缩 经典意式浓缩
+    CFM_MAS_TURBO_SHOT,         // 大师浓缩 Turbo Shot
+    CFM_MAS_LUNGO,              // 大师浓缩 Lungo
+    CFM_MAS_CUSTOMER,           // 大师浓缩 自定义
 
-    CFM_HAND_WASH_CLASSIC_TREE, // 测试2咖啡 经典三刀流
-    CFM_HAND_WASH_ONE_BLADE_SCHOOL, // 测试2咖啡 一刀流
+    CFM_HAND_WASH_CLASSIC_TREE, // 手冲咖啡 经典三刀流
+    CFM_HAND_WASH_ONE_BLADE_SCHOOL, // 手冲咖啡 一刀流
     CFM_HAND_WASH_DEEP_BAKING,  // 深度烘焙
     CFM_HAND_WASH_MEDIUM_ROAST, // 中度烘焙
     CFM_HAND_WASH_SHALLOW_BAKING,//浅度烘焙
@@ -153,8 +153,8 @@ enum{
 // 咖啡大类型
 enum{
     COFFEE_TYPE_NORMAL = 1, // 常规萃取
-    COFFEE_TYPE_MAS,        // 测试浓缩
-    COFFEE_TYPE_HANDWASH,   // 测试2咖啡
+    COFFEE_TYPE_MAS,        // 大师浓缩
+    COFFEE_TYPE_HANDWASH,   // 手冲咖啡
 };
 
 // 流速
@@ -164,7 +164,7 @@ enum{
     FLOW_DATE_HIGH,         // 高
 };
 
-// 测茶类型
+// 萃茶类型
 enum{
     TEA_TYPE_FLOWER = 1,    // 花茶
     TEA_TYPE_GREEN,         // 绿茶
@@ -175,9 +175,9 @@ enum{
     TEA_TYPE_BLACK,         // 黑茶
 };
 
-// 测茶大类型
+// 萃茶大类型
 enum{
-    EXTRACTING_TEA = 1, // 测茶
+    EXTRACTING_TEA = 1, // 萃茶
     MAKE_TEA,           // 冲茶
 };
 

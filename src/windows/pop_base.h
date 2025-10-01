@@ -9,13 +9,13 @@
 // #include "time_textview.h"
 
 typedef enum{
-    POP_TYPE_MASTER_ESPRESSO,   // 测试浓缩
-    POP_TYPE_HAND_WASH,         // 测试2咖啡
-    POP_TYPE_TEA,               // 测茶
-    POP_TYPE_TEA_REBREW_SET,    // 测茶 再沏的参数设置
-    POP_TYPE_TEA_EXT_TIPS,      // 测茶 冲泡
-    POP_TYPE_TEA_REBREW_TIPS,   // 测茶 再沏
-    POP_TYPE_TEA_CANCEL_WORK,   // 测茶 是否取消工作
+    POP_TYPE_MASTER_ESPRESSO,   // 大师浓缩
+    POP_TYPE_HAND_WASH,         // 手冲咖啡
+    POP_TYPE_TEA,               // 萃茶
+    POP_TYPE_TEA_REBREW_SET,    // 萃茶 再沏的参数设置
+    POP_TYPE_TEA_EXT_TIPS,      // 萃茶 冲泡
+    POP_TYPE_TEA_REBREW_TIPS,   // 萃茶 再沏
+    POP_TYPE_TEA_CANCEL_WORK,   // 萃茶 是否取消工作
     POP_OTA,                    // OTA弹窗
     POP_SET_TIME,               // 设置时间弹窗
     POP_HOT_WATER,              // 热水设置
