@@ -6,6 +6,7 @@
 #include "wifi_adapter.h"
 #include "curldownload.h"
 #include "conn_mgr.h"
+#include "t5_conn_mgr.h"
 #include "ota.h"
 #include <core/app.h>
 #include <ghc/filesystem.hpp>
@@ -132,7 +133,8 @@ int main(int argc, const char* argv[]) {
     g_objConf->init();
 
     // 平台通信
-    g_objConnMgr->init();
+    g_T5Mgr->init();
+    // g_objConnMgr->init();
     g_objBtnMgr->init();
 
     // CURL 初始化

@@ -9,11 +9,11 @@
                 "~/Cdroid/src/**",
                 "~/Cdroid/outX64-Debug/include/**",
                 "~/Cdroid/outSIGMA-Debug/include/**",
-                "/opt/vcpkg/packages/**",
+                "~/vcpkg/packages/**",
                 "~/Cdroid/src/gui/widgetEx/"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc-11",
+            "compilerPath": "/usr/bin/gcc-13",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64"

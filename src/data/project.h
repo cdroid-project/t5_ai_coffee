@@ -144,6 +144,9 @@ typedef struct tagAppGlobalData {
     std::string   getAuthError;     // 获取授权码的error code
     std::string   mcuOTAError;      // mcu更新的错误信息
     
+    std::string   aiText;           // ai回复的文本
+    Json::Value   aiJsonText;       // ai的json
+
     tagAppGlobalData()
         : isBeta(false),tuyaWifiStatus(PRO_STATE_TUYA_GB_LAN_UNCONN),isNeedUpdate(false),tuyaQrcode("none"),netSwitch(true),netOk(false),childLocked(PRO_STATE_TONGSUO_CLOSE),isShutDown(false),resetCount(0),AutoChildLocked(true),
             weatherTemp(20),weatherConImage("@mipmap/tuyaWeather/yin"),homeTabSelectMode(HOME_MT_ESPRESSO),

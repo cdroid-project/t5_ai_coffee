@@ -81,13 +81,13 @@ int CConnMgr::handleEvents() {
 }
 
 void CConnMgr::setFactoryCallback(UartClient::uartCallback cb){
-    if(cb){
-        mIsFactory = true;
-        mUartMCU->setProductCallback(cb);
-    }else{
-        mIsFactory = false;
-        mUartMCU->setProductCallback(nullptr);
-    }
+    // if(cb){
+    //     mIsFactory = true;
+    //     mUartMCU->setProductCallback(cb);
+    // }else{
+    //     mIsFactory = false;
+    //     mUartMCU->setProductCallback(nullptr);
+    // }
 }
 
 // 关机指令
@@ -314,6 +314,7 @@ void CConnMgr::setResetStatus(bool flag){
 }
 
 void CConnMgr::send2MCU() {
+    return;
     BuffData *bd = mPacket->obtain();
     UI2MCU   snd(bd);
 
