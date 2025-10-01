@@ -35,6 +35,7 @@ public:
     void onHorPickerChange();
     void onFavModeEditListener(int Position, bool isEdit);
     void dealTuyaStartWork();
+    void dealAiData();
     void stopWork();
     void startWork();
     Json::Value getCacheDataToJson();

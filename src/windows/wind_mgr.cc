@@ -341,6 +341,17 @@ void CWindMgr::updateDate(){
             return;
         }
     }
+
+    if(g_appData.statusChangeFlag & CS_AI_DATA_CHANGE){
+        showHomePage();
+        std::string deviceText = g_appData.aiJsonText["device"].isString()?g_appData.aiJsonText["device"].asString():"null";
+
+        if(deviceText.find("coffee") != std::string::npos){
+            g_appData.statusChangeFlag |= CS_AI_EXT;
+            g_appData.statusChangeFlag &= ~CS_AI_DATA_CHANGE;
+        }
+    }
+
     if(mShowPage) mShowPage->updatePageData();
     g_appData.statusChangeFlag = 0x00;
 }

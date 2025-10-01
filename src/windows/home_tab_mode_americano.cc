@@ -573,6 +573,14 @@ void HomeTabModeAmericano::dealTuyaStartWork(){
     g_objConf->setAmericanData(mAmericanData);
 }
 
+void HomeTabModeAmericano::dealAiData(){
+    mAmericanData.sndData.extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
+    mAmericanData.sndData.extractWaterDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_water");
+    mAmericanData.sndData.soakingTimeDef = getJsonInt(g_appData.aiJsonText["params"],"pre_soak_time");
+    mAmericanData.sndData.hotWaterDef = getJsonInt(g_appData.aiJsonText["params"],"hot_water_volume");
+    mAmericanData.sndData.hotWaterTempDef = getJsonInt(g_appData.aiJsonText["params"],"hot_water_temp");
+}
+
 Json::Value HomeTabModeAmericano::getCacheDataToJson(){
     Json::Value favItemData;
     Json::Value favSndItemData;

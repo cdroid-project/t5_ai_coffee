@@ -456,6 +456,25 @@ void HomeTabModeMasEsp::dealTuyaStartWork(){
     g_objConf->setMasEspData(mMasEspData);
 }
 
+void HomeTabModeMasEsp::dealAiData(){
+    mPlotInfoModePicker->setValue(mMasEspData.sndModeList.size() - 1);
+    mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
+    mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).soakingTimeDef = getJsonInt(g_appData.aiJsonText["params"],"pre_soak_time");
+
+    std::vector<MasEspStepDataStr> &stepData = mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).stepDataList;
+    stepData.clear();
+    if(g_appData.aiJsonText["params"]["steps"].isArray()){
+        Json::Value jsonStepList = g_appData.aiJsonText["params"]["steps"];
+        for(int i=0;i<5;i++){
+            if(i < jsonStepList.size()){
+                stepData.push_back({getJsonInt(jsonStepList[i],"pressure"),getJsonInt(jsonStepList[i],"water")});
+            }else{
+                break;
+            }
+        }
+    }
+}
+
 void HomeTabModeMasEsp::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){

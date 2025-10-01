@@ -52,6 +52,8 @@ private:
     void updatePressureGauge();         // 更新压力表数据
     void dealWarnStatus();
     void dealTuyaExt();
+
+    void dealAiExt();
 private:
     HomeTabModeEsp          *mEspMgr;
     HomeTabModeAmericano    *mAmericanoMgr;

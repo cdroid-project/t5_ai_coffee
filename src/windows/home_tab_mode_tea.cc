@@ -596,6 +596,30 @@ void HomeTabModeTea::dealTuyaStartWork(){
     g_objConf->setExtractTeaData(mExtTeaData);
 }
 
+void HomeTabModeTea::dealAiData(){
+    mHorSelectPos = mExtTeaData.sndModeList.size() - 1;
+    mHorModePicker->setValue(mHorSelectPos);
+    mExtTeaData.sndModeList.at(mHorModePicker->getValue()).extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
+    ExtractTeaSndModeDataStr &stepData = mExtTeaData.sndModeList.at(mHorModePicker->getValue());
+
+    if(g_appData.aiJsonText["params"]["steps"].isArray()){
+        Json::Value jsonStepList = g_appData.aiJsonText["params"]["steps"];
+        if(jsonStepList.size() == 3){
+            stepData.washTeaWater = getJsonInt(jsonStepList[0],"water");
+            stepData.washTeaFlowRate = getJsonInt(jsonStepList[0],"flow_rate");
+            stepData.washTeaInterTime = getJsonInt(jsonStepList[0],"break_time");
+
+            stepData.soakTeaWater = getJsonInt(jsonStepList[1],"water");
+            stepData.soakTeaFlowRate = getJsonInt(jsonStepList[1],"flow_rate");
+            stepData.soakTeaInterTime = getJsonInt(jsonStepList[1],"break_time");
+            
+            stepData.makeTeaWater = getJsonInt(jsonStepList[2],"water");
+            stepData.makeTeaFlowRate = getJsonInt(jsonStepList[2],"flow_rate");
+            stepData.makeTeaInterTime = getJsonInt(jsonStepList[2],"break_time");
+        }
+    }
+}
+
 void HomeTabModeTea::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){

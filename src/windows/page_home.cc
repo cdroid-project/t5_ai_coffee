@@ -525,6 +525,10 @@ void PageHome::updatePageData(){
         dealTuyaExt();
     }
 
+    if(g_appData.statusChangeFlag & CS_AI_EXT){
+        dealAiExt();
+    }
+
     // 涂鸦下发 测茶下一步
     // if(g_appData.statusChangeFlag & CS_TUYA_TEA_NEXT_STEP){
     //     InputEventSource::getInstance().closeScreenSaver();
@@ -1466,4 +1470,67 @@ void PageHome::dealTuyaExt(){
             else                                    LOGE("*************************** 状态错误 !!!!!!!!!!!!!!!!!!!");
         }
     }
+}
+
+
+void PageHome::dealAiExt(){
+    InputEventSource::getInstance().closeScreenSaver();
+    mPageEditType = HOME_PAGE_NORMAL;
+
+    int OldTabSelectMode = g_appData.homeTabSelectMode;
+    std::string ModeText = g_appData.aiJsonText["params"]["mode"].isString()?g_appData.aiJsonText["params"]["mode"].asString():"null";
+
+    if(ModeText.find("espresso") != std::string::npos){
+        // 意式咖啡
+        g_appData.homeTabSelectMode = 1;
+        mEspMgr->dealAiData();
+        setGroupType(HOME_MT_ESPRESSO);
+    }else if(ModeText.find("american") != std::string::npos){
+        // 美式咖啡
+        g_appData.homeTabSelectMode = 0;
+        mAmericanoMgr->dealAiData();
+        setGroupType(HOME_MT_AMERICANO);
+    }else if(ModeText.find("master_concentrate") != std::string::npos){
+        // 大师浓缩
+        g_appData.homeTabSelectMode = 3;
+        mMasEspMgr->dealAiData();
+        setGroupType(HOME_MT_MASTER_ESPRESSO);
+    }else if(ModeText.find("pour_over") != std::string::npos){
+        // 手冲咖啡
+        g_appData.homeTabSelectMode = 2;
+        mHandWashMgr->dealAiData();
+        setGroupType(HOME_MT_HAND_WASHED);
+    }else if(ModeText.find("tea_extraction") != std::string::npos){
+        g_appData.homeTabSelectMode = 4;
+        mTeaMgr->dealAiData();
+        if(mGroupType != HOME_MT_EXTRACTING_TEA)setGroupType(HOME_MT_EXTRACTING_TEA);
+        mTeaMgr->updateCoffeeGroupData();
+    }else if(ModeText.find("hot_water") != std::string::npos){
+        // 热水
+        g_appData.hotWater = g_appData.tuyaDiyData[5];
+        g_appData.hotWaterTemp = g_appData.tuyaDiyData[6];
+        LOGE(" g_appData.hotWater = %d  g_appData.hotWaterTemp = %d", g_appData.hotWater,g_appData.hotWaterTemp);
+        if((mGroupType != HOME_MT_ESPRESSO) && (mGroupType != HOME_MT_AMERICANO)){
+            g_appData.homeTabSelectMode = 0;
+            setGroupType(HOME_MT_ESPRESSO);
+        }
+        g_objConf->setHotWater(g_appData.hotWater);
+        g_objConf->setHotWaterTemp(g_appData.hotWaterTemp);
+        mHotWaterTv->performClick();
+        return;
+    }
+
+    // 移动Tab
+    if(OldTabSelectMode != g_appData.homeTabSelectMode){
+        mHorScrollLayout->getChildAt(OldTabSelectMode)->setActivated(false);
+        // mHorScrollLayout->getChildAt(g_appData.homeTabSelectMode)->setActivated(true);
+        int selectPos = g_appData.homeTabSelectMode;
+        int duration = std::abs(mHomeTabAnimBg->getTranslationX() - 255*selectPos);
+        mHomeTabAnimBgListener.onAnimationEnd = [this,selectPos](Animator& animation, bool isReverse){
+            if(selectPos == g_appData.homeTabSelectMode) mHorScrollLayout->getChildAt(g_appData.homeTabSelectMode)->setActivated(true);
+        };
+        mHomeTabAnimBg->animate().cancel();
+        mHomeTabAnimBg->animate().translationX(255*selectPos).setDuration(duration).setListener(mHomeTabAnimBgListener).start();
+    }
+
 }

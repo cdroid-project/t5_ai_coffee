@@ -402,6 +402,25 @@ void HomeTabModeHandWash::dealTuyaStartWork(){
     g_objConf->setHandWashData(mHandWashData);
 }
 
+void HomeTabModeHandWash::dealAiData(){
+    mHorSelectPos = mHandWashData.sndModeList.size() - 1;
+    mHorModePicker->setValue(mHorSelectPos);
+
+    mHandWashData.sndModeList.at(mHorModePicker->getValue()).extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
+    std::vector<FormStepDataStr> &stepData = mHandWashData.sndModeList.at(mHorModePicker->getValue()).stepDataList;
+    stepData.clear();
+    if(g_appData.aiJsonText["params"]["steps"].isArray()){
+        Json::Value jsonStepList = g_appData.aiJsonText["params"]["steps"];
+        for(int i=0;i<4;i++){
+            if(i < jsonStepList.size()){
+                stepData.push_back({getJsonInt(jsonStepList[i],"water"),getJsonInt(jsonStepList[i],"flow_rate"),getJsonInt(jsonStepList[i],"break_time")});
+            }else{
+                break;
+            }
+        }
+    }
+}
+
 void HomeTabModeHandWash::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){

@@ -23,6 +23,7 @@ public:
     void updateBeanCupImgStatus();
     void onFavModeEditListener(int Position, bool isEdit);
     void dealTuyaStartWork();
+    void dealAiData();
     Json::Value getCacheDataToJson();
 private:
     void initGroup();

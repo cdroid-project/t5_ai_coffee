@@ -517,6 +517,12 @@ void HomeTabModeEsp::dealTuyaStartWork(){
     g_objConf->setEspData(mEspData);
 }
 
+void HomeTabModeEsp::dealAiData(){
+    mEspData.sndData.extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
+    mEspData.sndData.extractWaterDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_water");
+    mEspData.sndData.soakingTimeDef = getJsonInt(g_appData.aiJsonText["params"],"pre_soak_time");
+}
+
 
 Json::Value HomeTabModeEsp::getCacheDataToJson(){
     Json::Value favItemData;
