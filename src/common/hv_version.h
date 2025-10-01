@@ -12,18 +12,18 @@
 #include <stdio.h>
 #include "hv_series_conf.h"
 
-#define HV_SOFT_VER_MAJ "HV_MAJ"
-#define HV_SOFT_VER_MIN "HV_MIN"
+#define HV_SOFT_VER_MAJ "01"
+#define HV_SOFT_VER_MIN "00"
 
-#define HV_SOFT_VER_EXT "RevTag"
-#define HV_BETA_BER_EXT "BetaTag"
-#define HV_LOWEST_VER_EXT "LowestTag"
+#define HV_SOFT_VER_EXT "1.1.6.3"
+#define HV_BETA_BER_EXT "255.1.6.3"
+#define HV_LOWEST_VER_EXT "1.0.0.0"
 
-#define HV_TUYA_VER_EXT "TuyaVer"
+#define HV_TUYA_VER_EXT "1.6.3"
 
-#define HV_SOFT_VER_TIME "RevTIME"
+#define HV_SOFT_VER_TIME "2025-10-01 10:33.24 UTC"
 
-#define HV_SOFT_GIT_HARD "RevGITLAB"
+#define HV_SOFT_GIT_HARD "820ad3ec3b1bbd3e1099fbc5eefc36676cf48bf3"
 
 #define HV_SOFT_VERSION "V" HV_CPU_NAME "." HV_SOFT_VER_MAJ "." HV_SOFT_VER_MIN "." HV_SOFT_VER_EXT "." HV_SOFT_VER_TIME
 #define HV_SOFT_VERSION_NEW HV_SOFT_VER_MAJ "." HV_SOFT_VER_EXT "." HV_SOFT_VER_MIN "." HV_SOFT_VER_TIME
@@ -31,7 +31,7 @@
 
 #define HV_OS_VER_S "Linux 4.4"
 
-#define HV_HARD_VER_S "RevHardVer"
+#define HV_HARD_VER_S "A0.01.00"
 
 #define HV_HARD_VERSION "V" HV_CPU_NAME "." HV_HARD_VER_S
 
@@ -74,4 +74,3 @@ static inline const char* HV_FORMAT_GIT_HARD_STRING()
 }
 
 #endif
-

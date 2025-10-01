@@ -71,58 +71,58 @@ PageHome::~PageHome() {
 }
 
 void PageHome::initPageView(){
-    mHorScrollLayout    = (LinearLayout *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::hor_scroll_layout);
+    mHorScrollLayout    = (LinearLayout *)mPageLayout->findViewById(t5_ai_coffee::R::id::hor_scroll_layout);
 
-    mHomeTabAnimBg = mPageLayout->findViewById(kaidu_ms7_lqy::R::id::tab_anim_bg);
-    mCoffeeGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::layout_coffee);
-    mTeaListGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::layout_tea_list);
-    mFavListGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::layout_fav_list);
+    mHomeTabAnimBg = mPageLayout->findViewById(t5_ai_coffee::R::id::tab_anim_bg);
+    mCoffeeGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::layout_coffee);
+    mTeaListGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::layout_tea_list);
+    mFavListGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::layout_fav_list);
 
-    mArcPowder      = (ArcSeekBar *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::arc_powder);
-    mArcRight       = (ArcSeekBar *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::arc_right);
+    mArcPowder      = (ArcSeekBar *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::arc_powder);
+    mArcRight       = (ArcSeekBar *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::arc_right);
 
-    mInfoRVPicker   = (RVNumberPicker *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::info_picker);
+    mInfoRVPicker   = (RVNumberPicker *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::info_picker);
 
-    mPowderInfoTitleTv = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_title_tv);
-    mPowderInfoTv   = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_info_tv);
-    mPowderInfoUnitsTv = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_units_tv);
-    mRightInfoTv    = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_info_tv);
-    mRightInfoTitleTv = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_info_title_tv);
-    mRightInfoUnitsTv = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_units_tv);
-    mRightInfoWorkTimeTv = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_info_work_time_tv);
+    mPowderInfoTitleTv = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_title_tv);
+    mPowderInfoTv   = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_info_tv);
+    mPowderInfoUnitsTv = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_units_tv);
+    mRightInfoTv    = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_info_tv);
+    mRightInfoTitleTv = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_info_title_tv);
+    mRightInfoUnitsTv = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_units_tv);
+    mRightInfoWorkTimeTv = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_info_work_time_tv);
 
-    mOneBeanImg     = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::icon_one_bean);
-    mDoubleBeanImg  = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::icon_double_bean);
-    mOneCupImg      = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::icon_one_cup);
-    mDoubleCupImg   = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::icon_double_cup);
-    mTeaRebrewImg   = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::icon_tea_rebrew);
-    mFavBackImg     = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::fav_back_img);
-    mFavEnterImg     = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::fav_enter_img);
-    mFavNameTv      = (TextView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::fav_name_tv);
+    mOneBeanImg     = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::icon_one_bean);
+    mDoubleBeanImg  = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::icon_double_bean);
+    mOneCupImg      = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::icon_one_cup);
+    mDoubleCupImg   = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::icon_double_cup);
+    mTeaRebrewImg   = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::icon_tea_rebrew);
+    mFavBackImg     = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::fav_back_img);
+    mFavEnterImg     = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::fav_enter_img);
+    mFavNameTv      = (TextView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::fav_name_tv);
 
-    mPowderReduceImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_reduce);
-    mPowderAddImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_add);
-    mRightInfoReduceImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_info_reduce);
-    mRightInfoAddImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_info_add);
+    mPowderReduceImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_reduce);
+    mPowderAddImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_add);
+    mRightInfoReduceImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_info_reduce);
+    mRightInfoAddImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_info_add);
 
-    mHomeFavGroup = (ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::hand_wash_fav_group);
-    mHomeTipsGroup = (ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::home_tips_group);
-    mHomeFavImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::hand_wash_fav_img);
-    mHomeTipsImg = (ImageView *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::hand_wash_tips_img);
+    mHomeFavGroup = (ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::hand_wash_fav_group);
+    mHomeTipsGroup = (ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::home_tips_group);
+    mHomeFavImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::hand_wash_fav_img);
+    mHomeTipsImg = (ImageView *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::hand_wash_tips_img);
 
-    mPowderProgress = (ProgressBar *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_progress_anim);
-    mRightProgress  = (ProgressBar *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_progress_anim);
+    mPowderProgress = (ProgressBar *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_progress_anim);
+    mRightProgress  = (ProgressBar *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_progress_anim);
     
-    mPowderAnimView = mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_anim);
-    mRightAnimView = mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_anim);
-    mRightWorkingAnimView = mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_working_anim);
+    mPowderAnimView = mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_anim);
+    mRightAnimView = mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_anim);
+    mRightWorkingAnimView = mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_working_anim);
 
     mPowderProgress->setVisibility(View::GONE);
     mRightProgress->setVisibility(View::GONE);
     mRightWorkingAnimView->setVisibility(View::GONE);
 #ifdef CDROID_X64
-    mPowderAnimView->setBackgroundResource("../apps/kaidu_ms7_lqy/docs/home_anims.webp");
-    mRightAnimView->setBackgroundResource("../apps/kaidu_ms7_lqy/docs/home_anims.webp");
+    mPowderAnimView->setBackgroundResource("../apps/t5_ai_coffee/docs/home_anims.webp");
+    mRightAnimView->setBackgroundResource("../apps/t5_ai_coffee/docs/home_anims.webp");
 #else
     mPowderAnimView->setBackgroundResource("./home_anims.webp");
     mRightAnimView->setBackgroundResource("./home_anims.webp");
@@ -137,8 +137,8 @@ void PageHome::initPageView(){
     appearTransition->setDuration(600);
     mCoffeeGroup->setLayoutTransition(appearTransition);
 
-    ((ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::right_group))->setVisibility(View::VISIBLE);
-    ((ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::powder_group))->setVisibility(View::VISIBLE);
+    ((ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::right_group))->setVisibility(View::VISIBLE);
+    ((ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::powder_group))->setVisibility(View::VISIBLE);
     
     mPowderWorkingListener.onAnimationEnd = [this](Animator& animation, bool isReverse){
         // mPowderWorkingAnimView->animate().alpha( mPowderWorkingAnimView->getAlpha() >=1.f?0.4:1.f).start();
@@ -241,26 +241,26 @@ void PageHome::initPageData(){
     mTeaMgr = new HomeTabModeTea(mWindPageBox);
     mFavMgr = new HomeTabModeFav(mWindPageBox,std::bind(&PageHome::onFavModeEditListener,this,std::placeholders::_1,std::placeholders::_2));
 
-    mPicInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::info_layout_cup_pic);
-    mPlotInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::info_layout_plot);
-    mFormInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::info_layout_form);
-    mInfoTouchView = (View *)mCoffeeGroup->findViewById(kaidu_ms7_lqy::R::id::info_layout_touch_view);
+    mPicInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::info_layout_cup_pic);
+    mPlotInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::info_layout_plot);
+    mFormInfoGroup = (ViewGroup *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::info_layout_form);
+    mInfoTouchView = (View *)mCoffeeGroup->findViewById(t5_ai_coffee::R::id::info_layout_touch_view);
 
-    mCupResetGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_info_reset_group);
-    mCupInfoFavImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_info_favorites);
-    mCupShadowImg  = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_shadow_img);
-    mPlotInfoFavImg= (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_plot_favorites);
-    mInfoImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_info_img);
-    mResetTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_reset);
-    mHotWaterTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_hot_water);
-    mSteamTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_steam);
-    mFormInfoHorPicker = (NumberPicker *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_form_hor_picker);
-    mFormGroup      = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_layout);
-    mFormStepGroup_0 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_heating);
-    mFormStepGroup_1 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_1);
-    mFormStepGroup_2 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_2);
-    mFormStepGroup_3 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_3);
-    mFormStepAddImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_step_add);
+    mCupResetGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_info_reset_group);
+    mCupInfoFavImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_info_favorites);
+    mCupShadowImg  = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_shadow_img);
+    mPlotInfoFavImg= (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_plot_favorites);
+    mInfoImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_info_img);
+    mResetTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_reset);
+    mHotWaterTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_hot_water);
+    mSteamTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_steam);
+    mFormInfoHorPicker = (NumberPicker *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_form_hor_picker);
+    mFormGroup      = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_layout);
+    mFormStepGroup_0 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_heating);
+    mFormStepGroup_1 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_1);
+    mFormStepGroup_2 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_2);
+    mFormStepGroup_3 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_3);
+    mFormStepAddImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_step_add);
 
     auto childDealClickFunc = std::bind(&PageHome::onChildDealClickListener,this,std::placeholders::_1);
     mCupInfoFavImg->setOnClickListener(childDealClickFunc);    
@@ -575,9 +575,9 @@ void PageHome::resetPageAction(){
         case HOME_MT_HAND_WASHED:{ mHomeFavImg->setActivated(g_objConf->checkFavModeData(mHandWashMgr->getCacheDataToJson())); break;}
         case HOME_MT_EXTRACTING_TEA:{ mHomeFavImg->setActivated(g_objConf->checkFavModeData(mTeaMgr->getCacheDataToJson())); break;}
     }
-    // case kaidu_ms7_lqy::R::id::info_plot_favorites:
-    // case kaidu_ms7_lqy::R::id::hand_wash_fav_img:
-    // case kaidu_ms7_lqy::R::id::cup_info_favorites:
+    // case t5_ai_coffee::R::id::info_plot_favorites:
+    // case t5_ai_coffee::R::id::hand_wash_fav_img:
+    // case t5_ai_coffee::R::id::cup_info_favorites:
 }
 
 // 设置页面 Type
@@ -811,7 +811,7 @@ void PageHome::onFavModeEditListener(int Position, bool isEdit){
 
 void PageHome::onChildDealClickListener(View &v){
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::btn_hot_water:{
+        case t5_ai_coffee::R::id::btn_hot_water:{
             if((g_appData.coffeePreheatPtc < 100) || g_appData.displayMode){
                 showToast("预热中，请稍候",-55);
                 return;
@@ -825,7 +825,7 @@ void PageHome::onChildDealClickListener(View &v){
                 return;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::btn_steam:{
+        }case t5_ai_coffee::R::id::btn_steam:{
             if((g_appData.coffeePreheatPtc < 100) || g_appData.displayMode){
                 showToast("预热中，请稍候",-55);
                 return;
@@ -849,11 +849,11 @@ void PageHome::onChildDealClickListener(View &v){
             mSteamTv->getBackground()->setLevel(isStart?10000:0);
             g_objConnMgr->setExtraction(isStart,EXT_MODE_STEAM,0x00,0x00,0x00,0x00,0x00,0x00);
             break;
-        }case kaidu_ms7_lqy::R::id::form_info_step_heating:
-        case kaidu_ms7_lqy::R::id::form_info_step_1:
-        case kaidu_ms7_lqy::R::id::form_info_step_2:
-        case kaidu_ms7_lqy::R::id::form_info_step_3:
-        case kaidu_ms7_lqy::R::id::form_step_add:{
+        }case t5_ai_coffee::R::id::form_info_step_heating:
+        case t5_ai_coffee::R::id::form_info_step_1:
+        case t5_ai_coffee::R::id::form_info_step_2:
+        case t5_ai_coffee::R::id::form_info_step_3:
+        case t5_ai_coffee::R::id::form_step_add:{
             if(g_appData.machineState != MC_STATE_NONE){
                 showToast("工作中，请稍候",-55);
                 return;
@@ -862,8 +862,8 @@ void PageHome::onChildDealClickListener(View &v){
                 return;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             if(g_appData.coffeePreheatPtc < 100){
                 showToast("预热中，请稍候",-55);
                 return;
@@ -886,8 +886,8 @@ void PageHome::onChildDealClickListener(View &v){
             }
             break;
         }
-        case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:{
             if(g_appData.machineState & MC_STATE_HOT_WATER){
                 showToast("出热水中，不可操作",-55);
                 return;
@@ -906,15 +906,15 @@ void PageHome::onChildDealClickListener(View &v){
                 mResetTv->setEnabled(v.isSelected());
             }
             break;
-        }case kaidu_ms7_lqy::R::id::powder_add:
-        case kaidu_ms7_lqy::R::id::powder_reduce:{
-            mArcPowder->setProgress(mArcPowder->getProgress()+(v.getId() == kaidu_ms7_lqy::R::id::powder_reduce?-1:1));
+        }case t5_ai_coffee::R::id::powder_add:
+        case t5_ai_coffee::R::id::powder_reduce:{
+            mArcPowder->setProgress(mArcPowder->getProgress()+(v.getId() == t5_ai_coffee::R::id::powder_reduce?-1:1));
             onArcValueChangeListener(*mArcPowder,mArcPowder->getProgress(),true);
             if(!mPowderAnim->isRunning()) mPowderAnim->start();
             break;
-        }case kaidu_ms7_lqy::R::id::info_plot_favorites:
-        case kaidu_ms7_lqy::R::id::hand_wash_fav_img:
-        case kaidu_ms7_lqy::R::id::cup_info_favorites:{
+        }case t5_ai_coffee::R::id::info_plot_favorites:
+        case t5_ai_coffee::R::id::hand_wash_fav_img:
+        case t5_ai_coffee::R::id::cup_info_favorites:{
             if(!v.isActivated() && (g_objConf->getFavModeList().size() >= 10)){
                 showToast("最多收藏10个",-55);
                 return;
@@ -948,8 +948,8 @@ void PageHome::onChildDealClickListener(View &v){
         }
     }
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             if(mGroupType != HOME_MT_EXTRACTING_TEA)dealRightInfoGroup(v);
             // if(mGroupType == HOME_MT_MASTER_ESPRESSO) mPlotInfoGroup->setAlpha(v.isSelected()?0.4:1.0);
             // else if((mGroupType == HOME_MT_HAND_WASHED) || (mGroupType == HOME_MT_EXTRACTING_TEA))
@@ -957,18 +957,18 @@ void PageHome::onChildDealClickListener(View &v){
             if(mGroupType != HOME_MT_EXTRACTING_TEA)dealPowderInfoGroup(v);
             break;
         }
-        case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:{
             dealPowderInfoGroup(v);
             // if(mGroupType == HOME_MT_MASTER_ESPRESSO) mPlotInfoGroup->setAlpha(v.isSelected()?0.4:1.0);
             // else if((mGroupType == HOME_MT_HAND_WASHED) || (mGroupType == HOME_MT_EXTRACTING_TEA))
             //     mFormInfoGroup->setAlpha(v.isSelected()?0.4:1.0);
             break;
-        }case kaidu_ms7_lqy::R::id::right_info_reduce:
-        case kaidu_ms7_lqy::R::id::right_info_add:{
+        }case t5_ai_coffee::R::id::right_info_reduce:
+        case t5_ai_coffee::R::id::right_info_add:{
             if(!mRightAnim->isRunning()) mRightAnim->start();    
             break;
-        }case kaidu_ms7_lqy::R::id::btn_reset:{
+        }case t5_ai_coffee::R::id::btn_reset:{
             if(!(g_appData.machineState & MC_STATE_POWDER || g_appData.machineState & MC_STATE_EXT)){
                 mResetAnimator->start();
             }else{
@@ -976,8 +976,8 @@ void PageHome::onChildDealClickListener(View &v){
             }
             
             break;
-        }case kaidu_ms7_lqy::R::id::fav_enter_img:
-        case kaidu_ms7_lqy::R::id::fav_back_img:{
+        }case t5_ai_coffee::R::id::fav_enter_img:
+        case t5_ai_coffee::R::id::fav_back_img:{
             if(mPageEditType != HOME_PAGE_NORMAL){
                 if(g_appData.machineState != MC_STATE_NONE){
                     LOGE("is working ! dont't change tab");
@@ -988,7 +988,7 @@ void PageHome::onChildDealClickListener(View &v){
                 mPageEditType = HOME_PAGE_NORMAL;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::btn_hot_water:{
+        }case t5_ai_coffee::R::id::btn_hot_water:{
             bool isStart = mHotWaterTv->getBackground()->getLevel() == 0;
             if(isStart){
                 mDoubleCupImg->setActivated(false);
@@ -1124,8 +1124,8 @@ void PageHome::dealPowderInfoGroup(View &v){
         }
     }
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:{
             int grindTotal = g_objConf->getGrindTotal()+1;
             int  powder = g_appData.tuyaSetPowder<0?mArcPowder->getProgress():g_appData.tuyaSetPowder;
             g_objConnMgr->setGrindBean(v.isSelected(),powder,mModeBeanGrindMode);
@@ -1153,8 +1153,8 @@ void PageHome::dealPowderInfoGroup(View &v){
                 g_appData.tuyaSetPowder = -1;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             if(v.isSelected()){
                 mPowderInfoTv->setText("0");
                 mPowderInfoTitleTv->setText("萃取中");
@@ -1246,11 +1246,11 @@ void PageHome::onArcValueChangeListener(View &v, int progress, bool fromUser){
     LOGI("id  = %d   progress = %d fromUser = %d",v.getId(),progress,fromUser);
     
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::arc_powder:{
+        case t5_ai_coffee::R::id::arc_powder:{
             if(!mPowderAnim->isRunning() && fromUser) mPowderAnim->start();
             break;
         }
-        case kaidu_ms7_lqy::R::id::arc_right:{
+        case t5_ai_coffee::R::id::arc_right:{
             if(!mRightAnim->isRunning() && fromUser) mRightAnim->start();
             break;
         }default:{

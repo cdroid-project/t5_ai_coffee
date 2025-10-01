@@ -1,0 +1,1 @@
+/home/cikn/Cdroid/apps/T5-AI-COFFEE/conf/defualt_config.h

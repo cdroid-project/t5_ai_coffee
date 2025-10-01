@@ -20,16 +20,16 @@ PopBean::~PopBean(){
 
 void PopBean::initPopView(){
 
-    mBeanModeWeightTv  = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bean_weight_tv);
-    mBeanModeTimeTv   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bean_time_tv);
+    mBeanModeWeightTv  = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bean_weight_tv);
+    mBeanModeTimeTv   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bean_time_tv);
     
     auto clickFunc = std::bind(&PopBean::onBtnClickListener,this,std::placeholders::_1);
     mPopLayout->setSoundEffectsEnabled(false);
     mPopLayout->setOnClickListener(clickFunc);  // 防止点击穿透
     mBeanModeWeightTv->setOnClickListener(clickFunc);
     mBeanModeTimeTv->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter)->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel)->setOnClickListener(clickFunc);
 }
 
 void PopBean::initPopData(){
@@ -46,7 +46,7 @@ void PopBean::updatePageData(){
 void PopBean::onBtnClickListener(View&v){
     LOGI("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             g_appData.beanGrindMode = mBeanModeWeightTv->isSelected()?BEAN_GRIND_WEI:BEAN_GRIND_TIME;
             g_objConf->setBeanGrindMode(g_appData.beanGrindMode);
 #ifndef TUYA_OS_DISABLE
@@ -55,16 +55,16 @@ void PopBean::onBtnClickListener(View&v){
             if(mEnterCallback) mEnterCallback();
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_bean_weight_tv:{
+        }case t5_ai_coffee::R::id::pop_bean_weight_tv:{
             if(!v.isSelected()){
                 v.setSelected(true);
                 mBeanModeTimeTv->setSelected(false);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::pop_bean_time_tv:{
+        }case t5_ai_coffee::R::id::pop_bean_time_tv:{
             if(!v.isSelected()){
                 v.setSelected(true);
                 mBeanModeWeightTv->setSelected(false);

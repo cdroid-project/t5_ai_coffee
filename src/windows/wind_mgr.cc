@@ -47,9 +47,9 @@ CWindMgr::~CWindMgr(){
 void CWindMgr::initWindow(){
     mWindow = new WindowBase;
     mWindLayout     = (ViewGroup *)LayoutInflater::from(mWindow->getContext())->inflate("@layout/main_window", mWindow);
-    mWindPageBox    = (ViewGroup *)mWindLayout->findViewById(kaidu_ms7_lqy::R::id::page_box);
-    mWindPopBox     = (ViewGroup *)mWindLayout->findViewById(kaidu_ms7_lqy::R::id::pop_box);
-    mWindKeyBoardBox= (ViewGroup *)mWindLayout->findViewById(kaidu_ms7_lqy::R::id::keyboard_box);
+    mWindPageBox    = (ViewGroup *)mWindLayout->findViewById(t5_ai_coffee::R::id::page_box);
+    mWindPopBox     = (ViewGroup *)mWindLayout->findViewById(t5_ai_coffee::R::id::pop_box);
+    mWindKeyBoardBox= (ViewGroup *)mWindLayout->findViewById(t5_ai_coffee::R::id::keyboard_box);
     
     mShowPage = nullptr;
     mPopPage  = nullptr;

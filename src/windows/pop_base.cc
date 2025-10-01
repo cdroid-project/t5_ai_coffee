@@ -62,11 +62,11 @@ int  PopBase::getPopType(){
 }
 
 void PopBase::cancelCallback(){
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel)->performClick();
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel)->performClick();
 }
 
 
 void PopBase::enterCallback(){
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter)->performClick();
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter)->performClick();
 }
 

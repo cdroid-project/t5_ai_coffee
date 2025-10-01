@@ -18,7 +18,7 @@
     #define USERDICT_FILE "userdict"
 #endif
 
-using namespace kaidu_ms7_lqy;
+using namespace t5_ai_coffee;
 using namespace cdroid;
 
 #define ENTERTEXT_COLOR 0x210000

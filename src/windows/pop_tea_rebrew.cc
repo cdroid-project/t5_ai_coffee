@@ -21,17 +21,17 @@ PopTeaRebrew::~PopTeaRebrew() {
 }
 
 void PopTeaRebrew::initPopView(){
-    mPopPicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker);
+    mPopPicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker);
 
-    mPopPickerWater = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_water);
-    mPopPickerFlowRate = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_flowrate);
-    mPopPickerTime = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_time);
-    mPopPickerTemp = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_temp);
+    mPopPickerWater = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_water);
+    mPopPickerFlowRate = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_flowrate);
+    mPopPickerTime = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_time);
+    mPopPickerTemp = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_temp);
 
-    mPopResetAnim = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_anim);
-    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter);
-    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel);
-    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_group);
+    mPopResetAnim = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_anim);
+    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter);
+    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel);
+    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_group);
     
     initPopData();
 
@@ -40,7 +40,7 @@ void PopTeaRebrew::initPopView(){
     mPopLayout->setOnClickListener(clickFunc);  // 防止点击穿透
     mPopBtnConfirm->setOnClickListener(clickFunc);
     mPopBtnCancel->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_group)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_group)->setOnClickListener(clickFunc);
     mPopPicker->setOnValueChangedListener(std::bind(&PopTeaRebrew::onPickerValueChangeListener,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3));
 
     mResetAnimator = ValueAnimator::ofInt({0,10000});
@@ -97,7 +97,7 @@ void PopTeaRebrew::setPopData(){
 void PopTeaRebrew::onBtnClickListener(View&v){
     LOGE("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             ExtractTeaSndModeDataStr &stepData = mTeaData.sndModeList.at(mPickerSelectPos);
             stepData.makeTeaWater = mPopPickerWater->getValue()*mTeaData.waterGear;
             stepData.makeTeaFlowRate = mPopPickerFlowRate->getValue();
@@ -107,11 +107,11 @@ void PopTeaRebrew::onBtnClickListener(View&v){
             if(mModeEnterCallback) mModeEnterCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             if(mModeCancelCallback) mModeCancelCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_reset_group:{
+        }case t5_ai_coffee::R::id::pop_reset_group:{
             setPopData();
             mResetAnimator->start();
             break;
@@ -121,7 +121,7 @@ void PopTeaRebrew::onBtnClickListener(View&v){
 
 void PopTeaRebrew::onPickerValueChangeListener(NumberPicker&picker,int oldValue,int newValue){
     switch(picker.getId()){
-        case kaidu_ms7_lqy::R::id::pop_picker:{
+        case t5_ai_coffee::R::id::pop_picker:{
             mPickerSelectPos = newValue;
             setPopData();
             break;

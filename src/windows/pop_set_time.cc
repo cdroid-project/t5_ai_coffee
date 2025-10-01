@@ -16,14 +16,14 @@ PopSetTime::~PopSetTime(){
 }
 
 void PopSetTime::initPopView(){
-    mPickerYear = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_time_year_picker);
-    mPickerMon = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_time_mon_picker);
-    mPickerDay = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_time_day_picker);
-    mPickeHour = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_time_hour_picker);
-    mPickeMin = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_time_min_picker);
+    mPickerYear = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_time_year_picker);
+    mPickerMon = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_time_mon_picker);
+    mPickerDay = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_time_day_picker);
+    mPickeHour = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_time_hour_picker);
+    mPickeMin = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_time_min_picker);
 
-    // mTipsText = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::set_time_tips);
-    // msetBtnLayout = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::set_btn_layout);
+    // mTipsText = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::set_time_tips);
+    // msetBtnLayout = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::set_btn_layout);
 
     mPickerMon->setFormatter([this](int value){ return fillLength(value, 2); });
     mPickerDay->setFormatter([this](int value){ return fillLength(value, 2); });
@@ -34,8 +34,8 @@ void PopSetTime::initPopView(){
     mPickerMon->setOnValueChangedListener(std::bind(&PopSetTime::onPickerValueChangeListener,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3));
 
     auto clickFunc = std::bind(&PopSetTime::onBtnClickListener,this,std::placeholders::_1);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter)->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel)->setOnClickListener(clickFunc);
     mPopLayout->setOnClickListener(clickFunc);
     mPopLayout->setSoundEffectsEnabled(false);
 }
@@ -53,10 +53,10 @@ void PopSetTime::initPopData(){
 
 void PopSetTime::onBtnClickListener(View&v){
     switch (v.getId()){
-    case kaidu_ms7_lqy::R::id::pop_cancel:
+    case t5_ai_coffee::R::id::pop_cancel:
         g_windMgr->dealClosePopPage();
         break;
-    case kaidu_ms7_lqy::R::id::pop_enter:
+    case t5_ai_coffee::R::id::pop_enter:
         timeSet(mPickerYear->getValue(),
                 mPickerMon->getValue(),
                 mPickerDay->getValue(),
@@ -73,8 +73,8 @@ void PopSetTime::onBtnClickListener(View&v){
 
 void PopSetTime::onPickerValueChangeListener(NumberPicker& picker,int num_old,int num_new){
     switch(picker.getId()){
-        case kaidu_ms7_lqy::R::id::pop_time_year_picker:
-        case kaidu_ms7_lqy::R::id::pop_time_mon_picker:
+        case t5_ai_coffee::R::id::pop_time_year_picker:
+        case t5_ai_coffee::R::id::pop_time_mon_picker:
             if(g_appData.tuyaWifiStatus != PRO_STATE_TUYA_GB_CLOUD_CONN){
                 setMaxDay(mPickerYear->getValue(),mPickerMon->getValue());  
                 break;

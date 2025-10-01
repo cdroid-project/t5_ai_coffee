@@ -81,11 +81,11 @@ void wifiRecycAdapter::onBindViewHolder(RecyclerView::ViewHolder& holder, int po
     ViewGroup *viewGroup = ((wifiRecycAdapter::ViewHolder&)holder).viewGroup;
     LOGD("position = %d  viewGroup = %p",position,viewGroup);
 
-    ImageView *wifiSignalImg = (ImageView*)viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_signal_img);
-    ImageView *wifiLockImg = (ImageView*)viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_lock_img);
-    TextView *wifiName = (TextView*)viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_name_tv);
-    ImageView *wifiHookImg = (ImageView*)viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_hook_img);
-    TextView *wifiListTitleTv = (TextView*)viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_list_title_tv);
+    ImageView *wifiSignalImg = (ImageView*)viewGroup->findViewById(t5_ai_coffee::R::id::wifi_signal_img);
+    ImageView *wifiLockImg = (ImageView*)viewGroup->findViewById(t5_ai_coffee::R::id::wifi_lock_img);
+    TextView *wifiName = (TextView*)viewGroup->findViewById(t5_ai_coffee::R::id::wifi_name_tv);
+    ImageView *wifiHookImg = (ImageView*)viewGroup->findViewById(t5_ai_coffee::R::id::wifi_hook_img);
+    TextView *wifiListTitleTv = (TextView*)viewGroup->findViewById(t5_ai_coffee::R::id::wifi_list_title_tv);
     
     Runnable &connRun = ((wifiRecycAdapter::ViewHolder&)holder).connectingRun;
     connRun = [this,wifiSignalImg,&connRun,viewGroup](){
@@ -200,7 +200,7 @@ void wifiRecycAdapter::onViewRecycled(RecyclerView::ViewHolder& holder){
 
 void wifiRecycAdapter::onViewAttachedToWindow(RecyclerView::ViewHolder& holder){
     LOGV("onViewAttachedToWindow   %d",holder.getLayoutPosition());
-    View *wifiName = ((wifiRecycAdapter::ViewHolder&)holder).viewGroup->findViewById(kaidu_ms7_lqy::R::id::wifi_name_tv);
+    View *wifiName = ((wifiRecycAdapter::ViewHolder&)holder).viewGroup->findViewById(t5_ai_coffee::R::id::wifi_name_tv);
     wifiName->setSelected(false);
     wifiName->setSelected(true);
 }

@@ -20,15 +20,15 @@ PageScaleCalibration::~PageScaleCalibration(){
 
 void PageScaleCalibration::initPageView(){
     
-    mStep1Group = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_1_group);
-    mStep2Group = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_2_group);
-    mStep3Group = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_3_group);
-    mStep4Group = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_4_group);
+    mStep1Group = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_1_group);
+    mStep2Group = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_2_group);
+    mStep3Group = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_3_group);
+    mStep4Group = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_4_group);
     
-    mStep4Tv    = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_4_info_tv);
-    mWeightTv   = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::card2_weight_tv);
+    mStep4Tv    = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_4_info_tv);
+    mWeightTv   = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::card2_weight_tv);
     
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::title_back)->setOnClickListener([this](View &v){
+    mPageLayout->findViewById(t5_ai_coffee::R::id::title_back)->setOnClickListener([this](View &v){
         g_windMgr->showPrevPage();
     });
 

@@ -11,12 +11,12 @@ PageKeyBoard::PageKeyBoard(ViewGroup *wind_page_box,std::string iText, std::stri
 
 void PageKeyBoard::btnClickListener(View& view) {
     switch(view.getId()){
-        case kaidu_ms7_lqy::R::id::keyboard_enter:{
+        case t5_ai_coffee::R::id::keyboard_enter:{
             if(mPopEnterCallback) mPopEnterCallback(mKeyBoard->getEnterText());
             g_windMgr->dealCloseKeyBoardPage();
             break;
         }
-        case kaidu_ms7_lqy::R::id::keyboard_cancel:{
+        case t5_ai_coffee::R::id::keyboard_cancel:{
             if(mPopExitCallback) mPopExitCallback();
             g_windMgr->dealCloseKeyBoardPage();
             break;
@@ -30,9 +30,9 @@ PageKeyBoard::~PageKeyBoard() {
 
 void PageKeyBoard::initPageView(){
     auto btn_click_func = std::bind(&PageKeyBoard::btnClickListener, this, std::placeholders::_1);
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::keyboard_enter)->setOnClickListener(btn_click_func);
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::keyboard_cancel)->setOnClickListener(btn_click_func);
-    mKeyBoard = (CdroidKeyBoard *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::cdroid_keyboard);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::keyboard_enter)->setOnClickListener(btn_click_func);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::keyboard_cancel)->setOnClickListener(btn_click_func);
+    mKeyBoard = (CdroidKeyBoard *)mPageLayout->findViewById(t5_ai_coffee::R::id::cdroid_keyboard);
 
     mKeyBoard->setOnCompleteListener([this](const std::string& txt) {
         LOG(DEBUG) << "editText :" << txt;

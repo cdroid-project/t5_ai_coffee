@@ -1,0 +1,1 @@
+/home/cikn/Cdroid/apps/T5-AI-COFFEE/conf/cdroid_series_conf.h

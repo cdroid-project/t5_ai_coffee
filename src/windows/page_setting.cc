@@ -25,33 +25,33 @@ PageSetting::~PageSetting(){
 void PageSetting::initPageView(){
     
 
-    mWifiSwitch  = (Switch *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::wifi_switch);
-    mWifiSwLayout  = mPageLayout->findViewById(kaidu_ms7_lqy::R::id::wifi_sw_layout);
-    mShuaxinIcon= (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::wifi_shuaxin);
-    mDisConnText= (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::disconnect_text);
+    mWifiSwitch  = (Switch *)mPageLayout->findViewById(t5_ai_coffee::R::id::wifi_switch);
+    mWifiSwLayout  = mPageLayout->findViewById(t5_ai_coffee::R::id::wifi_sw_layout);
+    mShuaxinIcon= (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::wifi_shuaxin);
+    mDisConnText= (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::disconnect_text);
 
-    mAppVersionTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::version_tv);
-    mMcuVersionTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::mcu_version_tv);
-    mCdroidVersionTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::cdroid_version_tv);
+    mAppVersionTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::version_tv);
+    mMcuVersionTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::mcu_version_tv);
+    mCdroidVersionTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::cdroid_version_tv);
     
-    mUpdateTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::update_tv);
-    mResetTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::reset_tv);
+    mUpdateTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::update_tv);
+    mResetTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::reset_tv);
 
-    mTimeGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_group);
-    mGrindModeGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::grind_mode_group);
-    mHotWaterGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::hot_water_group);
-    mBindAppGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::bind_app_group);
-    mVoiceGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::voice_group);
+    mTimeGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::time_group);
+    mGrindModeGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::grind_mode_group);
+    mHotWaterGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::hot_water_group);
+    mBindAppGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::bind_app_group);
+    mVoiceGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::voice_group);
 
-    mTimeTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_tv);
-    mGrindModeTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::grind_mode_tv);
-    mHotWaterTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::hot_water_tv);
-    mBindAppTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::bind_app_tv);
-    mVoiceSwitch = (Switch *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::voice_switch);
+    mTimeTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::time_tv);
+    mGrindModeTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::grind_mode_tv);
+    mHotWaterTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::hot_water_tv);
+    mBindAppTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::bind_app_tv);
+    mVoiceSwitch = (Switch *)mPageLayout->findViewById(t5_ai_coffee::R::id::voice_switch);
 
-    mFrothTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::froth_tv);
-    mGrindTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::grind_tv);
-    mBrewTv = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::brew_tv);
+    mFrothTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::froth_tv);
+    mGrindTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::grind_tv);
+    mBrewTv = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::brew_tv);
     
     // 旋转时有锯齿
     ((BitmapDrawable *)((RotateDrawable *)mShuaxinIcon->getDrawable())->getDrawable())->setFilterBitmap(true);
@@ -66,12 +66,12 @@ void PageSetting::initPageView(){
     mHotWaterGroup->setOnClickListener(btn_click_func);
     mBindAppGroup->setOnClickListener(btn_click_func);
     mVoiceGroup->setOnClickListener(btn_click_func);
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::title_back)->setOnClickListener(btn_click_func);
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::card_3_grind)->setOnClickListener(btn_click_func);
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::card_3_grind)->setSoundEffectsEnabled(false);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::title_back)->setOnClickListener(btn_click_func);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::card_3_grind)->setOnClickListener(btn_click_func);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::card_3_grind)->setSoundEffectsEnabled(false);
 
     ///////////// recyclerview，wifi列表 ////////////////////
-    mWifiRecyclerView = (RecyclerView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::wifi_recycler);
+    mWifiRecyclerView = (RecyclerView *)mPageLayout->findViewById(t5_ai_coffee::R::id::wifi_recycler);
 
     mLinearLyManager = new LinearLayoutManager(mPageLayout->getContext(),RecyclerView::VERTICAL,false);
     mWifiRecyclerView->setLayoutManager(mLinearLyManager);
@@ -84,8 +84,8 @@ void PageSetting::initPageView(){
     /////////////////////////////////////
 
     /////////// 调节亮度的小动画 ////////////////////
-    ImageView *image_bright = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::image_bright);
-    SeekBar *mLightSeekbar = (SeekBar*)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::seekbar_light);
+    ImageView *image_bright = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::image_bright);
+    SeekBar *mLightSeekbar = (SeekBar*)mPageLayout->findViewById(t5_ai_coffee::R::id::seekbar_light);
 
     RotateDrawable *rotate = (RotateDrawable *)image_bright->getDrawable();
     mLightSeekbar->setProgress(g_appData.light);
@@ -236,14 +236,14 @@ void PageSetting::resetPageAction(){
 
 void PageSetting::btnClickListener(View& view){
     switch(view.getId()){
-        case kaidu_ms7_lqy::R::id::title_back:{
+        case t5_ai_coffee::R::id::title_back:{
             g_windMgr->showPrevPage();
             break;
-        }case kaidu_ms7_lqy::R::id::wifi_shuaxin:{
+        }case t5_ai_coffee::R::id::wifi_shuaxin:{
             mWifishuaxinAnim->start();
             WIFIMgr::ins()->scanWifi();
             break;
-        }case kaidu_ms7_lqy::R::id::wifi_sw_layout:{
+        }case t5_ai_coffee::R::id::wifi_sw_layout:{
             if(!mWifiSwitch->isChecked()){
                 g_appData.netSwitch = true;
                 mShuaxinIcon->setVisibility(View::VISIBLE);
@@ -272,33 +272,33 @@ void PageSetting::btnClickListener(View& view){
             }
             mWifiSwitch->setChecked(!mWifiSwitch->isChecked());
             break;
-        }case kaidu_ms7_lqy::R::id::update_tv:{
+        }case t5_ai_coffee::R::id::update_tv:{
             if(g_appData.isNeedUpdate || (!g_appData.mcuUpgradeVer.empty()&&(g_appData.McuVersion != g_appData.mcuUpgradeVer))){
                 g_windMgr->showPopPage(POP_OTA,mPageLayout);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::reset_tv:{
+        }case t5_ai_coffee::R::id::reset_tv:{
             g_windMgr->showPopPage(POP_RESTORE_FACTORY,mPageLayout);
             break;
-        }case kaidu_ms7_lqy::R::id::time_group:{
+        }case t5_ai_coffee::R::id::time_group:{
             if(g_appData.tuyaWifiStatus == PRO_STATE_TUYA_GB_CLOUD_CONN){
                 showToast("已经同步网络时间");
             }else{
                 g_windMgr->showPopPage(POP_SET_TIME,mPageLayout);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::grind_mode_group:{
+        }case t5_ai_coffee::R::id::grind_mode_group:{
             g_windMgr->showPopPage(POP_BEAN_GRIND,mPageLayout,[this](){
                 mGrindModeTv->setText(g_appData.beanGrindMode==BEAN_GRIND_WEI?"称豆模式":"计时模式");
                 g_objConnMgr->setDeviceData();
             });
             break;
-        }case kaidu_ms7_lqy::R::id::hot_water_group:{
+        }case t5_ai_coffee::R::id::hot_water_group:{
             g_windMgr->showPopPage(POP_HOT_WATER,mPageLayout,[this](){
                 mHotWaterTv->setText(std::to_string(g_appData.hotWaterTemp)+ "℃ "+std::to_string(g_appData.hotWater)+"ml");
             });
             break;
-        }case kaidu_ms7_lqy::R::id::bind_app_group:{
+        }case t5_ai_coffee::R::id::bind_app_group:{
             if(!g_appData.netOk){
                 showToast("请先连接WIFI");
             }else if(g_appData.tuyaWifiStatus == PRO_STATE_TUYA_GB_CLOUD_CONN){
@@ -308,13 +308,13 @@ void PageSetting::btnClickListener(View& view){
             }
             
             break;
-        }case kaidu_ms7_lqy::R::id::voice_group:{
+        }case t5_ai_coffee::R::id::voice_group:{
             g_appData.isMute = !g_appData.isMute;
             mVoiceSwitch->setChecked(!g_appData.isMute);
             g_objConf->setMuteFlag(g_appData.isMute);
             g_objConnMgr->setDeviceData();
             break;
-        }case kaidu_ms7_lqy::R::id::card_3_grind:{
+        }case t5_ai_coffee::R::id::card_3_grind:{
             static int clickCount = 0;
             if(SystemClock::uptimeMillis() <= 40*1000){
                 clickCount++;

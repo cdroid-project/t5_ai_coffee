@@ -28,29 +28,29 @@ PopMasterEspresso::~PopMasterEspresso() {
 }
 
 void PopMasterEspresso::initPopView(){
-    mPopPicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker);
+    mPopPicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker);
 
-    mMasEspPopPlotView = (CYPlotView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_plotview);
-    mMasEspPopStep1 = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_extraction_step1);
-    mMasEspPopStep2 = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_extraction_step2);
-    mMasEspPopStep3 = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_extraction_step3);
-    mMasEspPopStep4 = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_extraction_step4);
-    mMasEspPopStep5 = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_extraction_step5);
+    mMasEspPopPlotView = (CYPlotView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_plotview);
+    mMasEspPopStep1 = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_extraction_step1);
+    mMasEspPopStep2 = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_extraction_step2);
+    mMasEspPopStep3 = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_extraction_step3);
+    mMasEspPopStep4 = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_extraction_step4);
+    mMasEspPopStep5 = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_extraction_step5);
 
-    mMasEspPopStepAdd = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_step_add);
-    mMasEspPopStepDelete = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_step_delete);
+    mMasEspPopStepAdd = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_step_add);
+    mMasEspPopStepDelete = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_step_delete);
 
-    mMasEspPickerPressure = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_pressure);
-    mMasEspPickerWater = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_water);
+    mMasEspPickerPressure = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_pressure);
+    mMasEspPickerWater = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_water);
 
-    mMasEspPopResetAnim = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_anim);
+    mMasEspPopResetAnim = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_anim);
 
-    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter);
-    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel);
+    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter);
+    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel);
 
     initPopData();
     
-    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_group);
+    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_group);
     auto clickFunc = std::bind(&PopMasterEspresso::onBtnClickListener,this,std::placeholders::_1);
     auto clickStepFunc = std::bind(&PopMasterEspresso::onMasEspStepBtnClickListener,this,std::placeholders::_1);
     auto pickerValueChangedFunc = std::bind(&PopMasterEspresso::onPickerValueChangeListener,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3);
@@ -64,7 +64,7 @@ void PopMasterEspresso::initPopView(){
     mPopLayout->setOnClickListener(clickFunc);  // 防止点击穿透
     mPopBtnConfirm->setOnClickListener(clickFunc);
     mPopBtnCancel->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_group)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_group)->setOnClickListener(clickFunc);
     // mPopPicker->setOnClickListener(clickFunc);
     mPopPicker->setOnValueChangedListener(pickerValueChangedFunc);
     mMasEspPickerPressure->setOnValueChangedListener(pickerValueChangedFunc);
@@ -255,7 +255,7 @@ void PopMasterEspresso::setPlotViewData(){
 void PopMasterEspresso::onBtnClickListener(View&v){
     LOGE("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             MasEspStepDataStr &stepData = mMasEspData.sndModeList.at(mPickerSelectPos).stepDataList.at(mStepSelectPos);
             stepData.pressure = mMasEspPickerPressure->getValue();
             stepData.water = mMasEspPickerWater->getValue()*5;
@@ -263,30 +263,30 @@ void PopMasterEspresso::onBtnClickListener(View&v){
             if(mModeEnterCallback) mModeEnterCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             if(mModeCancelCallback) mModeCancelCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_step_add:{
+        }case t5_ai_coffee::R::id::pop_step_add:{
             mMasEspData.sndModeList.at(mPickerSelectPos).stepDataList.push_back({9,30});
             setStepData();
             setPlotViewData();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_step_delete:{
+        }case t5_ai_coffee::R::id::pop_step_delete:{
             std::vector<MasEspStepDataStr> &stepList = mMasEspData.sndModeList.at(mPickerSelectPos).stepDataList;
             stepList.erase(stepList.begin()+mStepSelectPos);
             if(mStepSelectPos == stepList.size()) mStepSelectPos = stepList.size()-1;
             setStepData();
             setPlotViewData();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_picker:{
+        }case t5_ai_coffee::R::id::pop_picker:{
             // g_windMgr->showKeyBoardPage(mMasEspData.sndModeList.at(mPickerSelectPos).sndModename,"请输入自定义名称",20,
             // [this](std::string inputData){
             //     mMasEspData.sndModeList.at(mPickerSelectPos).sndModename = inputData;
             //     mPopPicker->setFormatter([this](int value){ return mMasEspData.sndModeList.at(value).sndModename; });
             // },nullptr);
             break;
-        }case kaidu_ms7_lqy::R::id::pop_reset_group:{
+        }case t5_ai_coffee::R::id::pop_reset_group:{
             mMasEspData.sndModeList.at(mPickerSelectPos) = g_objConf->getMasEspData(true).sndModeList.at(mPickerSelectPos);
             mPopPicker->setFormatter([this](int value){ return mMasEspData.sndModeList.at(value).sndModename; });
             // mMasEspData.sndModeList.at(mPickerSelectPos).stepDataList = g_objConf->getMasEspData().sndModeList.at(mPickerSelectPos).stepDataList;
@@ -304,11 +304,11 @@ void PopMasterEspresso::onMasEspStepBtnClickListener(View&v){
     stepData.water = mMasEspPickerWater->getValue()*5;
 
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_extraction_step1:{ mStepSelectPos = 0; break; }
-        case kaidu_ms7_lqy::R::id::pop_extraction_step2:{ mStepSelectPos = 1; break; }
-        case kaidu_ms7_lqy::R::id::pop_extraction_step3:{ mStepSelectPos = 2; break; }
-        case kaidu_ms7_lqy::R::id::pop_extraction_step4:{ mStepSelectPos = 3; break; }
-        case kaidu_ms7_lqy::R::id::pop_extraction_step5:{ mStepSelectPos = 4; break; }
+        case t5_ai_coffee::R::id::pop_extraction_step1:{ mStepSelectPos = 0; break; }
+        case t5_ai_coffee::R::id::pop_extraction_step2:{ mStepSelectPos = 1; break; }
+        case t5_ai_coffee::R::id::pop_extraction_step3:{ mStepSelectPos = 2; break; }
+        case t5_ai_coffee::R::id::pop_extraction_step4:{ mStepSelectPos = 3; break; }
+        case t5_ai_coffee::R::id::pop_extraction_step5:{ mStepSelectPos = 4; break; }
     }
     mMasEspPopStepDelete->setTranslationY(75+45*mStepSelectPos);
     mStepSelectView->getLayoutParams()->height=45;
@@ -326,14 +326,14 @@ void PopMasterEspresso::onMasEspStepBtnClickListener(View&v){
 
 void PopMasterEspresso::onPickerValueChangeListener(NumberPicker&picker,int oldValue,int newValue){
     switch(picker.getId()){
-        case kaidu_ms7_lqy::R::id::pop_picker:{
+        case t5_ai_coffee::R::id::pop_picker:{
             mPickerSelectPos = newValue;
             mMasEspData.sndModeList.at(oldValue).stepDataList = g_objConf->getMasEspData().sndModeList.at(oldValue).stepDataList;
             setStepData();
             setPlotViewData();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_picker_pressure:
-        case kaidu_ms7_lqy::R::id::pop_picker_water:{
+        }case t5_ai_coffee::R::id::pop_picker_pressure:
+        case t5_ai_coffee::R::id::pop_picker_water:{
             std::string stepText;
             switch(mStepSelectPos){
                 case 0:{ stepText = "①"; break; }

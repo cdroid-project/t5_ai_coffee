@@ -17,30 +17,30 @@ HomeTabModeMasEsp::~HomeTabModeMasEsp(){
 
 void HomeTabModeMasEsp::initGroup(){
     // 公有控件属性
-    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_bean);
-    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_bean);
-    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_cup);
-    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_cup);
+    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_bean);
+    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_bean);
+    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_cup);
+    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_cup);
 
-    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_powder);
-    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_right);
+    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_powder);
+    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_right);
 
-    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::powder_info_tv);
-    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_tv);
-    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_title_tv);
-    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_units_tv);
+    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::powder_info_tv);
+    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_tv);
+    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_title_tv);
+    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_units_tv);
 
-    mInfoRVPicker   = (RVNumberPicker *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_picker);
+    mInfoRVPicker   = (RVNumberPicker *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_picker);
 
     masEspRightInfoList = {{RIGHT_INFO_SOAK,"预浸泡时间","s"},{RIGHT_INFO_EXT_TEMP,"萃取温度","℃"}};
     masEspPlotHistoryDataList.clear();
 
     // 特定控件
-    mPlotInfoPlotView   = (CYPlotView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_plotview);
+    mPlotInfoPlotView   = (CYPlotView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_plotview);
 
-    mPlotInfoFavImg     = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_plot_favorites);
-    mPlotInfoEditImg    =  (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_plot_edit);
-    mPlotInfoModePicker = (NumberPicker *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_plot_hor_picker);
+    mPlotInfoFavImg     = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_plot_favorites);
+    mPlotInfoEditImg    =  (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_plot_edit);
+    mPlotInfoModePicker = (NumberPicker *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_plot_hor_picker);
 
     mPlotInfoModePicker->setMaxValue(mMasEspData.sndModeList.size()-1);
     mPlotInfoModePicker->setFormatter([this](int value){ return value>= mMasEspData.sndModeList.size()?"error formatter":mMasEspData.sndModeList.at(value).sndModename; });
@@ -303,13 +303,13 @@ void HomeTabModeMasEsp::dealRightInfoAddReductClick(bool isAdd){
 
 void HomeTabModeMasEsp::onItemClickListener(View &v){
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::right_info_reduce:{
+        case t5_ai_coffee::R::id::right_info_reduce:{
             dealRightInfoAddReductClick(false);
             break;
-        }case kaidu_ms7_lqy::R::id::right_info_add:{
+        }case t5_ai_coffee::R::id::right_info_add:{
             dealRightInfoAddReductClick(true);
             break;
-        }case kaidu_ms7_lqy::R::id::info_plot_favorites:{
+        }case t5_ai_coffee::R::id::info_plot_favorites:{
             v.setActivated(!v.isActivated());
 
             mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()) = mCacheData;
@@ -321,17 +321,17 @@ void HomeTabModeMasEsp::onItemClickListener(View &v){
                 g_objConf->deleteFavModeData(favItemData);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::powder_add:
-        case kaidu_ms7_lqy::R::id::powder_reduce:{
+        }case t5_ai_coffee::R::id::powder_add:
+        case t5_ai_coffee::R::id::powder_reduce:{
             mCacheData.powderDef = mArcPowder->getProgress();
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:
-        case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:
+        case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             dealPowderItemClick(v);
             break;
-        }case kaidu_ms7_lqy::R::id::fav_enter_img:{
+        }case t5_ai_coffee::R::id::fav_enter_img:{
             Json::Value favItemData = g_objConf->getFavModeList()[mFavEditPos];
             Json::Value favSndItemData = favItemData["sndModeData"];
             Json::Value favSndStepItemData;
@@ -362,8 +362,8 @@ void HomeTabModeMasEsp::dealPowderItemClick(View &v){
     LOGE("%d %d",v.isSelected(),v.isActivated());
     // 不管单双，共同的操作
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:{
             if(v.isSelected()){
                 v.setSelected(false);
                 mOneCupImg->setActivated(true);
@@ -373,8 +373,8 @@ void HomeTabModeMasEsp::dealPowderItemClick(View &v){
                 mMasEspData.sndModeList.at(mPlotInfoModePicker->getValue()).powderDef = mCacheData.powderDef;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             if(v.isSelected()){
                 v.setSelected(false);
                 mOneBeanImg->setActivated(true);
@@ -459,12 +459,12 @@ void HomeTabModeMasEsp::dealTuyaStartWork(){
 void HomeTabModeMasEsp::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::arc_powder:{
+        case t5_ai_coffee::R::id::arc_powder:{
             mPowderInfoTv->setText(std::to_string(progress));
             mCacheData.powderDef = progress;
             break;
         }
-    case kaidu_ms7_lqy::R::id::arc_right:{
+    case t5_ai_coffee::R::id::arc_right:{
             mRightInfoTv->setText(std::to_string(progress));
             switch(masEspRightInfoList.at(mInfoRVPicker->getValue()).type){
                 case RIGHT_INFO_EXT_TEMP:{

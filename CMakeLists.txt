@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.8)
-project(kaidu_ms7_lqy)
+project(t5_ai_coffee)
 
 execute_process(COMMAND bash date2ver  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 message("CMAKE_CXX_COMPILER:${CMAKE_CXX_COMPILER}")
@@ -72,8 +72,8 @@ if(x${CDROID_CHIPSET} STREQUAL "xsigma")
     link_directories(./tuya/libs )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tuya ${ALL_INCLUDE_DIRECTORIES} ) 
     message("ALL_INCLUDE_DIRECTORIES=${ALL_INCLUDE_DIRECTORIES}")
-    aux_source_directory(./tuya KAIDU_MS7)
-    aux_source_directory(./tuya/tuyaos_adapter/src KAIDU_MS7)
+    aux_source_directory(./tuya T5_AI_COFFEE)
+    aux_source_directory(./tuya/tuyaos_adapter/src T5_AI_COFFEE)
     add_definitions(-DSUSPEND=1)
     set(TUYA_LIBS libtuyaos.a libtuyaos_adapter.a libtuyaapp_components.a)
     find_package(OpenMP REQUIRED)
@@ -95,7 +95,7 @@ link_directories(${CMAKE_BINARY_DIR}/lib)
 # 增加 3rdpart 的CMAKE 
 add_subdirectory(./3rdpart)
 
-add_executable(${PROJECT_NAME} ${KAIDU_MS7} ${SOURCES} ${PRJ_SRC} ${PRJ_SRC_COMM} ${PRJ_SRC_DATA} ${PRJ_SRC_FUN} ${PRJ_SRC_NET} ${PRJ_SRC_VIEWLIB} ${PRJ_SRC_PROTOCOL} ${PRJ_SRC_UART} ${PRJ_SRC_WINDOWS})
+add_executable(${PROJECT_NAME} ${T5_AI_COFFEE} ${SOURCES} ${PRJ_SRC} ${PRJ_SRC_COMM} ${PRJ_SRC_DATA} ${PRJ_SRC_FUN} ${PRJ_SRC_NET} ${PRJ_SRC_VIEWLIB} ${PRJ_SRC_PROTOCOL} ${PRJ_SRC_UART} ${PRJ_SRC_WINDOWS})
 
 target_compile_options(${PROJECT_NAME} PRIVATE ${AVX_SSE})
 CreatePAK(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/assets ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.pak ${PROJECT_SOURCE_DIR}/R.h  ${PIXMAN_INCLUDE_DIRS} )

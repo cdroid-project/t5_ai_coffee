@@ -28,20 +28,20 @@ PopWarn::~PopWarn(){
 }
 
 void PopWarn::initPopView(){
-    mPopGroup       = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_group);
+    mPopGroup       = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_group);
 
-    mWarnInfoGroup  = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_info_group);
-    mWarnCleanGroup  = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_clean_group);
+    mWarnInfoGroup  = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_info_group);
+    mWarnCleanGroup  = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_clean_group);
 
-    mWarnImg         = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_img);
-    mPopBtnConfirm  = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter);
-    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel);
+    mWarnImg         = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_img);
+    mPopBtnConfirm  = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter);
+    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel);
     
-    mWarnTitleTv     = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_title_tv);
-    mWarnInfoTv      = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_info_tv);
+    mWarnTitleTv     = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_title_tv);
+    mWarnInfoTv      = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_info_tv);
 
-    mWarnCleanInfoTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_clean_info_tv);
-    mWarnCleanSwitchTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::warn_clean_switch_tv);
+    mWarnCleanInfoTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_clean_info_tv);
+    mWarnCleanSwitchTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::warn_clean_switch_tv);
 
     auto clickFunc = std::bind(&PopWarn::onBtnClickListener,this,std::placeholders::_1);
     mPopLayout->setSoundEffectsEnabled(false);
@@ -98,7 +98,7 @@ void PopWarn::updatePageData(){
 void PopWarn::onBtnClickListener(View&v){
     LOGI("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             g_appData.warnIsDealState |= g_appData.warnShowType;
             if(g_appData.warnShowType == A02){
                 g_windMgr->showPage(PAGE_CLEAN_CALCIFY);
@@ -116,7 +116,7 @@ void PopWarn::onBtnClickListener(View&v){
             g_windMgr->updateDate();
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             if(g_appData.warnShowType == A02){
                 g_appData.warnIsDealState |= g_appData.warnShowType;
                 std::time_t nowTime = std::time(NULL);
@@ -130,7 +130,7 @@ void PopWarn::onBtnClickListener(View&v){
             g_windMgr->updateDate();
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::warn_clean_switch_tv:{
+        }case t5_ai_coffee::R::id::warn_clean_switch_tv:{
             mWarnCleanSwitchTv->setSelected(!mWarnCleanSwitchTv->isSelected());
             break;
         }

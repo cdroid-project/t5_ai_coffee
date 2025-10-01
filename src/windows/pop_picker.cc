@@ -17,19 +17,19 @@ PopPicker::~PopPicker(){
 }
 
 void PopPicker::initPopView(){
-    mSelectModePicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_select_mode_picker_1);
-    mNumberPicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_num_picker_1);
-    mNumberPicker2 = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_num_picker_2);
+    mSelectModePicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_select_mode_picker_1);
+    mNumberPicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_num_picker_1);
+    mNumberPicker2 = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_num_picker_2);
 
-    mTitleTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_title_tv);
-    mPickerName1Tv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_name_1);
-    mPickerName2Tv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_name_2_tv);
-    mPickerUnits1Tv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_units_1_tv);
-    mPickerUnits2Tv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_units_2_tv);
+    mTitleTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_title_tv);
+    mPickerName1Tv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_name_1);
+    mPickerName2Tv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_name_2_tv);
+    mPickerUnits1Tv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_units_1_tv);
+    mPickerUnits2Tv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_units_2_tv);
 
     auto clickFunc = std::bind(&PopPicker::onBtnClickListener,this,std::placeholders::_1);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter)->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel)->setOnClickListener(clickFunc);
     mPopLayout->setOnClickListener(clickFunc);
     mPopLayout->setSoundEffectsEnabled(false);
 }
@@ -86,10 +86,10 @@ void PopPicker::initPopData(){
 
 void PopPicker::onBtnClickListener(View&v){
     switch (v.getId()){
-    case kaidu_ms7_lqy::R::id::pop_cancel:
+    case t5_ai_coffee::R::id::pop_cancel:
         g_windMgr->dealClosePopPage();
         break;
-    case kaidu_ms7_lqy::R::id::pop_enter:
+    case t5_ai_coffee::R::id::pop_enter:
         if(mPopType == POP_HOT_WATER){  
             g_appData.hotWaterTemp = mNumberPicker->getValue();
             g_appData.hotWater = mNumberPicker2->getValue()*5;

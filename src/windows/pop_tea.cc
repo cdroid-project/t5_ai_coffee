@@ -22,22 +22,22 @@ PopTea::~PopTea() {
 }
 
 void PopTea::initPopView(){
-    mPopPicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker);
+    mPopPicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker);
 
-    mPopStepPicker = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_step_picker);
-    mTipsPowderTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_tips_powder_tv);
-    mTipsPowderMaxTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_tips_powder_max_tv);
-    mTipsWashTimesTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_tips_wash_times_tv);
-    mTipsPressureTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_tips_pressure_tv);
+    mPopStepPicker = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_step_picker);
+    mTipsPowderTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_tips_powder_tv);
+    mTipsPowderMaxTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_tips_powder_max_tv);
+    mTipsWashTimesTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_tips_wash_times_tv);
+    mTipsPressureTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_tips_pressure_tv);
 
-    mPopPickerWater = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_water);
-    mPopPickerFlowRate = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_flowrate);
-    mPopPickerTime = (NumberPicker *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_picker_time);
+    mPopPickerWater = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_water);
+    mPopPickerFlowRate = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_flowrate);
+    mPopPickerTime = (NumberPicker *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_picker_time);
 
-    mPopResetAnim = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_anim);
-    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter);
-    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel);
-    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_group);
+    mPopResetAnim = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_anim);
+    mPopBtnConfirm   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter);
+    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel);
+    // mPopGaussBox = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_group);
     
     initPopData();
 
@@ -46,7 +46,7 @@ void PopTea::initPopView(){
     mPopLayout->setOnClickListener(clickFunc);  // 防止点击穿透
     mPopBtnConfirm->setOnClickListener(clickFunc);
     mPopBtnCancel->setOnClickListener(clickFunc);
-    mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_reset_group)->setOnClickListener(clickFunc);
+    mPopLayout->findViewById(t5_ai_coffee::R::id::pop_reset_group)->setOnClickListener(clickFunc);
     mPopPicker->setOnValueChangedListener(PickerFunc);
     mPopStepPicker->setOnValueChangedListener(PickerFunc);
 
@@ -157,17 +157,17 @@ void PopTea::setTipsData(){
 void PopTea::onBtnClickListener(View&v){
     LOGE("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             saveStepData();
             g_objConf->setExtractTeaData(mTeaData);
             if(mModeEnterCallback) mModeEnterCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             if(mModeCancelCallback) mModeCancelCallback(mPickerSelectPos);
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_reset_group:{
+        }case t5_ai_coffee::R::id::pop_reset_group:{
             // mTeaData.sndModeList.at(mPickerSelectPos) = g_objConf->getExtractTeaData().sndModeList.at(mPickerSelectPos);
             mTeaData.sndModeList.at(mPickerSelectPos) = g_objConf->getExtractTeaData(true).sndModeList.at(mPickerSelectPos);
             setStepData();
@@ -179,13 +179,13 @@ void PopTea::onBtnClickListener(View&v){
 
 void PopTea::onPickerValueChangeListener(NumberPicker&picker,int oldValue,int newValue){
     switch(picker.getId()){
-        case kaidu_ms7_lqy::R::id::pop_picker:{
+        case t5_ai_coffee::R::id::pop_picker:{
             mPickerSelectPos = newValue;
             mTeaData.sndModeList.at(oldValue) = g_objConf->getExtractTeaData().sndModeList.at(oldValue);
             setStepData();
             setTipsData();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_step_picker:{
+        }case t5_ai_coffee::R::id::pop_step_picker:{
             saveStepData();
             mStepSelectPos = newValue;
             setStepData();

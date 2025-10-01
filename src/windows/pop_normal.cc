@@ -23,32 +23,32 @@ PopNormal::~PopNormal(){
 }
 
 void PopNormal::initPopView(){
-    mPopGroup       = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_group);
+    mPopGroup       = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_group);
 
-    mNormalGroup    = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_normal_group);
-    mOTAGroup       = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_ota_group);
-    mBindAppGroup   = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bind_app_group);
+    mNormalGroup    = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_normal_group);
+    mOTAGroup       = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_ota_group);
+    mBindAppGroup   = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bind_app_group);
 
-    mPopInfoGroup   = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_info_group);
-    mOTAInfoScrollGroup = (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_ota_info_scroll_group);
+    mPopInfoGroup   = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_info_group);
+    mOTAInfoScrollGroup = (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_ota_info_scroll_group);
 
-    mPopBtnConfirm  = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_enter);
-    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_cancel);
+    mPopBtnConfirm  = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_enter);
+    mPopBtnCancel   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_cancel);
     
-    mPopImg         = (ImageView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_img);
-    mPopTitleTv     = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_title_tv);
-    mPopInfoTv      = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_info_tv);
-    mPopOtaScrollInfoTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_ota_info_tv);
+    mPopImg         = (ImageView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_img);
+    mPopTitleTv     = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_title_tv);
+    mPopInfoTv      = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_info_tv);
+    mPopOtaScrollInfoTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_ota_info_tv);
 
-    mPopOtaProgress = (ProgressBar *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_ota_progress);
-    mPopOtaTitleTv  = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_ota_scroll_title_tv);
-    mPopOtaInfoTv   = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::ota_info_tv);
-    mPopOtaProgressTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::ota_progress_tv);
+    mPopOtaProgress = (ProgressBar *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_ota_progress);
+    mPopOtaTitleTv  = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_ota_scroll_title_tv);
+    mPopOtaInfoTv   = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::ota_info_tv);
+    mPopOtaProgressTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::ota_progress_tv);
     
-    mBindAppImgGroup= (ViewGroup *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bind_app_img_group);
-    mBindAppImg     = (QRCodeView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bind_app_img);
-    mBindAppCilckTipsTv = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_click_tips_tv);
-    mBindAppInfoTv  = (TextView *)mPopLayout->findViewById(kaidu_ms7_lqy::R::id::pop_bind_app_info_tv);
+    mBindAppImgGroup= (ViewGroup *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bind_app_img_group);
+    mBindAppImg     = (QRCodeView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bind_app_img);
+    mBindAppCilckTipsTv = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_click_tips_tv);
+    mBindAppInfoTv  = (TextView *)mPopLayout->findViewById(t5_ai_coffee::R::id::pop_bind_app_info_tv);
 
     auto clickFunc = std::bind(&PopNormal::onBtnClickListener,this,std::placeholders::_1);
     mPopLayout->setSoundEffectsEnabled(false);
@@ -335,7 +335,7 @@ void PopNormal::updatePageData(){
 void PopNormal::onBtnClickListener(View&v){
     LOGI("onBtnClickListener v.getId() = %d",v.getId());
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::pop_enter:{
+        case t5_ai_coffee::R::id::pop_enter:{
             switch(mPopType){
                 case POP_OTA:{
                     mNormalGroup->setVisibility(View::GONE);
@@ -382,19 +382,19 @@ void PopNormal::onBtnClickListener(View&v){
             if(mEnterCallback) mEnterCallback();
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_cancel:{
+        }case t5_ai_coffee::R::id::pop_cancel:{
             if(mCancelCallback) mCancelCallback();
             g_windMgr->dealClosePopPage();
             break;
-        }case kaidu_ms7_lqy::R::id::pop_click_tips_tv:
-        case kaidu_ms7_lqy::R::id::pop_bind_app_img:{
-            View *view = mPopLayout->findViewById(kaidu_ms7_lqy::R::id::qrcode_box);
+        }case t5_ai_coffee::R::id::pop_click_tips_tv:
+        case t5_ai_coffee::R::id::pop_bind_app_img:{
+            View *view = mPopLayout->findViewById(t5_ai_coffee::R::id::qrcode_box);
             view->setActivated(!view->isActivated());
             view->setScaleX(view->isActivated()?2.f:1.f);
             view->setScaleY(view->isActivated()?2.f:1.f);
             mBindAppCilckTipsTv->setVisibility(view->isActivated()?View::GONE:View::VISIBLE);
             break;
-        }case kaidu_ms7_lqy::R::id::pop_layout:{
+        }case t5_ai_coffee::R::id::pop_layout:{
             if(mPopType == POP_BIND_APP){
                 g_windMgr->dealClosePopPage();
             }

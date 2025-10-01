@@ -32,11 +32,11 @@ void PageBase::initPageBase(const std::string resource){
     mPageLayout = (ViewGroup *)LayoutInflater::from(mWindPageBox->getContext())->inflate(resource, nullptr);
     addPage(); //默认显示
 
-    mToastView = (TextView *)mWindPageBox->getParent()->findViewById(kaidu_ms7_lqy::R::id::toast_tv);
+    mToastView = (TextView *)mWindPageBox->getParent()->findViewById(t5_ai_coffee::R::id::toast_tv);
     if(mPageType == PAGE_SCREENSAVER){
-        mTitleBarWeather    = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::weather_img);
-        mTitleBarWeekText   = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::date_text);
-        mTitleBarTimeText   = (TimeTextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_text);
+        mTitleBarWeather    = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::weather_img);
+        mTitleBarWeekText   = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::date_text);
+        mTitleBarTimeText   = (TimeTextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::time_text);
         mTitleBarTimeText->start();
         
         mTickerTime = 1000; //每1秒刷新一次
@@ -44,13 +44,13 @@ void PageBase::initPageBase(const std::string resource){
         onBaseTicker();
     }else if((mPageType != PAGE_KEYBOARD) && (mPageType != PAGE_FACTORY)){
     
-        mTitleBarWifi       = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::icon_wifi);
-        mTitleWash          = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::icon_wash);
-        mTitleSetup         = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::icon_setup);
+        mTitleBarWifi       = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::icon_wifi);
+        mTitleWash          = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::icon_wash);
+        mTitleSetup         = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::icon_setup);
 
-        mTitleBarWeather    = (ImageView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::weather);
-        mTitleBarWeekText   = (TextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::week_text);
-        mTitleBarTimeText   = (TimeTextView *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_text);
+        mTitleBarWeather    = (ImageView *)mPageLayout->findViewById(t5_ai_coffee::R::id::weather);
+        mTitleBarWeekText   = (TextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::week_text);
+        mTitleBarTimeText   = (TimeTextView *)mPageLayout->findViewById(t5_ai_coffee::R::id::time_text);
         mTitleBarTimeText->start();
 
         auto btn_click_func = std::bind(&PageBase::btnClickListener, this, std::placeholders::_1);
@@ -61,7 +61,7 @@ void PageBase::initPageBase(const std::string resource){
         if(mPageType != PAGE_SETTING)   mTitleSetup->setOnClickListener(btn_click_func);
         else                            mTitleSetup->setOnClickListener(std::bind(&PageBase::enterTestPage, this, std::placeholders::_1));
 
-        mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_layout)->setOnClickListener([this](View &){
+        mPageLayout->findViewById(t5_ai_coffee::R::id::time_layout)->setOnClickListener([this](View &){
             static int clickCount = 0;
             if(SystemClock::uptimeMillis() <= 15*1000){
                 clickCount++;
@@ -71,7 +71,7 @@ void PageBase::initPageBase(const std::string resource){
                 }
             }
         });
-        mPageLayout->findViewById(kaidu_ms7_lqy::R::id::time_layout)->setSoundEffectsEnabled(false);
+        mPageLayout->findViewById(t5_ai_coffee::R::id::time_layout)->setSoundEffectsEnabled(false);
 
         mTickerTime = 1000; //每1秒刷新一次
         mTicker = std::bind(&PageBase::onBaseTicker,this);
@@ -168,13 +168,13 @@ void PageBase::btnClickListener(View& view){
         return;
     }
     switch(view.getId()){
-        case kaidu_ms7_lqy::R::id::icon_wifi:{
+        case t5_ai_coffee::R::id::icon_wifi:{
             g_windMgr->showPage(PAGE_SETTING);
             break;
-        }case kaidu_ms7_lqy::R::id::icon_wash:{
+        }case t5_ai_coffee::R::id::icon_wash:{
             g_windMgr->showPage(PAGE_CLEAN);
             break;
-        }case kaidu_ms7_lqy::R::id::icon_setup:{
+        }case t5_ai_coffee::R::id::icon_setup:{
             g_windMgr->showPage(PAGE_SETTING);
             break;
         }
@@ -187,7 +187,7 @@ void PageBase::enterTestPage(View&v){
     static int  clickCount    = 0;
     int64_t now_tick = SystemClock::uptimeMillis();
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_setup:{
+        case t5_ai_coffee::R::id::icon_setup:{
             if((now_tick - LastClick ) <= 2000){
                 if(++clickCount >= 10){
                     g_windMgr->showPage(PAGE_FACTORY);

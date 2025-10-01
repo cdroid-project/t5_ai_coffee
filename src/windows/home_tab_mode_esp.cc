@@ -16,27 +16,27 @@ HomeTabModeEsp::~HomeTabModeEsp(){
 }
 
 void HomeTabModeEsp::initGroup(){
-    mResetTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_reset);
-    mHotWaterTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_hot_water);
-    mSteamTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::btn_steam);
+    mResetTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_reset);
+    mHotWaterTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_hot_water);
+    mSteamTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::btn_steam);
 
     // tv->getBackground()->setLevel(5000);
-    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_bean);
-    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_bean);
-    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_cup);
-    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_cup);
+    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_bean);
+    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_bean);
+    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_cup);
+    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_cup);
 
-    mCupInfoFavImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_info_favorites);
-    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_powder);
-    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_right);
+    mCupInfoFavImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_info_favorites);
+    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_powder);
+    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_right);
 
-    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::powder_info_tv);
-    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_tv);
-    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_title_tv);
-    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_units_tv);
+    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::powder_info_tv);
+    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_tv);
+    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_title_tv);
+    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_units_tv);
 
-    mInfoRVPicker   = (RVNumberPicker *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_picker);
-    mInfoImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::cup_info_img);
+    mInfoRVPicker   = (RVNumberPicker *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_picker);
+    mInfoImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::cup_info_img);
 
     espRightInfoList = {{RIGHT_INFO_SOAK,"预浸泡时间","s"},{RIGHT_INFO_EXT_WATER,"萃取水量","ml"},{RIGHT_INFO_EXT_TEMP,"萃取温度","℃"}};
 
@@ -296,13 +296,13 @@ void HomeTabModeEsp::dealRightInfoAddReductClick(bool isAdd){
 
 void HomeTabModeEsp::onItemClickListener(View &v){
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::right_info_reduce:{
+        case t5_ai_coffee::R::id::right_info_reduce:{
             dealRightInfoAddReductClick(false);
             break;
-        }case kaidu_ms7_lqy::R::id::right_info_add:{
+        }case t5_ai_coffee::R::id::right_info_add:{
             dealRightInfoAddReductClick(true);
             break;
-        }case kaidu_ms7_lqy::R::id::cup_info_favorites:{
+        }case t5_ai_coffee::R::id::cup_info_favorites:{
             v.setActivated(!v.isActivated());
 
             mEspData.sndData = mCacheData;
@@ -313,17 +313,17 @@ void HomeTabModeEsp::onItemClickListener(View &v){
                 g_objConf->deleteFavModeData(favItemData);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::powder_add:
-        case kaidu_ms7_lqy::R::id::powder_reduce:{
+        }case t5_ai_coffee::R::id::powder_add:
+        case t5_ai_coffee::R::id::powder_reduce:{
             mCacheData.powderDef = mArcPowder->getProgress();
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:
-        case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:
+        case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             dealPowderItemClick(v);
             break;
-        }case kaidu_ms7_lqy::R::id::btn_reset:{
+        }case t5_ai_coffee::R::id::btn_reset:{
             if(!(g_appData.machineState & MC_STATE_POWDER || g_appData.machineState & MC_STATE_EXT)){
                 mEspData.sndData = g_objConf->getEspData(true).sndData;
                 mCacheData = mEspData.sndData;
@@ -359,7 +359,7 @@ void HomeTabModeEsp::onItemClickListener(View &v){
                 mCupInfoFavImg->setActivated(g_objConf->checkFavModeData(getCacheDataToJson()));
             }
             break;
-        }case kaidu_ms7_lqy::R::id::btn_hot_water:{
+        }case t5_ai_coffee::R::id::btn_hot_water:{
             if((g_appData.machineState & MC_STATE_POWDER) || (g_appData.machineState & MC_STATE_EXT)){
                 LOGE("error!!! 工作中不能出热水");
             }else{
@@ -372,7 +372,7 @@ void HomeTabModeEsp::onItemClickListener(View &v){
                 }
             }
             break;
-        }case kaidu_ms7_lqy::R::id::fav_enter_img:{
+        }case t5_ai_coffee::R::id::fav_enter_img:{
             Json::Value favItemData = g_objConf->getFavModeList()[mFavEditPos];
             Json::Value favSndItemData;
             favSndItemData["powderDef"] = mArcPowder->getProgress();
@@ -395,8 +395,8 @@ void HomeTabModeEsp::dealPowderItemClick(View &v){
     LOGE("%d %d",v.isSelected(),v.isActivated());
     // 不管单双，共同的操作
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_double_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_double_bean:{
             if(v.isSelected()){
                 v.setSelected(false);
                 if(mCupItemState & ITEM_ACTIVIT_FIR)mOneCupImg->setActivated(true);
@@ -409,8 +409,8 @@ void HomeTabModeEsp::dealPowderItemClick(View &v){
                 mEspData.sndData.powderDef = mArcPowder->getProgress();
             }
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_cup:
-        case kaidu_ms7_lqy::R::id::icon_double_cup:{
+        }case t5_ai_coffee::R::id::icon_one_cup:
+        case t5_ai_coffee::R::id::icon_double_cup:{
             if(v.isSelected()){
                 v.setSelected(false);
                 if(mBeanItemState & ITEM_ACTIVIT_FIR)mOneBeanImg->setActivated(true);
@@ -465,7 +465,7 @@ void HomeTabModeEsp::dealPowderItemClick(View &v){
 void HomeTabModeEsp::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::arc_powder:{
+        case t5_ai_coffee::R::id::arc_powder:{
             mPowderInfoTv->setText(std::to_string(progress));
             mCacheData.powderDef = progress;
             if(progress>14){
@@ -478,7 +478,7 @@ void HomeTabModeEsp::onArcValueChangeListener(View &v, int progress, bool fromUs
                 mDoubleBeanImg->setActivated(false);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::arc_right:{
+        }case t5_ai_coffee::R::id::arc_right:{
             mRightInfoTv->setText(std::to_string(progress));
             switch(espRightInfoList.at(mInfoRVPicker->getValue()).type){
                 case RIGHT_INFO_EXT_WATER:{

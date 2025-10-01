@@ -30,32 +30,32 @@ PageClean::~PageClean(){
 
 void PageClean::initPageView(){
     
-    mSelectGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::clean_select);
-    mStepGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::step_tips_group);
-    mRunningGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::clean_running_group);
+    mSelectGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::clean_select);
+    mStepGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::step_tips_group);
+    mRunningGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::clean_running_group);
     // select group
-    mSelectWaterTv = (TextView *)mSelectGroup->findViewById(kaidu_ms7_lqy::R::id::clean_select_water_enter_tv);
-    mSelectCalcifyTv = (TextView *)mSelectGroup->findViewById(kaidu_ms7_lqy::R::id::clean_select_calcify_enter_tv);
-    mCalCleanWarnImg = mSelectGroup->findViewById(kaidu_ms7_lqy::R::id::cal_clean_warn_img);
-    mCalInfoTv = (TextView *)mSelectGroup->findViewById(kaidu_ms7_lqy::R::id::clean_select_calcify_time_tv);
-    mCalInfoTv2 = (TextView *)mSelectGroup->findViewById(kaidu_ms7_lqy::R::id::clean_select_calcify_time_tv2);
+    mSelectWaterTv = (TextView *)mSelectGroup->findViewById(t5_ai_coffee::R::id::clean_select_water_enter_tv);
+    mSelectCalcifyTv = (TextView *)mSelectGroup->findViewById(t5_ai_coffee::R::id::clean_select_calcify_enter_tv);
+    mCalCleanWarnImg = mSelectGroup->findViewById(t5_ai_coffee::R::id::cal_clean_warn_img);
+    mCalInfoTv = (TextView *)mSelectGroup->findViewById(t5_ai_coffee::R::id::clean_select_calcify_time_tv);
+    mCalInfoTv2 = (TextView *)mSelectGroup->findViewById(t5_ai_coffee::R::id::clean_select_calcify_time_tv2);
     
     // step group
-    mStepGroup_1 = (ViewGroup *)mStepGroup->findViewById(kaidu_ms7_lqy::R::id::step_1_group);
-    mStepGroup_2 = (ViewGroup *)mStepGroup->findViewById(kaidu_ms7_lqy::R::id::step_2_group);
+    mStepGroup_1 = (ViewGroup *)mStepGroup->findViewById(t5_ai_coffee::R::id::step_1_group);
+    mStepGroup_2 = (ViewGroup *)mStepGroup->findViewById(t5_ai_coffee::R::id::step_2_group);
 
-    mSteptitleTv_1 = (TextView *)mStepGroup_1->findViewById(kaidu_ms7_lqy::R::id::clean_step_1_title_tv);
-    mStepInfoTv_1 = (TextView *)mStepGroup_1->findViewById(kaidu_ms7_lqy::R::id::clean_step_1_info_tv);
-    mSteptitleTv_2 = (TextView *)mStepGroup_2->findViewById(kaidu_ms7_lqy::R::id::clean_step_2_title_tv);
-    mStepInfoTv_2 = (TextView *)mStepGroup_2->findViewById(kaidu_ms7_lqy::R::id::clean_step_2_info_tv);
+    mSteptitleTv_1 = (TextView *)mStepGroup_1->findViewById(t5_ai_coffee::R::id::clean_step_1_title_tv);
+    mStepInfoTv_1 = (TextView *)mStepGroup_1->findViewById(t5_ai_coffee::R::id::clean_step_1_info_tv);
+    mSteptitleTv_2 = (TextView *)mStepGroup_2->findViewById(t5_ai_coffee::R::id::clean_step_2_title_tv);
+    mStepInfoTv_2 = (TextView *)mStepGroup_2->findViewById(t5_ai_coffee::R::id::clean_step_2_info_tv);
     
-    mStepEnterTv = (TextView *)mStepGroup->findViewById(kaidu_ms7_lqy::R::id::clean_enter);
-    mStepcancelTv = (TextView *)mStepGroup->findViewById(kaidu_ms7_lqy::R::id::clean_cancel);
+    mStepEnterTv = (TextView *)mStepGroup->findViewById(t5_ai_coffee::R::id::clean_enter);
+    mStepcancelTv = (TextView *)mStepGroup->findViewById(t5_ai_coffee::R::id::clean_cancel);
 
     // running group
-    mRunningTitleTv = (TextView *)mRunningGroup->findViewById(kaidu_ms7_lqy::R::id::clean_running_title_tv);
-    mRunningInfoTv = (TextView *)mRunningGroup->findViewById(kaidu_ms7_lqy::R::id::clean_running_info_tv);
-    mRunningView = mRunningGroup->findViewById(kaidu_ms7_lqy::R::id::clean_running_rolling);
+    mRunningTitleTv = (TextView *)mRunningGroup->findViewById(t5_ai_coffee::R::id::clean_running_title_tv);
+    mRunningInfoTv = (TextView *)mRunningGroup->findViewById(t5_ai_coffee::R::id::clean_running_info_tv);
+    mRunningView = mRunningGroup->findViewById(t5_ai_coffee::R::id::clean_running_rolling);
 
 
     auto btn_click_func = std::bind(&PageClean::btnClickListener, this, std::placeholders::_1);
@@ -65,7 +65,7 @@ void PageClean::initPageView(){
     mStepEnterTv->setOnClickListener(btn_click_func);
     mStepcancelTv->setOnClickListener(btn_click_func);
     
-    mPageLayout->findViewById(kaidu_ms7_lqy::R::id::title_back)->setOnClickListener(btn_click_func);
+    mPageLayout->findViewById(t5_ai_coffee::R::id::title_back)->setOnClickListener(btn_click_func);
 
     mPageLayout->setSoundEffectsEnabled(false);
     
@@ -301,7 +301,7 @@ void PageClean::changePageStep(){
 
 void PageClean::btnClickListener(View& view){
     switch(view.getId()){
-        case kaidu_ms7_lqy::R::id::title_back:{
+        case t5_ai_coffee::R::id::title_back:{
             if(mRunningGroup->getVisibility() == View::VISIBLE
                 || (!mIsSelectWater && (mPageStep == 4))){
                     if(!mIsSelectWater && (mPageStep != 4)){
@@ -328,20 +328,20 @@ void PageClean::btnClickListener(View& view){
                 g_windMgr->showPrevPage();
             }
             break;
-        }case kaidu_ms7_lqy::R::id::clean_cancel:{
+        }case t5_ai_coffee::R::id::clean_cancel:{
             mPageStep--;
             changePageStep();
             break;
-        }case kaidu_ms7_lqy::R::id::clean_enter:{
+        }case t5_ai_coffee::R::id::clean_enter:{
             mPageStep++;
             changePageStep();
             break;
-        }case kaidu_ms7_lqy::R::id::clean_select_water_enter_tv:{
+        }case t5_ai_coffee::R::id::clean_select_water_enter_tv:{
             mIsSelectWater = true;
             mPageStep = 1;
             changePageStep();
             break;
-        }case kaidu_ms7_lqy::R::id::clean_select_calcify_enter_tv:{
+        }case t5_ai_coffee::R::id::clean_select_calcify_enter_tv:{
             mIsSelectWater = false;
             mPageStep = 1;
             changePageStep();

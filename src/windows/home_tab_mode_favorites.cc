@@ -18,10 +18,10 @@ HomeTabModeFav::~HomeTabModeFav(){
 
 void HomeTabModeFav::initGroup(){
     // 特定控件
-    mCoffeeGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::layout_coffee);
-    mFavListGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::layout_fav_list);
+    mCoffeeGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::layout_coffee);
+    mFavListGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::layout_fav_list);
 
-    mFavRecycler = (RecyclerView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::fav_list);
+    mFavRecycler = (RecyclerView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::fav_list);
 
     mFavAdapter = new FavRecycAdapter(mFavRecycler);
     mSimpleCallback = new FavSimpleCallback(mFavAdapter);
@@ -43,7 +43,7 @@ void HomeTabModeFav::updateGroupData(bool isScrollList ){
 
 void HomeTabModeFav::onFavCardClickListener(View &v ,int Position){
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::fav_name_tv:{
+        case t5_ai_coffee::R::id::fav_name_tv:{
             mFavListJson = g_objConf->getFavModeList();
             g_windMgr->showKeyBoardPage(getJsonString(mFavListJson[Position], "name"),"请输入收藏名称",20,
             [this,Position](std::string inputData){
@@ -52,10 +52,10 @@ void HomeTabModeFav::onFavCardClickListener(View &v ,int Position){
                 mFavAdapter->notifyItem(Position);
             },nullptr);
             break;
-        }case kaidu_ms7_lqy::R::id::fav_make_tv:{
+        }case t5_ai_coffee::R::id::fav_make_tv:{
             mFavModeEditListener(Position,false);
             break;
-        }case kaidu_ms7_lqy::R::id::fav_edit_img:{
+        }case t5_ai_coffee::R::id::fav_edit_img:{
             mFavModeEditListener(Position,true);
             break;
         }
@@ -91,22 +91,22 @@ void HomeTabModeFav::FavRecycAdapter::onBindViewHolder(RecyclerView::ViewHolder&
     viewGroup->setId(position + 10000);
 
     LOGE("viewGroup = %p holder = %p id = %d",viewGroup,&holder,viewGroup->getId());
-    ImageView *picImg = (ImageView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_pic_img);
-    ImageView *deleteImg = (ImageView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_delete_img);
-    ImageView *editImg = (ImageView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_edit_img);
+    ImageView *picImg = (ImageView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_pic_img);
+    ImageView *deleteImg = (ImageView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_delete_img);
+    ImageView *editImg = (ImageView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_edit_img);
 
-    TextView *nameTv = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_name_tv);
+    TextView *nameTv = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_name_tv);
 
-    TextView *infoTitleTv_1 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_title_tv_1);
-    TextView *infoTv_1 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_tv_1);
-    TextView *infoTitleTv_2 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_title_tv_2);
-    TextView *infoTv_2 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_tv_2);
-    TextView *infoTitleTv_3 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_title_tv_3);
-    TextView *infoTv_3 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_tv_3);
-    TextView *infoTitleTv_4 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_title_tv_4);
-    TextView *infoTv_4 = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_info_tv_4);
+    TextView *infoTitleTv_1 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_title_tv_1);
+    TextView *infoTv_1 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_tv_1);
+    TextView *infoTitleTv_2 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_title_tv_2);
+    TextView *infoTv_2 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_tv_2);
+    TextView *infoTitleTv_3 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_title_tv_3);
+    TextView *infoTv_3 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_tv_3);
+    TextView *infoTitleTv_4 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_title_tv_4);
+    TextView *infoTv_4 = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_info_tv_4);
 
-    TextView *makeTv = (TextView *)viewGroup->findViewById(kaidu_ms7_lqy::R::id::fav_make_tv);
+    TextView *makeTv = (TextView *)viewGroup->findViewById(t5_ai_coffee::R::id::fav_make_tv);
     nameTv->setText(getJsonString(mFavListJson[position], "name"));
     Json::Value jsonSndModeData = mFavListJson[position]["sndModeData"];
     int beanGrindMode = getJsonInt(mFavListJson[position],"beanGrindMode");

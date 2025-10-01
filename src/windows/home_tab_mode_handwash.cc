@@ -17,56 +17,56 @@ HomeTabModeHandWash::~HomeTabModeHandWash(){
 
 void HomeTabModeHandWash::initGroup(){
     // 公有控件属性
-    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_bean);
-    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_bean);
-    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_one_cup);
-    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::icon_double_cup);
+    mOneBeanImg     = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_bean);
+    mDoubleBeanImg  = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_bean);
+    mOneCupImg      = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_one_cup);
+    mDoubleCupImg   = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::icon_double_cup);
 
-    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_powder);
-    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::arc_right);
+    mArcPowder      = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_powder);
+    mArcRight       = (ArcSeekBar *)mWindPageBox->findViewById(t5_ai_coffee::R::id::arc_right);
 
-    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::powder_info_tv);
-    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_tv);
-    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_info_title_tv);
-    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::right_units_tv);
+    mPowderInfoTv   = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::powder_info_tv);
+    mRightInfoTv    = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_tv);
+    mRightInfoTitleTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_info_title_tv);
+    mRightInfoUnitsTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::right_units_tv);
 
-    mHomeFavGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::hand_wash_fav_img);
-    mHomeTipsGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::home_tips_group);
-    mHomeTipsHandWashGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::hand_wash_tips_group);
-    mHomeTipsTeaTv = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::home_tips_tea_tv);
+    mHomeFavGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::hand_wash_fav_img);
+    mHomeTipsGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::home_tips_group);
+    mHomeTipsHandWashGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::hand_wash_tips_group);
+    mHomeTipsTeaTv = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::home_tips_tea_tv);
 
-    mHomeTipsWater = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::hand_wash_tips_water_tv);
-    mHomeTipsTime = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::hand_wash_tips_time_tv);
+    mHomeTipsWater = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::hand_wash_tips_water_tv);
+    mHomeTipsTime = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::hand_wash_tips_time_tv);
     // 特定控件
-    mHorModePicker = (NumberPicker *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::info_form_hor_picker);
+    mHorModePicker = (NumberPicker *)mWindPageBox->findViewById(t5_ai_coffee::R::id::info_form_hor_picker);
     
-    mFormGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_layout);
-    mFormTitleGroup = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_title);
-    mFormStepGroup_0 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_heating);
-    mFormStepTitle_0 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_heating_title);
-    mFormStepWater_0 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_heating_water);
-    mFormStepSpeed_0 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_heating_speed);
-    mFormStepTime_0 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_heating_time);
+    mFormGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_layout);
+    mFormTitleGroup = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_title);
+    mFormStepGroup_0 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_heating);
+    mFormStepTitle_0 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_heating_title);
+    mFormStepWater_0 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_heating_water);
+    mFormStepSpeed_0 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_heating_speed);
+    mFormStepTime_0 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_heating_time);
 
-    mFormStepGroup_1 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_1);
-    mFormStepTitle_1 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_1_title);
-    mFormStepWater_1 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_1_water);
-    mFormStepSpeed_1 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_1_speed);
-    mFormStepTime_1 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_1_time);
+    mFormStepGroup_1 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_1);
+    mFormStepTitle_1 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_1_title);
+    mFormStepWater_1 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_1_water);
+    mFormStepSpeed_1 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_1_speed);
+    mFormStepTime_1 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_1_time);
 
-    mFormStepGroup_2 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_2);
-    mFormStepTitle_2 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_2_title);
-    mFormStepWater_2 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_2_water);
-    mFormStepSpeed_2 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_2_speed);
-    mFormStepTime_2 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_2_time);
+    mFormStepGroup_2 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_2);
+    mFormStepTitle_2 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_2_title);
+    mFormStepWater_2 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_2_water);
+    mFormStepSpeed_2 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_2_speed);
+    mFormStepTime_2 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_2_time);
 
-    mFormStepGroup_3 = (ViewGroup *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_info_step_3);
-    mFormStepTitle_3 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_3_title);
-    mFormStepWater_3 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_3_water);
-    mFormStepSpeed_3 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_3_speed);
-    mFormStepTime_3 = (TextView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::step_3_time);
+    mFormStepGroup_3 = (ViewGroup *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_info_step_3);
+    mFormStepTitle_3 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_3_title);
+    mFormStepWater_3 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_3_water);
+    mFormStepSpeed_3 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_3_speed);
+    mFormStepTime_3 = (TextView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::step_3_time);
     
-    mFormStepAddImg = (ImageView *)mWindPageBox->findViewById(kaidu_ms7_lqy::R::id::form_step_add);
+    mFormStepAddImg = (ImageView *)mWindPageBox->findViewById(t5_ai_coffee::R::id::form_step_add);
 
 }
 
@@ -220,32 +220,32 @@ void HomeTabModeHandWash::dealRightInfoAddReductClick(bool isAdd){
 
 void HomeTabModeHandWash::onItemClickListener(View &v){
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::right_info_reduce:{
+        case t5_ai_coffee::R::id::right_info_reduce:{
             dealRightInfoAddReductClick(false);
             break;
-        }case kaidu_ms7_lqy::R::id::right_info_add:{
+        }case t5_ai_coffee::R::id::right_info_add:{
             dealRightInfoAddReductClick(true);
             break;
-        }case kaidu_ms7_lqy::R::id::powder_add:
-        case kaidu_ms7_lqy::R::id::powder_reduce:{
+        }case t5_ai_coffee::R::id::powder_add:
+        case t5_ai_coffee::R::id::powder_reduce:{
             mCacheData.powderDef = mArcPowder->getProgress();
             break;
-        }case kaidu_ms7_lqy::R::id::form_info_step_heating:{
+        }case t5_ai_coffee::R::id::form_info_step_heating:{
             showHandWashPop(0);
             break;
-        }case kaidu_ms7_lqy::R::id::form_info_step_1:{
+        }case t5_ai_coffee::R::id::form_info_step_1:{
             showHandWashPop(1);
             break;
-        }case kaidu_ms7_lqy::R::id::form_info_step_2:{
+        }case t5_ai_coffee::R::id::form_info_step_2:{
             showHandWashPop(2);
             break;
-        }case kaidu_ms7_lqy::R::id::form_info_step_3:{
+        }case t5_ai_coffee::R::id::form_info_step_3:{
             showHandWashPop(3);
             break;
-        }case kaidu_ms7_lqy::R::id::form_step_add:{
+        }case t5_ai_coffee::R::id::form_step_add:{
             showHandWashPop(mHandWashData.sndModeList.at(mHorModePicker->getValue()).stepDataList.size());
             break;
-        }case kaidu_ms7_lqy::R::id::hand_wash_fav_img:{
+        }case t5_ai_coffee::R::id::hand_wash_fav_img:{
             v.setActivated(!v.isActivated());
 
             mHandWashData.sndModeList.at(mHorModePicker->getValue()) = mCacheData;
@@ -257,7 +257,7 @@ void HomeTabModeHandWash::onItemClickListener(View &v){
                 g_objConf->deleteFavModeData(favItemData);
             }
             break;
-        }case kaidu_ms7_lqy::R::id::hand_wash_tips_img:{
+        }case t5_ai_coffee::R::id::hand_wash_tips_img:{
             if(mHomeTipsGroup->getVisibility() != View::VISIBLE){
                 int sumWater = 0,sumTime = 0;
                 std::vector<FormStepDataStr> stepData = mHandWashData.sndModeList.at(mHorModePicker->getValue()).stepDataList;
@@ -279,11 +279,11 @@ void HomeTabModeHandWash::onItemClickListener(View &v){
             }
             
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_bean:
-        case kaidu_ms7_lqy::R::id::icon_one_cup:{
+        }case t5_ai_coffee::R::id::icon_one_bean:
+        case t5_ai_coffee::R::id::icon_one_cup:{
             dealPowderItemClick(v);
             break;
-        }case kaidu_ms7_lqy::R::id::fav_enter_img:{
+        }case t5_ai_coffee::R::id::fav_enter_img:{
             Json::Value favItemData = g_objConf->getFavModeList()[mFavEditPos];
             Json::Value favSndItemData = favItemData["sndModeData"];
             Json::Value favSndStepItemData;
@@ -312,7 +312,7 @@ void HomeTabModeHandWash::dealPowderItemClick(View &v){
     LOGE("%d %d",v.isSelected(),v.isActivated());
     // 不管单双，共同的操作
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::icon_one_bean:{
+        case t5_ai_coffee::R::id::icon_one_bean:{
             if(v.isSelected()){
                 v.setSelected(false);
                 if(g_appData.coffeePreheatPtc >= 100)mOneCupImg->setActivated(true);
@@ -322,7 +322,7 @@ void HomeTabModeHandWash::dealPowderItemClick(View &v){
                 mHandWashData.sndModeList.at(mHorModePicker->getValue()).powderDef = mCacheData.powderDef;
             }
             break;
-        }case kaidu_ms7_lqy::R::id::icon_one_cup:{
+        }case t5_ai_coffee::R::id::icon_one_cup:{
             if(v.isSelected()){
                 v.setSelected(false);
                 mOneBeanImg->setActivated(true);
@@ -405,12 +405,12 @@ void HomeTabModeHandWash::dealTuyaStartWork(){
 void HomeTabModeHandWash::onArcValueChangeListener(View &v, int progress, bool fromUser){
     if(!fromUser) return;
     switch(v.getId()){
-        case kaidu_ms7_lqy::R::id::arc_powder:{
+        case t5_ai_coffee::R::id::arc_powder:{
             mPowderInfoTv->setText(std::to_string(progress));
             mCacheData.powderDef = progress;
             break;
         }
-        case kaidu_ms7_lqy::R::id::arc_right:{
+        case t5_ai_coffee::R::id::arc_right:{
             mRightInfoTv->setText(std::to_string(progress));
             mCacheData.extractTempDef = progress;
             break;

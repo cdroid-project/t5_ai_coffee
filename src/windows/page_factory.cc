@@ -33,42 +33,42 @@ PageFactory::~PageFactory() {
 
 void PageFactory::initPageView(){
     mMainFlipper = (ViewFlipper*)mPageLayout;
-    mMenuLayout     = (ViewGroup*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::menu);
-    mTouchLayout    = (ViewGroup*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::touch);
-    mColorFlipper   = (ViewFlipper*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::color);
-    mWifiLayout     = (ViewGroup*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::wifi);
-    mInfoLayout     = (ViewGroup*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::info);
-    mShutDownLayout = (ViewGroup*)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::shutdown_btn);
+    mMenuLayout     = (ViewGroup*)mMainFlipper->findViewById(t5_ai_coffee::R::id::menu);
+    mTouchLayout    = (ViewGroup*)mMainFlipper->findViewById(t5_ai_coffee::R::id::touch);
+    mColorFlipper   = (ViewFlipper*)mMainFlipper->findViewById(t5_ai_coffee::R::id::color);
+    mWifiLayout     = (ViewGroup*)mMainFlipper->findViewById(t5_ai_coffee::R::id::wifi);
+    mInfoLayout     = (ViewGroup*)mMainFlipper->findViewById(t5_ai_coffee::R::id::info);
+    mShutDownLayout = (ViewGroup*)mMainFlipper->findViewById(t5_ai_coffee::R::id::shutdown_btn);
 
-    mTouchView      = (TouchView*)mTouchLayout->findViewById(kaidu_ms7_lqy::R::id::touchview);
-    mwifiSsidText      = (TextView *)mWifiLayout->findViewById(kaidu_ms7_lqy::R::id::ssid_text);
-    mwifiQualityText   = (TextView *)mWifiLayout->findViewById(kaidu_ms7_lqy::R::id::signal_level_text);
+    mTouchView      = (TouchView*)mTouchLayout->findViewById(t5_ai_coffee::R::id::touchview);
+    mwifiSsidText      = (TextView *)mWifiLayout->findViewById(t5_ai_coffee::R::id::ssid_text);
+    mwifiQualityText   = (TextView *)mWifiLayout->findViewById(t5_ai_coffee::R::id::signal_level_text);
 
-    mInfoModelView  = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_model);
-    mInfoUuidView   = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_uuid);
-    mInfoTpView     = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_tp);
-    mInfoMCUView    = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_mcu);
-    mInfoCdroidView = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_cdroid);
-    mInfoMacView    = (TextView *)mInfoLayout->findViewById(kaidu_ms7_lqy::R::id::info_mac);
-    mShutDownText   = (TextView *)mShutDownLayout->findViewById(kaidu_ms7_lqy::R::id::shutdown_text);
+    mInfoModelView  = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_model);
+    mInfoUuidView   = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_uuid);
+    mInfoTpView     = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_tp);
+    mInfoMCUView    = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_mcu);
+    mInfoCdroidView = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_cdroid);
+    mInfoMacView    = (TextView *)mInfoLayout->findViewById(t5_ai_coffee::R::id::info_mac);
+    mShutDownText   = (TextView *)mShutDownLayout->findViewById(t5_ai_coffee::R::id::shutdown_text);
 
-    mShutDownEnterText = (TextView *)mShutDownLayout->findViewById(kaidu_ms7_lqy::R::id::enter_btn);
-    mShutDownCancelText = (TextView *)mShutDownLayout->findViewById(kaidu_ms7_lqy::R::id::cancel_btn);
+    mShutDownEnterText = (TextView *)mShutDownLayout->findViewById(t5_ai_coffee::R::id::enter_btn);
+    mShutDownCancelText = (TextView *)mShutDownLayout->findViewById(t5_ai_coffee::R::id::cancel_btn);
 
-    mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::exit)->setOnClickListener( [this](View&) {g_windMgr->showPrevPage();} );
+    mMainFlipper->findViewById(t5_ai_coffee::R::id::exit)->setOnClickListener( [this](View&) {g_windMgr->showPrevPage();} );
 
     auto modeClick  = std::bind(&PageFactory::switchMode, this, std::placeholders::_1);
     auto btnclick   = std::bind(&PageFactory::btnClick, this, std::placeholders::_1);
 
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_serial)->setOnClickListener( modeClick);
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_touch)->setOnClickListener( modeClick);
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_color)->setOnClickListener( modeClick);
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_wifi)->setOnClickListener( modeClick);
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_info)->setOnClickListener( modeClick);
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_shutdown)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_serial)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_touch)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_color)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_wifi)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_info)->setOnClickListener( modeClick);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_shutdown)->setOnClickListener( modeClick);
     
-    mWifiLayout->findViewById(kaidu_ms7_lqy::R::id::shuaxin_wifi_btn)->setOnClickListener( btnclick );
-    mWifiLayout->findViewById(kaidu_ms7_lqy::R::id::pass_btn)->setOnClickListener( btnclick);
+    mWifiLayout->findViewById(t5_ai_coffee::R::id::shuaxin_wifi_btn)->setOnClickListener( btnclick );
+    mWifiLayout->findViewById(t5_ai_coffee::R::id::pass_btn)->setOnClickListener( btnclick);
     mShutDownEnterText->setOnClickListener( btnclick );
     mShutDownCancelText->setOnClickListener( btnclick);
     mInfoLayout->setOnClickListener( btnclick);
@@ -81,12 +81,12 @@ void PageFactory::initPageView(){
             mNowShow = FACTORY_MENU;
             mMainFlipper->setDisplayedChild(mNowShow);
         }else{
-            ((TextView *)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::serial_text))->setText(std::string("测试串口通讯异常，请检查通讯线。"));
+            ((TextView *)mMainFlipper->findViewById(t5_ai_coffee::R::id::serial_text))->setText(std::string("测试串口通讯异常，请检查通讯线。"));
             mSerialDown = true;
             mMainFlipper->post([this](){ g_objConnMgr->setFactoryCallback(nullptr);});
             mMainFlipper->removeCallbacks(mSerialRunner);
             mMainFlipper->postDelayed(mSerialRunner,3*1000);
-            mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_serial)->setActivated(false);
+            mMenuLayout->findViewById(t5_ai_coffee::R::id::to_serial)->setActivated(false);
         }
         
     };
@@ -139,9 +139,9 @@ void PageFactory::stopPageAction(){
 void PageFactory::switchMode(View& v) {
     mNowShow = FACTORY_MENU;
     switch (v.getId()) {
-        case kaidu_ms7_lqy::R::id::to_serial:{
+        case t5_ai_coffee::R::id::to_serial:{
             mNowShow = FACTORY_SERIAL;
-            ((TextView *)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::serial_text))->setText(std::string("请将RX、TX接口对接或连接整机"));
+            ((TextView *)mMainFlipper->findViewById(t5_ai_coffee::R::id::serial_text))->setText(std::string("请将RX、TX接口对接或连接整机"));
             mMainFlipper->removeCallbacks(mSerialRunner);
             mMainFlipper->postDelayed(mSerialRunner,10*1000);
             mSerialDown = false;
@@ -158,35 +158,35 @@ void PageFactory::switchMode(View& v) {
                 }
                 
                 if(isSerialSuccess && (mNowShow == FACTORY_SERIAL)){
-                    ((TextView *)mMainFlipper->findViewById(kaidu_ms7_lqy::R::id::serial_text))->setText(std::string("测试串口通讯正常"));
+                    ((TextView *)mMainFlipper->findViewById(t5_ai_coffee::R::id::serial_text))->setText(std::string("测试串口通讯正常"));
                     mSerialDown = true;
                     mMainFlipper->post([this](){ g_objConnMgr->setFactoryCallback(nullptr);});
                     mMainFlipper->removeCallbacks(mSerialRunner);
                     mMainFlipper->postDelayed(mSerialRunner,3*1000);
-                    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_serial)->setActivated(true);
+                    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_serial)->setActivated(true);
                 }
                 return true;
             });
             
             break;
         }   
-        case kaidu_ms7_lqy::R::id::to_touch:{
+        case t5_ai_coffee::R::id::to_touch:{
             mNowShow = FACTORY_TOUCH;
             mTouchView->initTestPoint(); // 内部也有处理，也可省略
             break;
         }
-        case kaidu_ms7_lqy::R::id::to_color:{
+        case t5_ai_coffee::R::id::to_color:{
             mNowShow = FACTORY_COLOR;
             break;
         }
-        case kaidu_ms7_lqy::R::id::to_wifi:{
+        case t5_ai_coffee::R::id::to_wifi:{
             mNowShow = FACTORY_WIFI;
             WIFIMgr::ins()->scanWifi();
             break;
-        }case kaidu_ms7_lqy::R::id::to_info:{
+        }case t5_ai_coffee::R::id::to_info:{
             mNowShow = FACTORY_INFO;
             break;
-        }case kaidu_ms7_lqy::R::id::to_shutdown:{
+        }case t5_ai_coffee::R::id::to_shutdown:{
             mNowShow = FACTORY_SHUTDOWN;
             mShutDownText->setText(std::string("该测试完成会自动重启，是否继续？"));
             mShutDownEnterText->setVisibility(View::VISIBLE);
@@ -203,25 +203,25 @@ void PageFactory::touchTestDown() {
     mNowShow = FACTORY_MENU;
     mMainFlipper->setDisplayedChild(mNowShow);
 
-    mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_touch)->setActivated(true);
+    mMenuLayout->findViewById(t5_ai_coffee::R::id::to_touch)->setActivated(true);
 }
 
 void PageFactory::btnClick(View& v){
     switch (v.getId()) {
-        case kaidu_ms7_lqy::R::id::shuaxin_wifi_btn:{
+        case t5_ai_coffee::R::id::shuaxin_wifi_btn:{
             WIFIMgr::ins()->scanWifi();
             break;
         }   
-        case kaidu_ms7_lqy::R::id::pass_btn:{
+        case t5_ai_coffee::R::id::pass_btn:{
             mNowShow = FACTORY_MENU;
             mMainFlipper->setDisplayedChild(mNowShow);
-            mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_wifi)->setActivated(true);
+            mMenuLayout->findViewById(t5_ai_coffee::R::id::to_wifi)->setActivated(true);
             break;
-        }case kaidu_ms7_lqy::R::id::info:{
+        }case t5_ai_coffee::R::id::info:{
             mNowShow = FACTORY_MENU;
             mMainFlipper->setDisplayedChild(mNowShow);
             break;
-        }case kaidu_ms7_lqy::R::id::enter_btn:{
+        }case t5_ai_coffee::R::id::enter_btn:{
             mShutDownText->setText(std::string("1、请长按关机按键3s\n2、接收到关机信号后，将会自动重启"));
 
             mMainFlipper->removeCallbacks(mShutDownRunner);
@@ -237,7 +237,7 @@ void PageFactory::btnClick(View& v){
             //         mShutDownText->setText(std::string("接收按键通讯正常、下发关机指令到电源板正常\n正在自动重启"));
             //         mMainFlipper->removeCallbacks(mShutDownRunner);
             //         mMainFlipper->postDelayed(mShutDownRunner,3*1000);
-            //         mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_shutdown)->setActivated(true);
+            //         mMenuLayout->findViewById(t5_ai_coffee::R::id::to_shutdown)->setActivated(true);
             //     }else if((ack->getData(BUF_SND_D0) == 0x5B) && (ack->getData(BUF_SND_D1) == 0x02) &&
             //             (ack->getData(BUF_SND_D2) == 0x01) && (ack->getData(BUF_SND_D3) == 0x5A) &&
             //             (ack->getData(BUF_SND_D4) == 0xB8) && (ack->getData(BUF_SND_D5) == 0x2A)){
@@ -245,7 +245,7 @@ void PageFactory::btnClick(View& v){
             //         mShutDownText->setText(std::string("接收按键通讯正常、下发关机指令到电源板正常\n正在自动重启"));
             //         mMainFlipper->removeCallbacks(mShutDownRunner);
             //         mMainFlipper->postDelayed(mShutDownRunner,3*1000);
-            //         mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_shutdown)->setActivated(true);
+            //         mMenuLayout->findViewById(t5_ai_coffee::R::id::to_shutdown)->setActivated(true);
             //         return true;
             //     }
             //     return false;
@@ -253,7 +253,7 @@ void PageFactory::btnClick(View& v){
             mShutDownEnterText->setVisibility(View::INVISIBLE);
             mShutDownCancelText->setVisibility(View::INVISIBLE);
             break;
-        }case kaidu_ms7_lqy::R::id::cancel_btn:{
+        }case t5_ai_coffee::R::id::cancel_btn:{
             mNowShow = FACTORY_MENU;
             mMainFlipper->setDisplayedChild(mNowShow);
             break;
@@ -272,7 +272,7 @@ void PageFactory::colorTest() {
                 mColorFlipper->setDisplayedChild(0);
                 mMainFlipper->setDisplayedChild(mNowShow);
 
-                mMenuLayout->findViewById(kaidu_ms7_lqy::R::id::to_color)->setActivated(true);
+                mMenuLayout->findViewById(t5_ai_coffee::R::id::to_color)->setActivated(true);
             });
         else
             mColorFlipper->getChildAt(i)->setOnClickListener([this](View&) {mColorFlipper->showNext();});

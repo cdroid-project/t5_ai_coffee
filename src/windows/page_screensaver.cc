@@ -11,7 +11,7 @@
 PageScreenSaver::PageScreenSaver(ViewGroup *wind_page_box,int page_type)
     : PageBase(wind_page_box,"@layout/page_screensaver",PAGE_SCREENSAVER) {
 
-    mScreenSaverGroup = (ViewGroup *)mPageLayout->findViewById(kaidu_ms7_lqy::R::id::screensaver_group);
+    mScreenSaverGroup = (ViewGroup *)mPageLayout->findViewById(t5_ai_coffee::R::id::screensaver_group);
 
     initPageData();
 }
@@ -65,7 +65,7 @@ void PageScreenSaver::updatePageData(){
 void PageScreenSaver::btnClickListener(View&view){
     LOGI("btnClickListener view.getId() = %d",view.getId());
     switch(view.getId()){
-        // case kaidu_ms7_lqy::R::id::network_btn:{
+        // case t5_ai_coffee::R::id::network_btn:{
             
         //     break;
         // }
