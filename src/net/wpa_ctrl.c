@@ -12,7 +12,7 @@
 //#define CONFIG_CTRL_IFACE_NAMED_PIPE
 
 #ifdef CONFIG_CTRL_IFACE
-
+#include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>

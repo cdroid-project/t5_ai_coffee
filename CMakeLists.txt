@@ -31,7 +31,7 @@ find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)
 
 add_definitions(-DCDROID_RUNNING)
-if (CDROID_CHIPSET STREQUAL sigma)
+if(CDROID_CHIPSET STREQUAL "sigma" OR CDROID_CHIPSET STREQUAL "tinat113")
     add_definitions(-DCDROID_SIGMA)
 elseif(CDROID_CHIPSET STREQUAL x64)
     add_definitions(-DCDROID_X64)
@@ -49,7 +49,7 @@ aux_source_directory(./src/windows PRJ_SRC_WINDOWS)
 
 find_package(Pixman)
 
-if(x${CDROID_CHIPSET} STREQUAL "xsigma")
+if(CDROID_CHIPSET STREQUAL "sigma" OR CDROID_CHIPSET STREQUAL "tinat113")
 
     set(TUYA_DIR ${CMAKE_CURRENT_SOURCE_DIR}/tuya)
     add_definitions(-DHAVE_PNG=1)
@@ -90,7 +90,7 @@ endif()
 
 message("PROJECT_NAME=${PROJECT_NAME}")
 add_definitions(--include cdtypes.h)
-add_definitions(--include cdlog.h)
+# add_definitions(--include cdlog.h)
 link_directories(${CMAKE_BINARY_DIR}/lib)
 # 增加 3rdpart 的CMAKE 
 add_subdirectory(./3rdpart)
@@ -98,6 +98,11 @@ add_subdirectory(./3rdpart)
 add_executable(${PROJECT_NAME} ${T5_AI_COFFEE} ${SOURCES} ${PRJ_SRC} ${PRJ_SRC_COMM} ${PRJ_SRC_DATA} ${PRJ_SRC_FUN} ${PRJ_SRC_NET} ${PRJ_SRC_VIEWLIB} ${PRJ_SRC_PROTOCOL} ${PRJ_SRC_UART} ${PRJ_SRC_WINDOWS})
 
 target_compile_options(${PROJECT_NAME} PRIVATE ${AVX_SSE})
+
+if(CDROID_CHIPSET STREQUAL "sigma" OR CDROID_CHIPSET STREQUAL "tinat113")
+  target_compile_options(${PROJECT_NAME} PRIVATE -mfpu=neon)
+endif()
+
 CreatePAK(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/assets ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.pak ${PROJECT_SOURCE_DIR}/R.h  ${PIXMAN_INCLUDE_DIRS} )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE cdroid PRIVATE crypt ${OPENSSL_LIBRARIES} JsonCpp::JsonCpp ${CURL_LIBRARIES}  ${TUYA_LIBS} ${OPENMP_LIBS})
