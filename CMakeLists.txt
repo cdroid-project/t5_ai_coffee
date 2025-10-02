@@ -49,7 +49,7 @@ aux_source_directory(./src/windows PRJ_SRC_WINDOWS)
 
 find_package(Pixman)
 
-if(CDROID_CHIPSET STREQUAL "sigma" OR CDROID_CHIPSET STREQUAL "tinat113")
+if(CDROID_CHIPSET STREQUAL "sigma")
 
     set(TUYA_DIR ${CMAKE_CURRENT_SOURCE_DIR}/tuya)
     add_definitions(-DHAVE_PNG=1)
@@ -81,7 +81,8 @@ if(CDROID_CHIPSET STREQUAL "sigma" OR CDROID_CHIPSET STREQUAL "tinat113")
         add_definitions(-DENABLE_OMP=1)
         set(OPENMP_LIBS OpenMP::OpenMP_C)
     endif()
-
+elseif(CDROID_CHIPSET STREQUAL "tinat113")
+    add_definitions(-DTUYA_OS_DISABLE=1)
 else()
     add_definitions(-DTUYA_OS_DISABLE=1)
     include_directories(./3rdpart/ARM_NEON_2_x86_SSE)
