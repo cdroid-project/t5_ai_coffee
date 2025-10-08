@@ -1,7 +1,7 @@
 {
     "espresso":{
         "name":"意式咖啡",
-        "pic":"@mipmap/pic_esp",
+        "pic":"@mipmap/yishi",
         "powderMin":1,
         "powderMax":22,
         "powderGear":1,
@@ -23,7 +23,7 @@
     },
     "americano":{
         "name":"美式咖啡",
-        "pic":"@mipmap/pic_americano",
+        "pic":"@mipmap/meishi",
         "powderMin":1,
         "powderMax":22,
         "powderGear":1,

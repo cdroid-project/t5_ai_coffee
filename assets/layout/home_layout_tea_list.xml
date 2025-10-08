@@ -18,7 +18,7 @@
             android:id="@+id/tea_card_title_tv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="「 萃茶 」"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="28dp"/>
 
@@ -31,7 +31,7 @@
             android:paddingHorizontal="33dp"
             android:layout_marginTop="10dp"
             android:lineSpacingExtra="17dp"
-            android:text="与传统的热泡茶相比，口味更浓郁，冲泡时间更短。在这个过程中，茶叶渗透性逐渐被激活，茶叶中的香气和味道会逐渐被释放出来，形成纯净的茶汤"
+            android:text=""
             android:textColor="#E5FFFFFF"
             android:textSize="18dp"/>
     </RelativeLayout>

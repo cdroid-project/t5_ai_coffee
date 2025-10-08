@@ -70,6 +70,7 @@ void HomeTabModeEsp::updateGroupData(){
     mArcPowder->setProgress(mCacheData.powderDef);
     mPowderInfoTv->setText(std::to_string(mCacheData.powderDef));
     mInfoImg->setImageResource(mEspData.pic);
+    ((BitmapDrawable*) mInfoImg->getDrawable())->setFilterBitmap(true);
     LOGE("mEspData.pic = %s",mEspData.pic.c_str());
 
     updateRightInfoGroup(mInfoRVPicker->getValue());

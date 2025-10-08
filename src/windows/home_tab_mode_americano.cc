@@ -73,6 +73,7 @@ void HomeTabModeAmericano::updateGroupData(){
     mArcPowder->setProgress(mCacheData.powderDef);
     mPowderInfoTv->setText(std::to_string(mCacheData.powderDef));
     mInfoImg->setImageResource(mAmericanData.pic);
+    ((BitmapDrawable*) mInfoImg->getDrawable())->setFilterBitmap(true);
     LOGE("mAmericanData.pic = %s",mAmericanData.pic.c_str());
 
     updateRightInfoGroup(mInfoRVPicker->getValue());
