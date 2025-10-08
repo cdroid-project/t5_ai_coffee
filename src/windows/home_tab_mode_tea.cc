@@ -597,8 +597,14 @@ void HomeTabModeTea::dealTuyaStartWork(){
 }
 
 void HomeTabModeTea::dealAiData(){
-    mHorSelectPos = mExtTeaData.sndModeList.size() - 1;
-    mHorModePicker->setValue(mHorSelectPos);
+    int Mode = getJsonInt(g_appData.aiJsonText["params"],"snd_mode_type");
+    for(int i=0; i<mExtTeaData.sndModeList.size(); i++){
+        if(mExtTeaData.sndModeList.at(i).sndModeType == Mode){
+            mHorSelectPos = i;
+            mHorModePicker->setValue(mHorSelectPos);
+            break;
+        }
+    }
     mExtTeaData.sndModeList.at(mHorModePicker->getValue()).extractTempDef = getJsonInt(g_appData.aiJsonText["params"],"extraction_temp");
     ExtractTeaSndModeDataStr &stepData = mExtTeaData.sndModeList.at(mHorModePicker->getValue());
 

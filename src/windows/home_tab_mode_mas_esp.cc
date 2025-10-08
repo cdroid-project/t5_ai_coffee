@@ -473,6 +473,7 @@ void HomeTabModeMasEsp::dealAiData(){
             }
         }
     }
+    g_objConf->setMasEspData(mMasEspData);
 }
 
 void HomeTabModeMasEsp::onArcValueChangeListener(View &v, int progress, bool fromUser){
