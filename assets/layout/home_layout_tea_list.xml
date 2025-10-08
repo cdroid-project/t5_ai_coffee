@@ -8,7 +8,7 @@
         android:id="@+id/tea_card_group"
         android:layout_width="392dp"
         android:layout_height="360dp"
-        android:background="@mipmap/ext_tea_tips_bg"
+        android:background="@mipmap/cdroid"
         android:layout_centerVertical="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="10dp">
