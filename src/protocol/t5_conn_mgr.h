@@ -36,6 +36,9 @@ private:
     UartClient      *mUartMCU; // mcu
     int              mSetData; // 设置数据次数
     uchar            mSndData[UI2MCU::BUF_LEN]; // 发送缓冲区
+
+    std::string      mT5RecvText;
+    bool             mIsT5RecvEnd;
 };
 
 

@@ -326,25 +326,25 @@ WIFIMgr::~WIFIMgr() {
 }
 
 void WIFIMgr::handleMessage(Message& message){
-    if(message.what == MSG_DELAY_CONN){
-        if(g_appData.netSwitch){
-            mIsConnStatus = WIFI_CONNECTING;
-            WifiSta::ins()->disconnect();
-            g_windMgr->changeTitleBar(PageBase::TITLE_BAR_WIFI);
-            g_appData.statusChangeFlag |= CS_WIFI_CONNECT;
-            g_windMgr->updateDate();
-            ThreadPool::ins()->add(new WIFIConnectThread, &mConnData,true);
-        }
-    }else if(message.what == MSG_DELAY_DISCONN){
-        if(mIsConnStatus == WIFI_CONNECTING && WifiSta::ins()->get_status() == WifiSta::E_STA_CONENCTING) disConnWifi();
-    }
+    // if(message.what == MSG_DELAY_CONN){
+    //     if(g_appData.netSwitch){
+    //         mIsConnStatus = WIFI_CONNECTING;
+    //         WifiSta::ins()->disconnect();
+    //         g_windMgr->changeTitleBar(PageBase::TITLE_BAR_WIFI);
+    //         g_appData.statusChangeFlag |= CS_WIFI_CONNECT;
+    //         g_windMgr->updateDate();
+    //         ThreadPool::ins()->add(new WIFIConnectThread, &mConnData,true);
+    //     }
+    // }else if(message.what == MSG_DELAY_DISCONN){
+    //     if(mIsConnStatus == WIFI_CONNECTING && WifiSta::ins()->get_status() == WifiSta::E_STA_CONENCTING) disConnWifi();
+    // }
 }
 
 void WIFIMgr::scanWifi(){
     if(g_appData.netSwitch && !mIsStartScan){
         // system("ifconfig wlan0 up");
         mIsStartScan = true;
-        ThreadPool::ins()->add(new WIFIScanThread, &sWifiScanData,true);
+        // ThreadPool::ins()->add(new WIFIScanThread, &sWifiScanData,true);
     }
 }
 void WIFIMgr::delayConnWifi(WIFIConnectData connWifiData,int time){
@@ -361,15 +361,15 @@ void WIFIMgr::delayConnWifi(WIFIConnectData connWifiData,int time){
 }
 
 void WIFIMgr::disConnWifi(){
-    if(mIsConnStatus != WIFI_CONNECTING){ g_objConf->setWifiInfo("",""); }
-    connWifiData = {};
-    g_appData.netOk = false;
-    g_appData.netStatus = PRO_STATE_NET_NONE;
-    mIsConnStatus = WIFI_DISCONNECTED;
-    WifiSta::ins()->disconnect();
-    scanWifi();
-    g_appData.statusChangeFlag |= CS_WIFI_CONNECT;
-    g_windMgr->updateDate();
+    // if(mIsConnStatus != WIFI_CONNECTING){ g_objConf->setWifiInfo("",""); }
+    // connWifiData = {};
+    // g_appData.netOk = false;
+    // g_appData.netStatus = PRO_STATE_NET_NONE;
+    // mIsConnStatus = WIFI_DISCONNECTED;
+    // WifiSta::ins()->disconnect();
+    // scanWifi();
+    // g_appData.statusChangeFlag |= CS_WIFI_CONNECT;
+    // g_windMgr->updateDate();
 }
 
 void WIFIMgr::scanEnd(){
@@ -384,11 +384,11 @@ int  WIFIMgr::connStatus(){
 }
 
 void WIFIMgr::setWifiEnable(bool isEnable){
-    if(isEnable){
-        WifiSta::ins()->enableWifi();
-    }else{
-        WifiSta::ins()->disEnableWifi();
-        WifiSta::ins()->disconnect();
-        mIsConnStatus = WIFI_DISCONNECTED;
-    }
+    // if(isEnable){
+    //     WifiSta::ins()->enableWifi();
+    // }else{
+    //     WifiSta::ins()->disEnableWifi();
+    //     WifiSta::ins()->disconnect();
+    //     mIsConnStatus = WIFI_DISCONNECTED;
+    // }
 }

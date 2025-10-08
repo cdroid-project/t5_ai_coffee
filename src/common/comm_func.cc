@@ -740,22 +740,61 @@ bool isWhitespace(const std::string& str) {
     return true; // 其他情况下也返回 true
 }
 
-std::string extractJson(const std::string& str) {
-    size_t start = str.find('{');
-    size_t start2 = str.find('[');
-    if((start == std::string::npos) && (start2 == std::string::npos)){
-        return "";
-    }
-    start = std::min(start,start2);
+std::string extractJson(const std::string& text) {
+    // size_t start = text.find('{');
+    // size_t start2 = text.find('[');
+    // if((start == std::string::npos) && (start2 == std::string::npos)){
+    //     return "";
+    // }
+    // start = std::min(start,start2);
 
-    size_t end = str.find_last_of('}');
-    size_t end2 = str.find_last_of(']');
-    if((end == std::string::npos) && (end2 == std::string::npos)){
-        return "";
+    // size_t end = text.find_last_of('}');
+    // size_t end2 = text.find_last_of(']');
+    // if((end == std::string::npos) && (end2 == std::string::npos)){
+    //     return "";
+    // }
+    // end = std::min(end,end2);
+    // if (end > start) {
+    //     return text.substr(start, end - start + 1);
+    // }
+    // return "";
+
+
+    // 查找 ```json 开始标记
+    std::string start_marker = "```json";
+    std::string end_marker = "```";
+    
+    size_t start_pos = text.find(start_marker);
+    if (start_pos == std::string::npos) {
+        // 如果没有找到 ```json，尝试找普通的 ```
+        start_marker = "```";
+        start_pos = text.find(start_marker);
+        if (start_pos == std::string::npos) {
+            return "";
+        }
+        start_pos += start_marker.length();
+    } else {
+        start_pos += start_marker.length();
     }
-    end = std::min(end,end2);
-    if (end > start) {
-        return str.substr(start, end - start + 1);
+    
+    // 查找结束标记 ```
+    size_t end_pos = text.find(end_marker, start_pos);
+    if (end_pos == std::string::npos) {
+        // 如果没有结束标记，尝试提取到字符串末尾
+        end_pos = text.length();
     }
-    return "";
+    
+    // 提取 JSON 内容
+    std::string json_content = text.substr(start_pos, end_pos - start_pos);
+    
+    // 清理内容（去除前后空白和换行）
+    size_t content_start = json_content.find_first_not_of(" \n\r\t");
+    size_t content_end = json_content.find_last_not_of(" \n\r\t");
+    
+    if (content_start != std::string::npos && content_end != std::string::npos) {
+        return json_content.substr(content_start, content_end - content_start + 1);
+    }
+    
+    return json_content;
+
 }

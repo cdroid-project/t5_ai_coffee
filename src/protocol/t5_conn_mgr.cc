@@ -19,6 +19,7 @@ T5Mgr::T5Mgr() {
     mNextEventTime     = 0;
     mLastSendTime      = 0;
     mSetData           = 0;
+    mIsT5RecvEnd       = true;
 
     g_objHandler->addHandler(BT_T5, this);
 }
@@ -90,36 +91,44 @@ void T5Mgr::onCommDeal(IAck *ack) {
     int64_t now_tick = SystemClock::uptimeMillis();
 
     // 将 uchar * 转换为 std::string
-    std::string utf8_data(reinterpret_cast<char*>(ack->mBuf), ack->mDlen);
+    std::string utf8_data(reinterpret_cast<char*>(ack->mBuf + 4), ack->mBuf[2] + ack->mBuf[3]*256);
 
-    // 输出结果
-    std::cout << "UTF-8 字符串: " << utf8_data << std::endl;
+    mT5RecvText += utf8_data;
 
-    std::string result;
-    for (char c : utf8_data) {
-        if (c != '\0') {
-            result += c; // 只添加非 null 字符
+    if(mT5RecvText.find("nlgEnd_cdroid") != std::string::npos) {
+        // 输出结果
+        std::cout << "UTF-8 字符串: " << mT5RecvText << std::endl;
+
+        std::string result;
+        for (char c : mT5RecvText) {
+            if (c != '\0') {
+                result += c; // 只添加非 null 字符
+            }
         }
-    }
-    utf8_data = result;
-    // 输出处理后的结果
-    std::cout << "处理后的字符串: " << utf8_data << std::endl;
-    // 提取 JSON 数据
-    g_appData.aiText = utf8_data;
-    std::string json_data = extractJson(utf8_data);
+        mT5RecvText = result;
+        // 输出处理后的结果
+        std::cout << "处理后的字符串: " << mT5RecvText << std::endl;
+        // 提取 JSON 数据
+        g_appData.aiText = mT5RecvText;
+        std::string json_data = extractJson(mT5RecvText);
 
-    // 检查提取的 JSON 数据是否有效
-    if (!json_data.empty()) {
-        if(!convertStringToJson(json_data,g_appData.aiJsonText)){
+        // 检查提取的 JSON 数据是否有效
+        if (!json_data.empty()) {
+            if(!convertStringToJson(json_data,g_appData.aiJsonText)){
+                g_appData.aiJsonText.clear();
+            }
+            std::cout << "提取的 JSON 数据: " << json_data << std::endl;
+        } else {
             g_appData.aiJsonText.clear();
+            std::cout << "没有有效的 JSON 数据." << std::endl;
         }
-        std::cout << "提取的 JSON 数据: " << json_data << std::endl;
-    } else {
-        g_appData.aiJsonText.clear();
-        std::cout << "没有有效的 JSON 数据." << std::endl;
+        
+        g_appData.statusChangeFlag |= CS_AI_DATA_CHANGE;
+        g_windMgr->updateDate();
+
+        mT5RecvText.clear();
     }
+
     
-    g_appData.statusChangeFlag |= CS_AI_DATA_CHANGE;
-    g_windMgr->updateDate();
     return;
 }
