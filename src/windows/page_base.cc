@@ -172,7 +172,7 @@ void PageBase::btnClickListener(View& view){
             g_windMgr->showPage(PAGE_SETTING);
             break;
         }case t5_ai_coffee::R::id::icon_wash:{
-            g_windMgr->showPage(PAGE_CLEAN);
+            // g_windMgr->showPage(PAGE_CLEAN);
             break;
         }case t5_ai_coffee::R::id::icon_setup:{
             g_windMgr->showPage(PAGE_SETTING);
