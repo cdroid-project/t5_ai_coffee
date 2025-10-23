@@ -3,7 +3,7 @@
  * @Email: hackricken@gmail.com
  * @Date: 2025-10-01 10:28:26
  * @LastEditTime: 2025-10-23 14:12:17
- * @FilePath: /t5_ai_demo/src/windows/page_clean.cc
+ * @FilePath: /t5_ai_coffee/src/windows/page_clean.cc
  * @Description: 
  * @BugList: 
  * 

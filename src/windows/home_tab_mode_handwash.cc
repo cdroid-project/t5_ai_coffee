@@ -3,7 +3,7 @@
  * @Email: 964028708@qq.com
  * @Date: 2025-10-01 17:42:15
  * @LastEditTime: 2025-10-23 14:07:19
- * @FilePath: /t5_ai_demo/src/windows/home_tab_mode_handwash.cc
+ * @FilePath: /t5_ai_coffee/src/windows/home_tab_mode_handwash.cc
  * @Description: 
  * @BugList: 
  * 

@@ -3,7 +3,7 @@
  * @Email: azhangxie0612@gmail.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:30:44
- * @FilePath: /t5_ai_demo/src/windows/page_screensaver.h
+ * @FilePath: /t5_ai_coffee/src/windows/page_screensaver.h
  * @Description: 
  * @BugList: 
  * 

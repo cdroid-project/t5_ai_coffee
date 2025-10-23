@@ -3,7 +3,7 @@
  * @Email: azhangxie0612@gmail.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:43:31
- * @FilePath: /t5_ai_demo/src/protocol/uart_client.cc
+ * @FilePath: /t5_ai_coffee/src/protocol/uart_client.cc
  * @Description: 
  * @BugList: 
  * 

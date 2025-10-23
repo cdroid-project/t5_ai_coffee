@@ -3,7 +3,7 @@
  * @Email: 964028708@qq.com
  * @Date: 2025-10-01 17:42:15
  * @LastEditTime: 2025-10-23 14:35:39
- * @FilePath: /t5_ai_demo/src/viewlibs/libs.h
+ * @FilePath: /t5_ai_coffee/src/viewlibs/libs.h
  * @Description: 
  * @BugList: 
  * 

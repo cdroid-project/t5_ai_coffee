@@ -3,7 +3,7 @@
  * @Email: hanakami@163.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:46:41
- * @FilePath: /t5_ai_demo/src/net/curl_manager.h
+ * @FilePath: /t5_ai_coffee/src/net/curl_manager.h
  * @Description: 
  * @BugList: 
  * 

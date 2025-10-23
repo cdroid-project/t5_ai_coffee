@@ -3,7 +3,7 @@
  * @Email: hackricken@gmail.com
  * @Date: 2025-10-01 10:28:26
  * @LastEditTime: 2025-10-23 14:48:06
- * @FilePath: /t5_ai_demo/src/i2c/hw_i2c_impl.h
+ * @FilePath: /t5_ai_coffee/src/i2c/hw_i2c_impl.h
  * @Description: 
  * @BugList: 
  * 

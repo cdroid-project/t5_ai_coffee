@@ -3,7 +3,7 @@
  * @Email: 964028708@qq.com
  * @Date: 2025-10-01 10:28:26
  * @LastEditTime: 2025-10-23 14:37:46
- * @FilePath: /t5_ai_demo/src/viewlibs/cyplotobject.h
+ * @FilePath: /t5_ai_coffee/src/viewlibs/cyplotobject.h
  * @Description: 
  * @BugList: 
  * 

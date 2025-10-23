@@ -3,7 +3,7 @@
  * @Email: hanakami@163.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:46:54
- * @FilePath: /t5_ai_demo/src/net/hv_wifi_sta.h
+ * @FilePath: /t5_ai_coffee/src/net/hv_wifi_sta.h
  * @Description: 
  * @BugList: 
  * 

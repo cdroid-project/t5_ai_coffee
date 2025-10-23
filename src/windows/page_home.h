@@ -3,7 +3,7 @@
  * @Email: azhangxie0612@gmail.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:31:11
- * @FilePath: /t5_ai_demo/src/windows/page_home.h
+ * @FilePath: /t5_ai_coffee/src/windows/page_home.h
  * @Description: 
  * @BugList: 
  * 

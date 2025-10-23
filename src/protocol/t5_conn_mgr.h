@@ -3,7 +3,7 @@
  * @Email: 964028708@qq.com
  * @Date: 2025-10-01 11:30:36
  * @LastEditTime: 2025-10-23 14:45:02
- * @FilePath: /t5_ai_demo/src/protocol/t5_conn_mgr.h
+ * @FilePath: /t5_ai_coffee/src/protocol/t5_conn_mgr.h
  * @Description: 
  * @BugList: 
  * 

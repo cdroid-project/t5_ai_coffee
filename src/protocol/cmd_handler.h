@@ -3,7 +3,7 @@
  * @Email: azhangxie0612@gmail.com
  * @Date: 2025-10-08 16:10:56
  * @LastEditTime: 2025-10-23 14:44:14
- * @FilePath: /t5_ai_demo/src/protocol/cmd_handler.h
+ * @FilePath: /t5_ai_coffee/src/protocol/cmd_handler.h
  * @Description: 
  * @BugList: 
  * 
