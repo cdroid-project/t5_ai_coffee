@@ -10,14 +10,13 @@
  * Copyright (c) 2025 by Ricken, All Rights Reserved. 
  * 
 **/
-
-
-#ifndef CDROID_X64
-// #include <printf.h>
+#include <printf.h>
 #include "stdlib.h"
 #include "math.h"
 #include "gaussFilter.h"
+#ifndef CDROID_X64
 #include "arm_neon.h"
+#endif
 #include "string.h"
 #include "cdlog.h"
 
@@ -883,5 +882,3 @@ void gaussianFilter_float_Neon(float* src, float* dst, int height, int width, in
 
     free(kernel);
 }
-
-#endif

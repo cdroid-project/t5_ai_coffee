@@ -2,8 +2,8 @@
  * @Author: AZhang
  * @Email: azhangxie0612@gmail.com
  * @Date: 2025-10-08 16:10:56
- * @LastEditTime: 2025-10-23 14:44:51
- * @FilePath: /t5_ai_demo/src/protocol/mcu_ui.h
+ * @LastEditTime: 2025-10-23 16:55:43
+ * @FilePath: /t5_ai_coffee/src/protocol/mcu_ui.h
  * @Description: 
  * @BugList: 
  * 
@@ -336,7 +336,7 @@ public:
 class AI2MCU : public IAck, public DataCheck {
 public:
     constexpr static int BUF_LEN  = 3096;
-    char HEAD[2] = {0xcc, 0xee};
+    uchar HEAD[2] = {0xcc, 0xee};
     int  recvLen = 0;
 public:
     AI2MCU() {}
