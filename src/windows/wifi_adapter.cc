@@ -1,3 +1,16 @@
+/*
+ * @Author: cy
+ * @Email: 964028708@qq.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:13:22
+ * @FilePath: /t5_ai_demo/src/windows/wifi_adapter.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by cy, All Rights Reserved. 
+ * 
+**/
+
 #include <wifi_adapter.h>
 #include "wind_mgr.h"
 #include "project.h"

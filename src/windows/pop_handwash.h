@@ -1,3 +1,16 @@
+/*
+ * @Author: gezilong
+ * @Email: ioremap@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:40:26
+ * @FilePath: /t5_ai_demo/src/windows/pop_handwash.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by gezilong, All Rights Reserved. 
+ * 
+**/
+
 #ifndef _POP_HANDWASH_H_
 #define _POP_HANDWASH_H_
 

@@ -1,8 +1,17 @@
-// File: filter.c
-// Brief: 图像高斯滤波
-// Author: Lixiaolong@xa.com
-// Date: 2022/6/30
-//
+/*
+ * @Author: Ricken
+ * @Email: hackricken@gmail.com
+ * @Date: 2025-10-01 10:28:26
+ * @LastEditTime: 2025-10-23 14:36:14
+ * @FilePath: /t5_ai_demo/src/viewlibs/gaussFilter.c
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by Ricken, All Rights Reserved. 
+ * 
+**/
+
+
 #ifndef CDROID_X64
 // #include <printf.h>
 #include "stdlib.h"

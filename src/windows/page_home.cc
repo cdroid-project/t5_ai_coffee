@@ -1,3 +1,16 @@
+/*
+ * @Author: AZhang
+ * @Email: azhangxie0612@gmail.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:54:35
+ * @FilePath: /t5_ai_coffee/src/windows/page_home.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by AZhang, All Rights Reserved. 
+ * 
+**/
+
 #include "page_home.h"
 #include "conf_mgr.h"
 
@@ -121,8 +134,8 @@ void PageHome::initPageView(){
     mRightProgress->setVisibility(View::GONE);
     mRightWorkingAnimView->setVisibility(View::GONE);
 #ifdef CDROID_X64
-    mPowderAnimView->setBackgroundResource("../apps/t5_ai_coffee/docs/home_anims.webp");
-    mRightAnimView->setBackgroundResource("../apps/t5_ai_coffee/docs/home_anims.webp");
+    mPowderAnimView->setBackgroundResource("../apps/t5_ai_demo/docs/home_anims.webp");
+    mRightAnimView->setBackgroundResource("../apps/t5_ai_demo/docs/home_anims.webp");
 #else
     mPowderAnimView->setBackgroundResource("./home_anims.webp");
     mRightAnimView->setBackgroundResource("./home_anims.webp");

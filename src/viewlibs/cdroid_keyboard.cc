@@ -1,4 +1,17 @@
-﻿
+﻿/*
+ * @Author: hanakami
+ * @Email: hanakami@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:39:01
+ * @FilePath: /t5_ai_demo/src/viewlibs/cdroid_keyboard.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by hanakami, All Rights Reserved. 
+ * 
+**/
+
+
 #include "R.h"
 #include <comm_func.h>
 #include "cdroid_keyboard.h"

@@ -1,3 +1,16 @@
+/*
+ * @Author: Ricken
+ * @Email: hackricken@gmail.com
+ * @Date: 2025-10-01 10:28:26
+ * @LastEditTime: 2025-10-23 14:12:26
+ * @FilePath: /t5_ai_demo/src/windows/page_base.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by Ricken, All Rights Reserved. 
+ * 
+**/
+
 #include "page_base.h"
 #include "R.h"
 #include "comm_func.h"

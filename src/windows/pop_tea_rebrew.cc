@@ -1,3 +1,16 @@
+/*
+ * @Author: hanakami
+ * @Email: hanakami@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:16:00
+ * @FilePath: /t5_ai_demo/src/windows/pop_warn.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by hanakami, All Rights Reserved. 
+ * 
+**/
+
 #include "pop_tea_rebrew.h"
 #include "R.h"
 #include "wind_mgr.h"

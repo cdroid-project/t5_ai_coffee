@@ -1,3 +1,16 @@
+/*
+ * @Author: hanakami
+ * @Email: hanakami@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:29:33
+ * @FilePath: /t5_ai_demo/src/windows/pop_master_espresso.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by hanakami, All Rights Reserved. 
+ * 
+**/
+
 #include "pop_master_espresso.h"
 
 #include <plotaxis.h>

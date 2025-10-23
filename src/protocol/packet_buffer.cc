@@ -1,4 +1,16 @@
-﻿
+﻿/*
+ * @Author: AZhang
+ * @Email: azhangxie0612@gmail.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:44:30
+ * @FilePath: /t5_ai_demo/src/protocol/packet_buffer.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by AZhang, All Rights Reserved. 
+ * 
+**/
+
 #include <iostream>
 #include <iomanip>
 #include "packet_buffer.h"

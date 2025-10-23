@@ -1,3 +1,16 @@
+/*
+ * @Author: gezilong
+ * @Email: ioremap@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:40:19
+ * @FilePath: /t5_ai_demo/src/windows/pop_bean.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by gezilong, All Rights Reserved. 
+ * 
+**/
+
 #include "pop_bean.h"
 #include "wind_mgr.h"
 #include "conn_mgr.h"

@@ -1,4 +1,17 @@
 /*
+ * @Author: hanakami
+ * @Email: hanakami@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:47:41
+ * @FilePath: /t5_ai_demo/src/net/wpa_ctrl.c
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by hanakami, All Rights Reserved. 
+ * 
+**/
+
+/*
  * wpa_supplicant/hostapd control interface library
  * Copyright (c) 2004-2007, Jouni Malinen <j@w1.fi>
  *

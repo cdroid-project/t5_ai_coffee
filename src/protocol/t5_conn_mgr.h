@@ -1,3 +1,15 @@
+/*
+ * @Author: cy
+ * @Email: 964028708@qq.com
+ * @Date: 2025-10-01 11:30:36
+ * @LastEditTime: 2025-10-23 14:45:02
+ * @FilePath: /t5_ai_demo/src/protocol/t5_conn_mgr.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by cy, All Rights Reserved. 
+ * 
+**/
 
 #ifndef __t5_conn_mgr_h__
 #define __t5_conn_mgr_h__

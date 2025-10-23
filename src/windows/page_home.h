@@ -1,3 +1,16 @@
+/*
+ * @Author: AZhang
+ * @Email: azhangxie0612@gmail.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:31:11
+ * @FilePath: /t5_ai_demo/src/windows/page_home.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by AZhang, All Rights Reserved. 
+ * 
+**/
+
 #ifndef _PAGE_HOME_H_
 #define _PAGE_HOME_H_
 

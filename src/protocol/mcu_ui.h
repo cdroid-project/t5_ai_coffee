@@ -1,3 +1,16 @@
+/*
+ * @Author: AZhang
+ * @Email: azhangxie0612@gmail.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:44:51
+ * @FilePath: /t5_ai_demo/src/protocol/mcu_ui.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by AZhang, All Rights Reserved. 
+ * 
+**/
+
 #ifndef __mcu_ui_ack_h__
 #define __mcu_ui_ack_h__
 

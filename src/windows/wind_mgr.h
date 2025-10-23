@@ -1,3 +1,17 @@
+/*
+ * @Author: Ricken
+ * @Email: hackricken@gmail.com
+ * @Date: 2025-10-01 10:28:26
+ * @LastEditTime: 2025-10-23 14:11:16
+ * @FilePath: /t5_ai_demo/src/windows/wind_mgr.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by Ricken, All Rights Reserved. 
+ * 
+**/
+
+
 #ifndef _WIND_MGR_H_
 #define _WIND_MGR_H_
 

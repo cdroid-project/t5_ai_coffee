@@ -1,4 +1,17 @@
-﻿
+﻿/*
+ * @Author: hanakami
+ * @Email: hanakami@163.com
+ * @Date: 2025-10-08 16:10:56
+ * @LastEditTime: 2025-10-23 14:49:18
+ * @FilePath: /t5_ai_demo/src/data/conf_mgr.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by hanakami, All Rights Reserved. 
+ * 
+**/
+
+
 #include "conf_mgr.h"
 #include "data.h"
 #include "wifi_adapter.h"

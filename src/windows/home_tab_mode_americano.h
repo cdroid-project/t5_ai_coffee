@@ -1,3 +1,16 @@
+/*
+ * @Author: cy
+ * @Email: 964028708@qq.com
+ * @Date: 2025-10-01 17:42:15
+ * @LastEditTime: 2025-10-23 14:05:17
+ * @FilePath: /t5_ai_demo/src/windows/home_tab_mode_americano.h
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by cy, All Rights Reserved. 
+ * 
+**/
+
 #ifndef _HOME_TAB_MODE_AMERICANO_H_
 #define _HOME_TAB_MODE_AMERICANO_H_
 

@@ -1,3 +1,17 @@
+/*
+ * @Author: cy
+ * @Email: 964028708@qq.com
+ * @Date: 2025-10-01 17:42:15
+ * @LastEditTime: 2025-10-23 14:07:19
+ * @FilePath: /t5_ai_demo/src/windows/home_tab_mode_handwash.cc
+ * @Description: 
+ * @BugList: 
+ * 
+ * Copyright (c) 2025 by cy, All Rights Reserved. 
+ * 
+**/
+
+
 #include "home_tab_mode_handwash.h"
 #include "conf_mgr.h"
 #include "wind_mgr.h"
