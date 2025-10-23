@@ -1,0 +1,1 @@
+rm /customer/app/home_anims_working.webp

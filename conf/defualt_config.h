@@ -1,0 +1,8 @@
+#ifndef __DEFUALT_CONFIG_H__
+#define __DEFUALT_CONFIG_H__
+
+// 一些全局默认参数配置
+#define  HV_SYS_CONFIG_SCREEN_BRIGHTNESS   50
+#define  HV_SYS_CONFIG_MAX_SCREEN_BRIGHTNESS   100
+
+#endif // __DEFUALT_CONFIG_H__
