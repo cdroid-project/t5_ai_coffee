@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-image xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@mipmap/home_anims"
+    android:repeatCount="-1"
+    android:autoStart="false">
+</animated-image>

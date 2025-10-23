@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:gravity="center" android:drawable="@mipmap/pic_home_pressure_bg"/>
+    <item android:gravity="center">
+        <rotate android:fromDegrees="-145" android:toDegrees="215"
+            android:drawable="@mipmap/pic_home_pressure_pointer">
+
+        </rotate>
+    </item>
+    <item>
+        <rotate android:fromDegrees="125" android:toDegrees="125">
+            <shape android:shape="ring" android:useLevel="true"
+                android:innerRadius="90dp" android:thickness="55dp" >
+                <gradient android:type="pattern" android:bitmap="@mipmap/pic_home_pressure_ring"/>
+            </shape>
+        </rotate>
+    </item>
+    
+</layer-list>

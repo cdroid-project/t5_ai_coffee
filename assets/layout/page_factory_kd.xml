@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1920dp"
+    android:layout_height="440dp"
+    android:background="#FF000000">
+
+    <RelativeLayout
+        android:layout_width="960dp"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_1"
+            android:layout_width="210dp"
+            android:layout_height="90dp"
+            android:text="打开蒸汽"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_r24_setting_select"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_2"
+            android:layout_width="210dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btn_1"
+            android:text="打开磨豆"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_r24_setting_select"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_3"
+            android:layout_width="210dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btn_2"
+            android:text="打开等离子"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_r24_setting_select"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_4"
+            android:layout_width="210dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btn_3"
+            android:text="打开磨豆"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_r24_setting_select"/>
+    </RelativeLayout>
+</RelativeLayout>

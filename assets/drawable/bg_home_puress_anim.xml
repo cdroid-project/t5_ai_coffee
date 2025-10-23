@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/pic_home_pressure_bg"/>
+    <item android:width="45dp" android:height="3dp"
+        android:gravity="center" android:left="229dp">
+        <rotate android:fromDegrees="-235" android:toDegrees="125" android:pivotX="-204%">
+            <shape>
+                <gradient android:startColor="#00e1ab5e"
+                    android:endColor="#e1ab5e"/>
+            </shape>
+        </rotate>
+    </item>
+    <item>
+        <rotate android:fromDegrees="125" android:toDegrees="125">
+            <shape android:shape="ring" android:useLevel="true"
+                android:innerRadius="133dp" android:thickness="4dp" >
+                <solid android:color="#e1ab5e"/>
+                <gradient android:type="sweep" android:startColor="#55e1ab5e"
+                    android:endColor="#e1ab5e"/>
+            </shape>
+        </rotate>
+    </item>
+    
+</layer-list>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1810dp"
+    android:layout_height="350dp"
+    android:id="@+id/layout_fav_list"
+    android:clipChildren="false">
+
+    <RecyclerView
+        android:id="@+id/fav_list"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="43dp"/>
+</RelativeLayout>

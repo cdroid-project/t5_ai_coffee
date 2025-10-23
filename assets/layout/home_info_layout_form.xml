@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_layout_form"
+    android:layout_width="520dp"
+    android:layout_height="350dp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/info_form_hor_picker_group"
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="60dp"
+        android:orientation="vertical">
+
+        <NumberPicker
+            android:id="@+id/info_form_hor_picker"
+            android:layout_width="650dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:internalLayout="@layout/numpicker_hor_layout"
+            android:updateInputTextInFling="true"
+            android:textSize="18dp"
+            android:textColor="#414141"
+            android:min="0"
+            android:max="5"
+            android:wheelItemCount="5"
+            android:background="#00FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/form_info_title"
+        android:layout_width="386dp"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_r21_brown_gradient"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/info_form_hor_picker_group"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="步骤"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="注水量"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="流速"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="中断时间"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/form_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/form_info_title">
+
+        <LinearLayout
+            android:id="@+id/form_info_step_heating"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_heating_title"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/form_heating"
+                android:paddingLeft="23dp"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_r15_brown_gradient_select"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_heating_water"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="30ml"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_heating_speed"
+                android:layout_width="76dp"
+                android:layout_height="match_parent"
+                android:text="中"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_heating_time"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="20s"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/form_info_step_1"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/form_info_step_heating"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_1_title"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/form_water"
+                android:paddingLeft="15dp"
+                android:drawablePadding="-20dp"
+                android:text="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_r15_brown_gradient_select"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_1_water"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="30ml"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_1_speed"
+                android:layout_width="76dp"
+                android:layout_height="match_parent"
+                android:text="中"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_1_time"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="20s"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/form_info_step_2"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/form_info_step_1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_2_title"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/form_water"
+                android:paddingLeft="15dp"
+                android:drawablePadding="-20dp"
+                android:text="2"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_r15_brown_gradient_select"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_2_water"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="30ml"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_2_speed"
+                android:layout_width="76dp"
+                android:layout_height="match_parent"
+                android:text="中"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_2_time"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="20s"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/form_info_step_3"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/form_info_step_2"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_3_title"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/form_water"
+                android:paddingLeft="15dp"
+                android:drawablePadding="-20dp"
+                android:text="3"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_r15_brown_gradient_select"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_3_water"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="30ml"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_3_speed"
+                android:layout_width="76dp"
+                android:layout_height="match_parent"
+                android:text="中"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                style="@style/Harmony_Regular_Text"
+                android:id="@+id/step_3_time"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="20s"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/form_step_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/form_layout"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_form_add_edit_img"
+        android:scaleType="centerInside"/>
+</RelativeLayout>

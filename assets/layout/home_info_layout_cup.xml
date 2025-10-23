@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_layout_cup_pic"
+    android:layout_width="520dp"
+    android:layout_height="350dp"
+    android:visibility="invisible">
+
+    <ImageView
+        android:id="@+id/cup_shadow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/pic_home_cup_shadow"
+        android:visibility="visible"/>
+    <ImageView
+        android:id="@+id/cup_info_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/icon_favorites_select"/>
+
+    <ImageView
+        android:id="@+id/cup_info_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:src="@mipmap/pic_americano"/>
+
+    <LinearLayout
+        android:id="@+id/cup_info_reset_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_reset"
+            android:layout_width="155dp"
+            android:layout_height="104dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_r27_brown_level"
+            android:paddingLeft="20dp"
+            android:drawablePadding="-15dp"
+            android:drawableLeft="@drawable/rotate_shuaxin_coffee"
+            android:text="重置"
+            android:textSize="24dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_hot_water"
+            android:layout_width="155dp"
+            android:layout_height="104dp"
+            android:layout_toRightOf="@id/btn_reset"
+            android:background="@drawable/btn_r27_brown_level"
+            android:paddingLeft="20dp"
+            android:drawablePadding="-15dp"
+            android:drawableLeft="@mipmap/icon_cup"
+            android:text="热水"
+            android:textSize="24dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/Harmony_Regular_Text"
+            android:id="@+id/btn_steam"
+            android:layout_width="155dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btn_hot_water"
+            android:background="@drawable/btn_r27_brown_level"
+            android:paddingLeft="20dp"
+            android:drawablePadding="-15dp"
+            android:drawableLeft="@mipmap/icon_steam"
+            android:text="蒸汽"
+            android:textSize="24dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>

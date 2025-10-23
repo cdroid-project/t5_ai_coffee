@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="500"
+    android:exitFadeDuration="500">
+    <item android:state_selected="true" android:state_activated="true"
+        android:drawable="@mipmap/icon_one_cup_select"/>
+    <item android:state_selected="false" android:state_activated="true"
+        android:drawable="@mipmap/icon_one_cup"/>
+    <item android:state_activated="false" android:drawable="@mipmap/icon_one_cup_unable"/>
+</selector>

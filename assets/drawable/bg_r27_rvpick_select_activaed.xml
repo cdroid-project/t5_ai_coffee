@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="30dp" android:right="30dp" android:top="2" android:bottom="2"
+        android:drawable="@mipmap/icon_rvpicker_select_bg"/>
+</layer-list>
+
+<!-- <shape>
+    <corners android:radius="30dp"/>
+    <gradient android:startColor="#33F0B664"
+        android:endColor="#333D311C"/>
+</shape> -->
